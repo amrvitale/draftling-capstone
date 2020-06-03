@@ -1,7 +1,11 @@
 * {
     box-sizing: border-box;
   }
-  
+
+  body {
+      margin: 0;
+  }
+
   #navbar {
     width: 100%;
     float: left;
@@ -11,19 +15,20 @@
     background-color: lightseagreen;
     border-bottom: 1px solid navy; 
     border-top: 1px solid navy;
+    text-align: center;
 }
 
 #navbar li {
     float: left;
     display: inline;
+    text-align: center;
 }
 
 #navbar  a {
-    display: block;
+    display: inline-block;
     padding: 8px 15px;
     text-decoration: none;
     font-weight: bold;
     color: darkblue;
-    float: right;
     text-align: center;
 }
