@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    
+  }
+body {
+    background-color: aliceblue;
+    
+}
+  label {
+    margin: 1%;
+  }
+
+  input {
+    margin: 1%;
+  }
+
+  button {
+    cursor: pointer;
+    background: gray;
+    border: 0;
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    color: darkblue;
+    font-weight: bold;
+}
+button:hover {
+    background-color:lightseagreen;
+}
