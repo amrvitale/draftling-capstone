@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Read from '../read/Read';
 
 class MyDraftlings extends React.Component {
     render() {
@@ -10,16 +11,27 @@ class MyDraftlings extends React.Component {
                 <section class="draftling1">
                     <h2>Draftling Title 1</h2>
                     <p>Sentence preview...</p>
-                    <button type="button">Read</button>
-                    <button type="button">Edit</button>
+                    <Link to="./read">
+                        <button type="button">Read</button>
+                    </Link>
+
+                    <Link to="./edit">
+                        <button type="button">Edit</button>
+                    </Link>
                     <button type="button">Delete</button>
                 </section>
 
                 <section class="draftling2">
                     <h2>Draftling Title 2</h2>
                     <p>Sentence preview...</p>
-                    <button type="button">Read</button>
-                    <button type="button">Edit</button>
+                    <Link to="./read">
+                        <button type="button">Read</button>
+                    </Link>
+
+                    <Link to="./edit">
+                        <button type="button">Edit</button>
+                    </Link>
+                    
                     <button type="button">Delete</button>
                 </section>
 
