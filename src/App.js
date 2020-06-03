@@ -10,6 +10,8 @@ import About from './components/about/About';
 import './App.css';
 import MyDraftlings from './components/mydraftlings/MyDraftlings';
 import SearchResults from './components/searchResults/SearchResults';
+import Read from './components/read/Read';
+import Edit from './components/edit/Edit';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Route path ='/postdraftling' component={PostDraftling} />
       <Route path ='/mydraftlings' component={MyDraftlings} />
       <Route path ='/about' component={About} />
+      <Route path= '/read' component={Read} />
+      <Route path='/edit' component={Edit} />
     </div>
   );
 }
