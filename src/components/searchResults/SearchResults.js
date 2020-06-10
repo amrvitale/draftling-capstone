@@ -7,6 +7,9 @@ class SearchResults extends React.Component {
             <div className="searchResults">
                 <h1>Search Results</h1>
                 <section className="resultsPlaceholder">
+                <Link to='/read'>
+                    <button type="submit">Read</button>
+                </Link>
 
                 </section>
                 
@@ -19,3 +22,5 @@ class SearchResults extends React.Component {
 }
 
 export default SearchResults;
+
+//except read link will take you to id of story yes?

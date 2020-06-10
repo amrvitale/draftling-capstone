@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Signup.css';
 import { Link } from 'react-router-dom';
 
-class LoginSignUp extends React.Component {
+class Signup extends React.Component {
     render() {
         const loginStyle = {
             fontWeight: 'bold',
@@ -66,4 +66,4 @@ class LoginSignUp extends React.Component {
         );
     }
 }
-export default LoginSignUp;
+export default Signup;
