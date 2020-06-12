@@ -14,7 +14,7 @@ import Read from './components/read/Read';
 import Edit from './components/edit/Edit';
 import CritiqueTemplate from './components/critiquetemplate/CritiqueTemplate';
 import CritiqueFreeform from './components/critiquefreeform/CritiqueFreeform';
-
+import ApiContext from './ApiContext';
 function App() {
   return (
     <div className='App'>
