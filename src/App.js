@@ -16,26 +16,63 @@ import CritiqueTemplate from './critiquetemplate/CritiqueTemplate';
 import CritiqueFreeform from './critiquefreeform/CritiqueFreeform';
 import ApiContext from './ApiContext';
 import ChooseCritique from './choosecritique/ChooseCritique'
+import config from './config'
 
-function App() {
-  return (
-    <div className='App'>
-      <Nav />
-      <Route exact path ='/' component={Signup} />
-      <Route path='/login' component={Login} />
-      <Route path ='/mydash' component={Dash}/>
-      <Route path='/search' component={Search}/>
-      <Route path='/results' component={SearchResults} />
-      <Route path ='/postdraftling' component={PostDraftling} />
-      <Route path ='/mydraftlings' component={MyDraftlings} />
-      <Route path ='/about' component={About} />
-      <Route path= '/read' component={Read} />
-      <Route path='/edit' component={Edit} />
-      <Route path='/choosecritique' component={ChooseCritique}/>
-      <Route path='/postfreeformcritique' component={CritiqueFreeform} />
-      <Route path='/posttemplatecritique' component={CritiqueTemplate} />
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    draftlings: []
+  };
+
+  componentDidMount() {
+    Promise.all( [
+      fetch(`${config.API_ENDPOINT}/mydraftlings`),
+    ])
+    .then(([draftlingsRes]) => {
+      if (!draftlingsRes.ok)
+        return draftlingsRes.json().then(e => Promise.reject(e))
+
+        return Promise.all([
+          draftlingsRes.json(),
+        ])
+    })
+
+    .then(([draftlings]) => {
+      this.setState( {draftlings})
+    })
+    .catch(error => {
+      console.log({ error })
+    })
+  }
+
+  handleAddDraftling = draftling => {
+    this.setState( {
+      mydraftlings: [
+        ...this.state.draftlings,
+        draftling
+      ]
+    })
+  }
+  render() {
+    return (
+      <div className='App'>
+        <Nav />
+        <Route exact path ='/' component={Signup} />
+        <Route path='/login' component={Login} />
+        <Route path ='/mydash' component={Dash}/>
+        <Route path='/search' component={Search}/>
+        <Route path='/results' component={SearchResults} />
+        <Route path ='/postdraftling' component={PostDraftling} />
+        <Route path ='/mydraftlings' component={MyDraftlings} />
+        <Route path ='/about' component={About} />
+        <Route path= '/read' component={Read} />
+        <Route path='/edit' component={Edit} />
+        <Route path='/choosecritique' component={ChooseCritique}/>
+        <Route path='/postfreeformcritique' component={CritiqueFreeform} />
+        <Route path='/posttemplatecritique' component={CritiqueTemplate} />
+      </div>
+      );
+  }
 }
 
 export default App;

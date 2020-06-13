@@ -5,7 +5,7 @@ class Read extends React.Component {
     render() {
         return (
             <div className="readOnlyDraftlings">
-                <section class="placeholderForSelectedDraftling">
+                <section className="placeholderForSelectedDraftling">
                   <p>Placeholder for read only version of selected Draftling...</p>
                   <Link to='/choosecritique'>
                         <button type="submit">Write a critique</button>
