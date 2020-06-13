@@ -1,20 +1,22 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Nav from './components/nav/Nav';
-import Signup from './components/signup/Signup';
-import Login from './components/login/Login';
-import PostDraftling from './components/postDraftling/PostDraftling';
-import Search from './components/search/Search';
-import Dash from './components/dash/Dash';
-import About from './components/about/About';
+import Nav from './nav/Nav';
+import Signup from './signup/Signup';
+import Login from './login/Login';
+import PostDraftling from './postDraftling/PostDraftling';
+import Search from './search/Search';
+import Dash from './dash/Dash';
+import About from './about/About';
 import './App.css';
-import MyDraftlings from './components/mydraftlings/MyDraftlings';
-import SearchResults from './components/searchResults/SearchResults';
-import Read from './components/read/Read';
-import Edit from './components/edit/Edit';
-import CritiqueTemplate from './components/critiquetemplate/CritiqueTemplate';
-import CritiqueFreeform from './components/critiquefreeform/CritiqueFreeform';
+import MyDraftlings from './mydraftlings/MyDraftlings';
+import SearchResults from './searchResults/SearchResults';
+import Read from './read/Read';
+import Edit from './edit/Edit';
+import CritiqueTemplate from './critiquetemplate/CritiqueTemplate';
+import CritiqueFreeform from './critiquefreeform/CritiqueFreeform';
 import ApiContext from './ApiContext';
+import ChooseCritique from './choosecritique/ChooseCritique'
+
 function App() {
   return (
     <div className='App'>
@@ -29,6 +31,7 @@ function App() {
       <Route path ='/about' component={About} />
       <Route path= '/read' component={Read} />
       <Route path='/edit' component={Edit} />
+      <Route path='/choosecritique' component={ChooseCritique}/>
       <Route path='/postfreeformcritique' component={CritiqueFreeform} />
       <Route path='/posttemplatecritique' component={CritiqueTemplate} />
     </div>

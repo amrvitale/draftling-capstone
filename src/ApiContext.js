@@ -6,4 +6,10 @@ export default React.createContext( {
     addFreeformCrit: () => {},
     addTemplateCrit: () => {},
     deleteDraftling: () => {},
+    editDraftling: () => {},
+    readDraftling: () => {},
+    readCrit: () => {},
 })
+
+//wait, would read and edit be from an array? ...so confused
+//array of crits go inside array of draftling somehow without messing up ID

@@ -7,12 +7,8 @@ class Read extends React.Component {
             <div className="readOnlyDraftlings">
                 <section class="placeholderForSelectedDraftling">
                   <p>Placeholder for read only version of selected Draftling...</p>
-                  <Link to='/postfreeformcritique'>
-                        <button type="submit">Write a freeform critique</button>
-                  </Link> 
-
-                  <Link to='/posttemplatecritique'>
-                        <button type="submit">Write a templated critique</button>
+                  <Link to='/choosecritique'>
+                        <button type="submit">Write a critique</button>
                   </Link> 
                 </section>
 
