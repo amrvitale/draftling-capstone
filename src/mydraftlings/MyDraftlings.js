@@ -8,7 +8,6 @@ class MyDraftlings extends React.Component {
     render() {
 
         console.log(this.props.draftlings);
-
         return (
             <div className="mydraftlings">
                 <h1>My Draftlings</h1>

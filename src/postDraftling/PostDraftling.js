@@ -22,6 +22,7 @@ class PostDraftling extends React.Component {
 
     handleChange = e => {
         this.setState({[e.target.getAttribute('name')]: e.target.value})
+
     }
 
     handleSubmit = e => {
@@ -49,6 +50,7 @@ class PostDraftling extends React.Component {
             console.log(draftling)
             this.context.addDraftling(draftling)
             this.props.history.push(`/mydraftlings/${draftling.id}`)
+           
         })
         .catch(error => {
             console.log({ error })
