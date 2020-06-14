@@ -28,9 +28,8 @@ class PostDraftling extends React.Component {
         e.preventDefault()
         const newDraftling = {
             title: this.state.title,
-            wordCount: this.state.wordCount,
+            wordcount: this.state.wordcount,
             content: this.state.content,
-            draftling_id: this.state.draftling_id,
             modified: new Date(),
         }
         console.log(newDraftling)
@@ -43,13 +42,13 @@ class PostDraftling extends React.Component {
             body: JSON.stringify(newDraftling),
         })
         .then(res => {
-            if(!res.ok)
-            return res.json().then(e => Promise.reject(e))
-            return res.json
+          
+            return res.json()
         })
         .then(draftling => {
+            console.log(draftling)
             this.context.addDraftling(draftling)
-            this.props.history.push(`/mydraftlings/${draftling.draftling_id}`)
+            this.props.history.push(`/mydraftlings/${draftling.id}`)
         })
         .catch(error => {
             console.log({ error })
@@ -76,8 +75,8 @@ class PostDraftling extends React.Component {
                     <label htmlFor="draftlingTitle">Draftling Title:</label>
                     <input type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />
-                    <label htmlFor="wordCount">Choose an approximate word count.</label>
-                    <select name="wordCount" id="wordCount" onChange={this.handleChange} required>
+                    <label htmlFor="wordcount">Choose an approximate word count.</label>
+                    <select name="wordcount" id="wordcount" onChange={this.handleChange} required>
                         <option></option>
                         <option value="sixWordStory">Six word story</option>
                         <option value="minisaga">Minisaga: 50 words</option>

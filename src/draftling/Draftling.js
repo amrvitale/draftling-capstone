@@ -35,7 +35,7 @@ export default class Draftling extends React.Component {
         })
     }
     render() {
-        const { title, id, content, wordCount, modified} = this.props
+        const { title, id, content, wordcount, modified} = this.props
 
         const date = new Date(modified);
 
