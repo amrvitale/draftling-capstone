@@ -17,6 +17,7 @@ import CritiqueFreeform from './critiquefreeform/CritiqueFreeform';
 import ApiContext from './ApiContext';
 import ChooseCritique from './choosecritique/ChooseCritique'
 import config from './config'
+import Draftling from './draftling/Draftling';
 
 class App extends React.Component {
 
@@ -63,7 +64,14 @@ class App extends React.Component {
         <Route path='/search' component={Search}/>
         <Route path='/results' component={SearchResults} />
         <Route path ='/postdraftling' component={PostDraftling} />
-        <Route path ='/mydraftlings' component={MyDraftlings} />
+
+        <Route 
+          path ='/mydraftlings' 
+          render={(props) =><MyDraftlings {...props} draftlings={this.state.draftlings} />}
+        />
+        <Route
+        path='/draftlings/:slug' component={Draftling} 
+        />
         <Route path ='/about' component={About} />
         <Route path= '/read' component={Read} />
         <Route path='/edit' component={Edit} />

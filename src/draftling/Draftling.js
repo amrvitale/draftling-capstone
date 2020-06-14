@@ -11,7 +11,7 @@ export default class Draftling extends React.Component {
 
     handleClickDelete = e => {
         e.preventDefault()
-        const draftling_id = this.props.draftling_id
+        const draftling_id = this.props.match.params.slug
         
         fetch(`${config.API_ENDPOINT}/mydraftlings/${draftling_id}`, {
             method: 'DELETE',
