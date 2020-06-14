@@ -2,16 +2,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Read from '../read/Read';
+import Draftling from '../draftling/Draftling';
 
 class MyDraftlings extends React.Component {
     render() {
+
         console.log(this.props.draftlings);
 
         return (
             <div className="mydraftlings">
                 <h1>My Draftlings</h1>
                 <section className="draftling1">
-                    <h2>Draftling Title 1</h2>
+                    <ul>
+                        {this.props.draftlings.map(draftling =>
+                            <li key={draftling.id}>
+                                <Draftling
+                                    id={draftling.id}
+                                    title={draftling.title}
+                                    modified={draftling.modified}
+                                    />
+                            </li>
+                            )}
+                    
                     <Link to="./read">
                         <button type="button">Read</button>
                     </Link>
@@ -20,6 +32,7 @@ class MyDraftlings extends React.Component {
                         <button type="button">Edit</button>
                     </Link>
                     <button type="button">Delete</button>
+                    </ul>
                 </section>
 
              

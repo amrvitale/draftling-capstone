@@ -42,7 +42,7 @@ export default class Draftling extends React.Component {
         return (
             <div className="draftling">
                 <h2 className="draftling-title">
-                    <Link to={`/note/${id}`}>
+                    <Link to={`/draftling/${id}`}>
                         {title}
                     </Link>
                 </h2>
