@@ -55,31 +55,45 @@ class App extends React.Component {
     })
   }
   render() {
+    const providerValue = {
+      addDraftling: this.handleAddDraftling,
+      draftlings: this.state.draftlings,
+    }
     return (
-      <div className='App'>
-        <Nav />
-        <Route exact path ='/' component={Signup} />
-        <Route path='/login' component={Login} />
-        <Route path ='/mydash' component={Dash}/>
-        <Route path='/search' component={Search}/>
-        <Route path='/results' component={SearchResults} />
-        <Route path ='/postdraftling' component={PostDraftling} />
+      <ApiContext.Provider value={providerValue}>
+        <div className='App'>
+          <Nav />
+          <Route exact path ='/' component={Signup} />
+          <Route path='/login' component={Login} />
+          <Route path ='/mydash' component={Dash}/>
+          <Route path='/search' component={Search}/>
+          <Route path='/results' component={SearchResults} />
+          <Route path ='/postdraftling' component={PostDraftling} />
 
-        <Route 
-          path ='/mydraftlings' 
-          render={(props) =><MyDraftlings {...props} draftlings={this.state.draftlings} />}
-        />
-        <Route
-        path='/draftlings/:slug' component={Draftling} 
-        />
-        <Route path ='/about' component={About} />
-        <Route path= '/read' component={Read} />
-        <Route path='/edit' component={Edit} />
-        <Route path='/choosecritique' component={ChooseCritique}/>
-        <Route path='/postfreeformcritique' component={CritiqueFreeform} />
-        <Route path='/posttemplatecritique' component={CritiqueTemplate} />
-      </div>
+          <Route 
+            path ='/mydraftlings' 
+            render={(props) =><MyDraftlings {...props} draftlings={this.state.draftlings} />}
+          />
+          <Route
+          path='/draftling/:slug' 
+          render={(props) => <Draftling {...props} draftlings={this.state.draftlings} />}
+          />
+          <Route path ='/about' component={About} />
+          <Route path= '/read' component={Read} />
+          <Route path='/edit' component={Edit} />
+          <Route path='/choosecritique' component={ChooseCritique}/>
+          <Route path='/postfreeformcritique' component={CritiqueFreeform} />
+          <Route path='/posttemplatecritique' component={CritiqueTemplate} />
+        </div>
+      </ApiContext.Provider>
       );
+
+
+        const value = {
+          draftlings: this.state.draftlings,
+          addDraftling: this.handleAddDraftling,
+        }
+      
   }
 }
 

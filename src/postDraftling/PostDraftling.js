@@ -49,7 +49,7 @@ class PostDraftling extends React.Component {
         .then(draftling => {
             console.log(draftling)
             this.context.addDraftling(draftling)
-            this.props.history.push(`/mydraftlings/${draftling.id}`)
+            this.props.history.push(`/mydraftlings/`)
            
         })
         .catch(error => {
