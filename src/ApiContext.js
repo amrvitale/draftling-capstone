@@ -7,6 +7,7 @@ export default React.createContext( {
     addTemplateCrit: () => {},
     deleteDraftling: () => {},
     editDraftling: () => {},
+    viewDraftling: () => {},
     readDraftling: () => {},
     readCrit: () => {},
 })

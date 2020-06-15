@@ -4,36 +4,10 @@ import config from '../config'
 import { Link } from 'react-router-dom'
 
 export default class Draftling extends React.Component {
-    static defaultProps = {
-        onDeleteDraftling: () => {}, 
-    }
+    
     static contextType = ApiContext;
 
-    handleClickDelete = e => {
-        e.preventDefault()
-        const draftling_id = this.props.match.params.slug
-        
-        fetch(`${config.API_ENDPOINT}/mydraftlings/${draftling_id}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            },
-        })
-
-        .then(res => {
-            if(!res.ok)
-                return res.status
-        })
-
-        .then( () => {
-            this.context.deleteDraftling(draftling_id)
-            this.props.onDeleteDraftling(draftling_id)
-        })
-
-        .catch(error => {
-            console.log({error})
-        })
-    }
+  
     render() {
         const { title, id, content, wordcount, modified} = this.props
 
@@ -43,8 +17,15 @@ export default class Draftling extends React.Component {
             <div className="draftling">
                 <h2 className="draftling-title">
                     <Link to={`/draftling/${id}`}>
+                        {title}
+                       
                     </Link>
                 </h2>
+                <p>
+                    {wordcount},
+                    <br />
+                    {modified}
+                </p>
             </div>
         )
     }

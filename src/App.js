@@ -29,6 +29,7 @@ class App extends React.Component {
   componentDidMount() {
     Promise.all( [
       fetch(`${config.API_ENDPOINT}/mydraftlings`),
+      //fetch(`${config.API_ENDPOINT}/draftling/${draftling.id}`)
     ])
     .then(([draftlingsRes]) => {
       if (!draftlingsRes.ok)
@@ -56,10 +57,19 @@ class App extends React.Component {
     })
   }
  
+ /* handleViewDraftling = draftling => {
+    this.setState( {
+      draftling: [
+        ...this.state.draftling,
+        draftling
+      ]
+    })
+  }*/
 
   render() {
     const providerValue = {
       addDraftling: this.handleAddDraftling,
+      //viewDraftling: this.handleViewDraftling,
       draftlings: this.state.draftlings,
     }
     return (
@@ -92,10 +102,7 @@ class App extends React.Component {
       );
 
 
-        const value = {
-          draftlings: this.state.draftlings,
-          addDraftling: this.handleAddDraftling,
-        }
+      
       
   }
 }

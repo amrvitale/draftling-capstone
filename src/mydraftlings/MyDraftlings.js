@@ -18,6 +18,8 @@ class MyDraftlings extends React.Component {
                                 <Draftling
                                     id={draftling.id}
                                     title={draftling.title}
+                                    wordcount={draftling.wordcount}
+                                    content={draftling.content}
                                     modified={draftling.modified}
                                 />
                             </li>
