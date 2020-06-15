@@ -18,6 +18,7 @@ import ApiContext from './ApiContext';
 import ChooseCritique from './choosecritique/ChooseCritique'
 import config from './config'
 import Draftling from './draftling/Draftling';
+import DraftlingPage from './draftlingpage/DraftlingPage'
 
 class App extends React.Component {
 
@@ -48,12 +49,14 @@ class App extends React.Component {
 
   handleAddDraftling = draftling => {
     this.setState( {
-      mydraftlings: [
+      draftlings: [
         ...this.state.draftlings,
         draftling
       ]
     })
   }
+ 
+
   render() {
     const providerValue = {
       addDraftling: this.handleAddDraftling,
@@ -76,7 +79,7 @@ class App extends React.Component {
           />
           <Route
           path='/draftling/:slug' 
-          render={(props) => <Draftling {...props} draftlings={this.state.draftlings} />}
+          render={(props) => <DraftlingPage {...props} draftlings={this.state.draftlings} />}
           />
           <Route path ='/about' component={About} />
           <Route path= '/read' component={Read} />

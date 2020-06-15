@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Read from '../read/Read';
 import Draftling from '../draftling/Draftling';
+import DraftlingPage from '../draftlingpage/DraftlingPage';
 
 class MyDraftlings extends React.Component {
     render() {
@@ -11,17 +12,17 @@ class MyDraftlings extends React.Component {
             <div className="mydraftlings">
                 <h1>My Draftlings</h1>
                 <section className="draftling1">
-                    <ul>
+                <ul>
                         {this.props.draftlings.map(draftling =>
                             <li key={draftling.id}>
                                 <Draftling
                                     id={draftling.id}
                                     title={draftling.title}
                                     modified={draftling.modified}
-                                    />
+                                />
                             </li>
                             )}
-                    
+                          
                     <Link to="./read">
                         <button type="button">Read</button>
                     </Link>
@@ -42,3 +43,14 @@ class MyDraftlings extends React.Component {
 }
 
 export default MyDraftlings;
+
+/* //this is the code that currently works
+ <Link to={`/draftling/${draftling.id}`}>
+                                    <p>
+                                        title={draftling.title}
+                                        <br />
+                                        wordcount={draftling.wordcount}
+                                        
+                                        modified={draftling.modified}
+                                    </p>
+                                </Link>*/
