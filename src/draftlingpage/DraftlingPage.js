@@ -19,14 +19,18 @@ class DraftlingPage extends React.Component {
         const {draftlings = [] } = this.context
         const {slug} = this.props.match.params
         console.log(slug)
-        let selectedDraftling = draftlings.find(draftling => draftling.id === slug)
+        let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
         console.log(draftlings, selectedDraftling)
         console.log(selectedDraftling)
 
 
         return (
             <div>
-              {(selectedDraftling) ? selectedDraftling.title: ""}
+             <h1>Title: {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
+              <br />
+             <p>Word Count: {(selectedDraftling) ? selectedDraftling.wordcount: ""}</p> 
+              <br />
+              <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
                 
             </div>
         );

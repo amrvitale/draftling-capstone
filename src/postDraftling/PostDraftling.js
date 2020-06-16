@@ -80,21 +80,21 @@ class PostDraftling extends React.Component {
                     <label htmlFor="wordcount">Choose an approximate word count.</label>
                     <select name="wordcount" id="wordcount" onChange={this.handleChange} required>
                         <option></option>
-                        <option value="sixWordStory">Six word story</option>
-                        <option value="minisaga">Minisaga: 50 words</option>
-                        <option value="microfiction">Microfiction: 51 - 100 words</option>
-                        <option value="twitterature">Twitterature: 280 characters</option>
-                        <option value="suddenFiction">Sudden Fiction: 300 - 750 words</option>
-                        <option value="flashFiction">Flash Fiction: 751 - 1000 words</option>
-                        <option value="shortStory">Short Story: 1001 - 7500 words</option>
-                        <option value="novellete">Novellete: 7501 - 20,000 words</option>
-                        <option value="novella">Novella: 20,001 - 60,000 words</option>
-                        <option value="novel">Novel: 60,0001 + words</option>
+                        <option value="Six word story">Six word story</option>
+                        <option value="Minisaga">Minisaga: 50 words</option>
+                        <option value="Micro fiction">Microfiction: 51 - 100 words</option>
+                        <option value="Twitterature">Twitterature: 280 characters</option>
+                        <option value="Sudden Fiction">Sudden Fiction: 300 - 750 words</option>
+                        <option value="Flash Fiction">Flash Fiction: 751 - 1000 words</option>
+                        <option value="Short Story">Short Story: 1001 - 7500 words</option>
+                        <option value="Novellete">Novellete: 7501 - 20,000 words</option>
+                        <option value="Novella">Novella: 20,001 - 60,000 words</option>
+                        <option value="Novel">Novel: 60,0001 + words</option>
                     </select>
                     <br />
                     <textarea style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
                     <br/>
-                    <input type="submit" value="Post Draftling"></input>
+                    <input type="submit" value="Submit Draft to My Dash"></input>
                 </form>
             </div>
         )
