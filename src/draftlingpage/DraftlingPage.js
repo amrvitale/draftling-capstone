@@ -12,24 +12,22 @@ class DraftlingPage extends React.Component {
       }
       static contextType = ApiContext    
    
-      handleViewDraftling = draftling_id => {
-       this.props.history.push('/')
-   }
+    
         
 
     render() {
         const {draftlings = [] } = this.context
-        const { draftling_id } = this.props.match.params
-        console.log(draftling_id)
-        const draftling = findDraftling(draftlings, parseInt(draftling_id)) || { content: ''}
-        console.log(draftling);
+        const {slug} = this.props.match.params
+        console.log(slug)
+        let selectedDraftling = draftlings.find(draftling => draftling.id === slug)
+        console.log(draftlings, selectedDraftling)
+        console.log(selectedDraftling)
+
 
         return (
             <div>
-                <Draftling
-                    title={draftling.title}
-                    content={draftling.content}
-                />
+              {(selectedDraftling) ? selectedDraftling.title: ""}
+                
             </div>
         );
     }
