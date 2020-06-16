@@ -18,4 +18,4 @@ class Read extends React.Component {
 }
 export default Read;
 
-//make it toggle one or the other and pop open the critique option
+//read option that shows critique options should only appear on draftlings that appear in search.

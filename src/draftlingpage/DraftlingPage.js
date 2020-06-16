@@ -3,6 +3,8 @@ import ApiContext from '../ApiContext'
 import config from '../config'
 import Draftling from '../draftling/Draftling';
 import {findDraftling} from '../draftlings-helpers'
+import { Link } from 'react-router-dom'
+import Edit from '../edit/Edit'
 
 class DraftlingPage extends React.Component {
     static defaultProps = {
@@ -26,12 +28,22 @@ class DraftlingPage extends React.Component {
 
         return (
             <div>
-             <h1>Title: {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
-              <br />
-             <p>Word Count: {(selectedDraftling) ? selectedDraftling.wordcount: ""}</p> 
-              <br />
-              <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
-                
+              <section className="myDraftActions">
+               <Link to="/edit/draftling/:id">
+                  <button type="button">Edit</button>
+                </Link> 
+                <button type="button">Publish</button>
+                <button type="button">Delete</button>
+              </section>
+              <section className="draftViewOfSelected">
+                <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
+                  <br />
+                <p>Length Type: {(selectedDraftling) ? selectedDraftling.wordcount: ""}</p> 
+                  <br />
+                <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
+              </section>
+
+              
             </div>
         );
     }

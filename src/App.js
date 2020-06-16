@@ -19,6 +19,7 @@ import ChooseCritique from './choosecritique/ChooseCritique'
 import config from './config'
 import Draftling from './draftling/Draftling';
 import DraftlingPage from './draftlingpage/DraftlingPage'
+import Publish from './publish/Publish'
 
 class App extends React.Component {
 
@@ -93,7 +94,7 @@ class App extends React.Component {
           />
           <Route path ='/about' component={About} />
           <Route path= '/read' component={Read} />
-          <Route path='/edit' component={Edit} />
+          <Route path='/edit/draftling/${id}' component={Edit} />
           <Route path='/choosecritique' component={ChooseCritique}/>
           <Route path='/postfreeformcritique' component={CritiqueFreeform} />
           <Route path='/posttemplatecritique' component={CritiqueTemplate} />

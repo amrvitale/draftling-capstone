@@ -25,34 +25,12 @@ class MyDraftlings extends React.Component {
                             </li>
                             )}
                           
-                    <Link to="./read">
-                        <button type="button">Read</button>
-                    </Link>
-
-                    <Link to="./edit">
-                        <button type="button">Edit</button>
-                    </Link>
-                    <button type="button">Delete</button>
+            
                     </ul>
                 </section>
-
-             
-
-
             </div>
         );
     }
 }
 
 export default MyDraftlings;
-
-/* //this is the code that currently works
- <Link to={`/draftling/${draftling.id}`}>
-                                    <p>
-                                        title={draftling.title}
-                                        <br />
-                                        wordcount={draftling.wordcount}
-                                        
-                                        modified={draftling.modified}
-                                    </p>
-                                </Link>*/
