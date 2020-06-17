@@ -29,7 +29,7 @@ class DraftlingPage extends React.Component {
         return (
             <div>
               <section className="myDraftActions">
-               <Link to="/edit/draftling/:id">
+               <Link to="/edit/draftling/{selectedDraftling.id}">
                   <button type="button">Edit</button>
                 </Link> 
                 <button type="button">Publish</button>

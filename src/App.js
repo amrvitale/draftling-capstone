@@ -73,6 +73,7 @@ class App extends React.Component {
       //viewDraftling: this.handleViewDraftling,
       draftlings: this.state.draftlings,
     }
+    
     return (
       <ApiContext.Provider value={providerValue}>
         <div className='App'>
