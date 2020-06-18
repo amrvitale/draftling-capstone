@@ -11,6 +11,9 @@ class Edit extends React.Component {
         const {slug} = this.props.match.params
         console.log(slug)
         const editDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
+        this.setState({
+            ...editDraftling,
+        })
         console.log(editDraftling)
     }
 
@@ -22,14 +25,7 @@ class Edit extends React.Component {
       static contextType = ApiContext    
 
     render() {
-        this.setState({
-            title: editDraftling.title,
-           wordcount: editDraftling.wordcount,
-           content: editDraftling.content
-        })
-
-       
-
+ 
         const { id } = this.props.match.params  
         const styleTextArea = {
             minHeight: '380px',
@@ -47,10 +43,10 @@ class Edit extends React.Component {
             <div className="edit">
                  <form onSubmit={this.handleSubmit}>
                     <label htmlFor="draftlingTitle">Draftling Title:</label>
-                    <input type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
+                    <input value={this.state.title} type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />
                     <label htmlFor="wordcount">Choose an approximate word count.</label>
-                    <select name="wordcount" id="wordcount" onChange={this.handleChange} required>
+                    <select value={this.state.wordcount} name="wordcount" id="wordcount" onChange={this.handleChange} required>
                         <option></option>
                         <option value="Six word story">Six word story</option>
                         <option value="Minisaga">Minisaga: 50 words</option>
@@ -64,7 +60,7 @@ class Edit extends React.Component {
                         <option value="Novel">Novel: 60,0001 + words</option>
                     </select>
                     <br />
-                    <textarea style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
+                    <textarea value={this.state.content} style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
                     <br/>
                     <input type="submit" value="Submit Draft to My Dash"></input>
                 </form>
