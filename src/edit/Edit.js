@@ -6,6 +6,12 @@ import {findDraftling} from '../draftlings-helpers'
 
 class Edit extends React.Component {
 
+    state = {
+        title: "",
+        wordcount: "",
+        content: ""
+    }
+
     componentDidMount() {
         const {draftlings = [] } = this.context
         const {id} = this.props.match.params
@@ -42,7 +48,8 @@ class Edit extends React.Component {
         return (
             <div className="edit">
                  <form onSubmit={this.handleSubmit}>
-                     <h1>test</h1>
+                     <h1>Edit Your Draftling</h1>
+                     <br />
                     <label htmlFor="draftlingTitle">Draftling Title:</label>
                     <input value={this.state.title} type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />
