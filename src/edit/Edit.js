@@ -42,6 +42,7 @@ class Edit extends React.Component {
         return (
             <div className="edit">
                  <form onSubmit={this.handleSubmit}>
+                     <h1>test</h1>
                     <label htmlFor="draftlingTitle">Draftling Title:</label>
                     <input value={this.state.title} type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />

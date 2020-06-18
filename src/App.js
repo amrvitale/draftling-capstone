@@ -95,7 +95,7 @@ class App extends React.Component {
           />
           <Route path ='/about' component={About} />
           <Route path= '/read' component={Read} />
-          <Route path='{`/edit/${:id}`}'  component={Edit} />
+          <Route path="/edit/:id" component={Edit} /> 
           <Route path='/choosecritique' component={ChooseCritique}/>
           <Route path='/postfreeformcritique' component={CritiqueFreeform} />
           <Route path='/posttemplatecritique' component={CritiqueTemplate} />

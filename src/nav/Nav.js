@@ -7,10 +7,10 @@ class Nav extends React.Component {
         return (
             <div>
                 <ul id="navbar">
-                    <li><Link to='/mydash'>My Dashboard</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/search'>Search Other Writer's Draftlings</Link></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><Link to='/mydash'>MY DASHBOARD</Link></li>
+                    <li><Link to='/about'>ABOUT</Link></li>
+                    <li><Link to='/search'>SEARCH DRAFTLINGS</Link></li>
+                    <li><a href="#">LOGOUT</a></li>
                 </ul>
             </div>
 

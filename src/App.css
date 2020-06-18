@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
   text-align: center;
+  font-family: 'Rubik', sans-serif;
+
   
 }
 
 body {
-  background-color: aliceblue;
+  background-color:#EAE7DC;
   
 }
 
@@ -17,17 +19,17 @@ body {
 
 button {
   cursor: pointer;
-  background: gray;
+  background: #8E8D8A;
   border: 0;
   font-size: 1rem;
-  color: white;
   margin: 1%;
   padding: 10px;
-  color: darkblue;
+  color: #5C2018;
   font-weight: bold;
+  border-radius: 15px;
 }
 button:hover {
-  background-color:lightseagreen;
+  background-color:#86B3D1;
 }
 ul {
   text-align: center;
