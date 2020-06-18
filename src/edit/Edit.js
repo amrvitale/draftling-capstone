@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import DraftlingPage from '../draftlingpage/DraftlingPage'
 import ApiContext from '../ApiContext'
 import {findDraftling} from '../draftlings-helpers'
+import config from '../config'
 
 class Edit extends React.Component {
 
@@ -29,6 +30,52 @@ class Edit extends React.Component {
         }
       }
       static contextType = ApiContext    
+
+      constructor(props) {
+        super(props);
+        this.state = {value: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange = e => {
+        this.setState({[e.target.getAttribute('name')]: e.target.value})
+
+    }
+
+    handleSubmit = e => {
+        e.preventDefault()
+        const newDraftling = {
+            title: this.state.title,
+            wordcount: this.state.wordcount,
+            content: this.state.content,
+            modified: new Date(),
+        }
+        console.log(newDraftling)
+
+        fetch(`${config.API_ENDPOINT}/mydraftlings`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newDraftling),
+        })
+        .then(res => {
+          
+            return res.json()
+        })
+        .then(draftling => {
+            console.log(draftling)
+            this.context.addDraftling(draftling)
+            this.props.history.push(`/mydraftlings/`)
+           
+        })
+        .catch(error => {
+            console.log({ error })
+        })
+    }
+
 
     render() {
  
