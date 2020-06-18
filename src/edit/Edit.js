@@ -8,9 +8,9 @@ class Edit extends React.Component {
 
     componentDidMount() {
         const {draftlings = [] } = this.context
-        const {slug} = this.props.match.params
-        console.log(slug)
-        const editDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
+        const {id} = this.props.match.params
+        console.log(id)
+        const editDraftling = draftlings.find(draftling => draftling.id === parseInt(id))
         this.setState({
             ...editDraftling,
         })
