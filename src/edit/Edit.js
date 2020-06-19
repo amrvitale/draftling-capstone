@@ -54,8 +54,8 @@ class Edit extends React.Component {
         }
         console.log(newDraftling)
 
-        fetch(`${config.API_ENDPOINT}/mydraftlings`, {
-            method: 'POST',
+        fetch(`${config.API_ENDPOINT}/mydraftlings/id`, {
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
