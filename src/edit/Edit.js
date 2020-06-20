@@ -55,7 +55,7 @@ class Edit extends React.Component {
         }
         console.log(newDraftling)
 
-        fetch(`${config.API_ENDPOINT}/mydraftlings/${this.props.match.params.id}`, {
+        fetch(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -64,11 +64,10 @@ class Edit extends React.Component {
         })
         .then(res => {
           
-            return res.json()
+            //return res.json()
         })
         .then(draftling => {
             console.log(draftling)
-            this.context.addDraftling(draftling)
             this.props.history.push(`/mydraftlings/`)
            
         })

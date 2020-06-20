@@ -30,7 +30,6 @@ class App extends React.Component {
   componentDidMount() {
     Promise.all( [
       fetch(`${config.API_ENDPOINT}/mydraftlings`),
-      //fetch(`${config.API_ENDPOINT}/draftling/${draftling.id}`)
     ])
     .then(([draftlingsRes]) => {
       if (!draftlingsRes.ok)
@@ -48,7 +47,7 @@ class App extends React.Component {
       console.log({ error })
     })
   }
-
+  
   handleAddDraftling = draftling => {
     this.setState( {
       draftlings: [
@@ -57,6 +56,27 @@ class App extends React.Component {
       ]
     })
   }
+
+  fetchDraftlings() {
+      fetch(`${config.API_ENDPOINT}/mydraftlings`)
+    
+    .then(([draftlingsRes]) => {
+      if (!draftlingsRes.ok)
+        return draftlingsRes.json().then(e => Promise.reject(e))
+
+        return Promise.all([
+          draftlingsRes.json(),
+        ])
+    })
+
+    .then(([draftlings]) => {
+      this.setState( {draftlings})
+    })
+    .catch(error => {
+      console.log({ error })
+    })
+  }
+  
  
  /* handleViewDraftling = draftling => {
     this.setState( {
