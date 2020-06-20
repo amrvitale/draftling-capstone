@@ -16,7 +16,8 @@ class Edit extends React.Component {
     componentDidMount() {
         const {draftlings = [] } = this.context
         const {id} = this.props.match.params
-        console.log(id)
+        console.log(this.props.match.params.id)
+        //console.log(id)
         const editDraftling = draftlings.find(draftling => draftling.id === parseInt(id))
         this.setState({
             ...editDraftling,
@@ -54,7 +55,7 @@ class Edit extends React.Component {
         }
         console.log(newDraftling)
 
-        fetch(`${config.API_ENDPOINT}/mydraftlings/id`, {
+        fetch(`${config.API_ENDPOINT}/mydraftlings/${this.props.match.params.id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
