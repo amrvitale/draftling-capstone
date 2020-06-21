@@ -57,7 +57,7 @@ class App extends React.Component {
     })
   }
 
-  fetchDraftlings() {
+  fetchDraftlings(props) {
       fetch(`${config.API_ENDPOINT}/mydraftlings`)
     
     .then(([draftlingsRes]) => {
@@ -70,8 +70,10 @@ class App extends React.Component {
     })
 
     .then(([draftlings]) => {
-      this.setState( {draftlings})
+      this.setState( {draftlings});
+      this.props.fetchDraftlings();
     })
+
     .catch(error => {
       console.log({ error })
     })

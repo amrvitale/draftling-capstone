@@ -64,7 +64,7 @@ class Edit extends React.Component {
         })
         .then(res => {
           
-            //return res.json()
+        
         })
         .then(draftling => {
             console.log(draftling)
