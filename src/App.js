@@ -58,27 +58,20 @@ class App extends React.Component {
   }
 
   fetchDraftlings(props) {
-      fetch(`${config.API_ENDPOINT}/mydraftlings`)
-    
-    .then(([draftlingsRes]) => {
+    fetch(`${config.API_ENDPOINT}/mydraftlings`)
+    .then((draftlingsRes) => {
       if (!draftlingsRes.ok)
-        return draftlingsRes.json().then(e => Promise.reject(e))
-
-        return Promise.all([
-          draftlingsRes.json(),
-        ])
+        return draftlingsRes.json().then((e) => Promise.reject(e));
+  
+      return draftlingsRes.json();
     })
-
-    .then(([draftlings]) => {
-      this.setState( {draftlings});
-      this.props.fetchDraftlings();
+    .then((draftlings) => {
+      this.setState({ draftlings });
     })
-
-    .catch(error => {
-      console.log({ error })
-    })
+    .catch((error) => {
+      console.log({ error });
+    });
   }
-
   render() {
     const providerValue = {
       addDraftling: this.handleAddDraftling,
@@ -107,7 +100,10 @@ class App extends React.Component {
           />
           <Route path ='/about' component={About} />
           <Route path= '/read' component={Read} />
-          <Route path="/edit/:id" component={Edit} /> 
+          <Route 
+          path="/edit/:id" 
+          render={(props) => <Edit {...props} fetchDraftlings={this.fetchDraftlings}/>} 
+          />
           <Route path='/choosecritique' component={ChooseCritique}/>
           <Route path='/postfreeformcritique' component={CritiqueFreeform} />
           <Route path='/posttemplatecritique' component={CritiqueTemplate} />

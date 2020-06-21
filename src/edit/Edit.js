@@ -68,8 +68,8 @@ class Edit extends React.Component {
         })
         .then(draftling => {
             console.log(draftling)
-            this.props.history.push(`/mydraftlings/`)
-           
+            this.props.fetchDraftlings();
+            this.props.history.push(`/mydraftlings/`);
         })
         .catch(error => {
             console.log({ error })
