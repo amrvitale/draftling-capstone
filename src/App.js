@@ -76,16 +76,6 @@ class App extends React.Component {
       console.log({ error })
     })
   }
-  
- 
- /* handleViewDraftling = draftling => {
-    this.setState( {
-      draftling: [
-        ...this.state.draftling,
-        draftling
-      ]
-    })
-  }*/
 
   render() {
     const providerValue = {
