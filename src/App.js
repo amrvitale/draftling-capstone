@@ -9,7 +9,6 @@ import Dash from './dash/Dash';
 import About from './about/About';
 import './App.css';
 import MyDraftlings from './mydraftlings/MyDraftlings';
-import SearchResults from './searchResults/SearchResults';
 import Read from './read/Read';
 import Edit from './edit/Edit';
 import CritiqueTemplate from './critiquetemplate/CritiqueTemplate';

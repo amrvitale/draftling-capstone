@@ -19,7 +19,7 @@ handleSearch = () => {
 }
 
 makeAPICall = searchInput => {
-    fetch(`${config.API_ENDPOINT}/results`, {
+    fetch(`${config.API_ENDPOINT}/search`, {
         method: 'GET',
         headers: {
             'content-type': 'application/json'

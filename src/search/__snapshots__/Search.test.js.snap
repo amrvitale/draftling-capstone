@@ -193,7 +193,7 @@ exports[`Search component renders a .Search by default 1`] = `
       </option>
     </select>
     <Link
-      to="/results"
+      to="/search"
     >
       <button
         type="submit"

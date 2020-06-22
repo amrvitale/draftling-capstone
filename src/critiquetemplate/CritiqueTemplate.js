@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchResults from '../searchResults/SearchResults'
 import Read from '../read/Read';
 import './CritiqueTemplate.css'
 
