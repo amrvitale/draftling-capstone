@@ -2,22 +2,67 @@ import React from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
 import Published from '../published/Published'
+import config from '../config'
 
 class Search extends React.Component {
+    state = {
+        searchValue: '',
+        draftlings: []
+    };
+
+handleOnChange = event => {
+    this.setState({ searchValue: event.target.value });
+};
+
+handleSearch = () => {
+    this.makeAPICall(this.state.searchValue);
+}
+
+makeAPICall = searchInput => {
+    fetch(`${config.API_ENDPOINT}/results`, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        },   
+    })
+    .then(res => {
+        return res.json();
+    })
+
+    .then(draftling => {
+        this.setState( { draftlings: draftling.draftlings})
+    })
+
+    .catch(error => {
+        console.log({ error })
+    })
+}
+
     render() {
+    
         return (
             <div className="searchPage">
-                <h1>Search For Other Writers's Draftlings</h1>
+                <h1>Search Draftlings</h1>
                 <br />
                 <br />
                 <section className="titleSearch">
                     <label htmlFor="titleSearch">Title:</label>
-                    <input type="text" placeholder="Search by title"></input>
+                    <input 
+                        type="text" 
+                        placeholder="Search by title" 
+                        onChange={event => this.handleOnChange(event)} 
+                        value={this.state.searchValue}
+                     />
                 </section>
                 <br />
                 <section className="wordcountSearch">
                     <label htmlFor="wordcountSearch">Word Count:</label>
-                    <select name="wordcount" id="wordcount" >
+                    <select 
+                        name="wordcount" 
+                        id="wordcount" 
+                        onChange={event => this.handleOnChange(event)} 
+                        value={this.state.searchValue}
+                     >
                         <option></option>
                         <option value="Six word story">Six word story</option>
                         <option value="Minisaga">Minisaga: 50 words</option>
@@ -34,7 +79,12 @@ class Search extends React.Component {
 
                 <section className="genreSearch">
                     <label htmlFor="genreDrop">Search by Fiction Genre</label>
-                    <select name="genreDrop" id="genreDrop">
+                    <select 
+                        name="genreDrop" 
+                        id="genreDrop"
+                        onChange={event => this.handleOnChange(event)} 
+                        value={this.state.searchValue}
+                    >
                         <option></option>
                         <option value="action / adventure">Action / Adventure</option>
                         <option value="classic">Classic</option>
@@ -55,16 +105,24 @@ class Search extends React.Component {
                         <option value="thriller">Thriller</option>
                         <option value="western">Western</option>
                     </select>
-                    <Link to='/results'>
-                        <button type="submit">Search</button>
-                    </Link>
                 </section>
-                <br />
-                <br />
-                <Published />
+
+                    <button type="submit" onClick={this.handleSearch}>Search</button>
+                    {this.state.draftlings ? (
+                        <div id="draftlingSearchResultContainer">
+                            {this.state.draftlings.map((draftling, index) => (
+                                <div class="single-draftling" key={index}>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>Search for a draftling</p>
+                    )}
             </div>
         );
     }
 }
 
 export default Search;
+
+
