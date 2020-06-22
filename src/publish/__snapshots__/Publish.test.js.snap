@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Publish component renders a .Publish by default 1`] = `<div />`;

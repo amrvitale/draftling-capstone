@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dash component renders a .Dash by default 1`] = `
+<div
+  className="draftlingDash"
+>
+  <h1>
+    My Draftling Dashboard
+  </h1>
+  <Link
+    to="/postdraftling"
+  >
+    <button
+      type="submit"
+    >
+      Post New Draftling
+    </button>
+  </Link>
+  <br />
+  <br />
+  <Link
+    to="/mydraftlings"
+  >
+    <button
+      type="submit"
+    >
+      View My Draftlings
+    </button>
+  </Link>
+</div>
+`;

@@ -12,9 +12,9 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    background-color: #EAE7DC;
-    border-bottom: 1px solid #EAE7DC;; 
-    border-top: 1px solid #EAE7DC;;
+    background-color: #edf2f4;
+    border-bottom: 1px solid #edf2f4;; 
+    border-top: 1px solid #edf2f4;;
     text-align: center;
     margin-bottom: 3px;
 }
@@ -30,6 +30,6 @@
     padding: 8px 15px;
     text-decoration: none;
     font-weight: bold;
-    color: #5C2018;
+    color: #D80032;
     text-align: center;
 }

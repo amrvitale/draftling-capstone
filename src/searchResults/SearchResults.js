@@ -6,6 +6,8 @@ class SearchResults extends React.Component {
         return (
             <div className="searchResults">
                 <h1>Search Results</h1>
+                <br />
+                <br />
                 <section className="resultsPlaceholder">
                 <Link to='/read'>
                     <button type="submit">Read</button>

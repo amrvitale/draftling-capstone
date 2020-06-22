@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Draftling component renders a .Draftling by default 1`] = `
+<div
+  className="draftling"
+>
+  <h2
+    className="draftling-title"
+  >
+    <Link
+      to="/draftling/undefined"
+    />
+  </h2>
+  <p>
+    ,
+    <br />
+    ,
+    <br />
+    Modified: 
+    Invalid Date
+  </p>
+</div>
+`;
+
+exports[`Draftling component renders the Draftling given props 1`] = `
+<div
+  className="draftling"
+>
+  <h2
+    className="draftling-title"
+  >
+    <Link
+      to="/draftling/13"
+    >
+      test-draftling
+    </Link>
+  </h2>
+  <p>
+    sixWordStory
+    ,
+    <br />
+    Horror
+    ,
+    <br />
+    Modified: 
+    Fri Jul 17 2020
+  </p>
+</div>
+`;

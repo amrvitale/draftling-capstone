@@ -40,6 +40,8 @@ class DraftlingPage extends React.Component {
                   <br />
                 <p>Length Type: {(selectedDraftling) ? selectedDraftling.wordcount: ""}</p> 
                   <br />
+                  <p>{(selectedDraftling) ? selectedDraftling.genre: ""}</p>
+                  <br />
                 <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
               </section>
 

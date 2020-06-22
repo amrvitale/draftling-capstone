@@ -10,6 +10,7 @@ class Edit extends React.Component {
     state = {
         title: "",
         wordcount: "",
+        genre: "",
         content: ""
     }
 
@@ -51,6 +52,7 @@ class Edit extends React.Component {
             title: this.state.title,
             wordcount: this.state.wordcount,
             content: this.state.content,
+            genre: this.state.genre,
             modified: new Date(),
         }
         console.log(newDraftling)
@@ -112,6 +114,28 @@ class Edit extends React.Component {
                         <option value="Novel">Novel: 60,0001 + words</option>
                     </select>
                     <br />
+                    <label htmlFor="genre">Choose a genre.</label>
+                    <select value={this.state.genre} name="genre" id="genre" onChange={this.handleChange} required>
+                        <option></option>
+                        <option value="Action/Adventure">Action/Adventure</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Contempory">Contempory</option>
+                        <option value="Crime/Detective">Crime/Detective</option>
+                        <option value="Fable">Fable</option>
+                        <option value="Fairy Tale">Fairy Tale</option>
+                        <option value="Folktale">Folktale</option>
+                        <option value="Gothic">Gothic</option>
+                        <option value="Historical Fiction">Historical Fiction</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Humor">Humor</option>
+                        <option value="Magical Realism">Magical realism</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Western">Western</option>
+                    </select>
+                    <br/>
                     <textarea value={this.state.content} style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
                     <br/>
                     <input type="submit" value="Submit Draft to My Dash"></input>

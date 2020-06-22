@@ -9,7 +9,7 @@ export default class Draftling extends React.Component {
 
   
     render() {
-        const { title, id, content, wordcount, modified} = this.props
+        const { title, id, content, wordcount, genre, modified} = this.props
 
         const date = new Date(modified);
 
@@ -24,7 +24,9 @@ export default class Draftling extends React.Component {
                 <p>
                     {wordcount},
                     <br />
-                    {modified}
+                    {genre},
+                    <br />
+                   Modified: {date.toDateString()}
                 </p>
             </div>
         )

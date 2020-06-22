@@ -7,29 +7,29 @@
 }
 
 body {
-  background-color:#EAE7DC;
+  background-color:#edf2f4;
   
 }
 
   input, label, select {
-    border: 1 px solid gray;
+    border: 1 px solid #8d99ae;
     margin: 5px;
   }
 
 
 button {
   cursor: pointer;
-  background: #8E8D8A;
+  background: #8D99AE;
   border: 0;
   font-size: 1rem;
   margin: 1%;
   padding: 10px;
-  color: #5C2018;
+  color: #d80032;
   font-weight: bold;
   border-radius: 15px;
 }
 button:hover {
-  background-color:#86B3D1;
+  background-color:#2B2D42;
 }
 ul {
   text-align: center;

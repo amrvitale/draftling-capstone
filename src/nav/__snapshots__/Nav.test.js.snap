@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component renders a .Nav by default 1`] = `
+<div>
+  <ul
+    id="navbar"
+  >
+    <li>
+      <Link
+        to="/mydash"
+      >
+        MY DASHBOARD
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/about"
+      >
+        ABOUT
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/search"
+      >
+        SEARCH DRAFTLINGS
+      </Link>
+    </li>
+  </ul>
+</div>
+`;
