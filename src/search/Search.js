@@ -7,15 +7,21 @@ import config from '../config'
 class Search extends React.Component {
     state = {
         searchValue: '',
+        wordcountValue: '',
+        genreValue: '',
         draftlings: []
     };
 
 handleOnChange = event => {
     this.setState({ searchValue: event.target.value });
+    this.setState( {wordcountValue: event.target.value});
+    this.setState( {genreValue: event.target.value});
 };
 
 handleSearch = () => {
     this.makeAPICall(this.state.searchValue);
+    this.makeAPICall(this.state.wordcountValue);
+    this.makeAPICall(this.state.genreValue);
 }
 
 makeAPICall = searchInput => {
@@ -61,7 +67,7 @@ makeAPICall = searchInput => {
                         name="wordcount" 
                         id="wordcount" 
                         onChange={event => this.handleOnChange(event)} 
-                        value={this.state.searchValue}
+                        value={this.state.wordcountValue}
                      >
                         <option></option>
                         <option value="Six word story">Six word story</option>
@@ -76,14 +82,14 @@ makeAPICall = searchInput => {
                         <option value="Novel">Novel: 60,0001 + words</option>
                     </select>
                 </section>
-
+                <br />
                 <section className="genreSearch">
                     <label htmlFor="genreDrop">Search by Fiction Genre</label>
                     <select 
                         name="genreDrop" 
                         id="genreDrop"
                         onChange={event => this.handleOnChange(event)} 
-                        value={this.state.searchValue}
+                        value={this.state.genreValue}
                     >
                         <option></option>
                         <option value="action / adventure">Action / Adventure</option>
