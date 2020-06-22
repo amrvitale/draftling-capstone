@@ -87,7 +87,6 @@ class App extends React.Component {
           <Route path='/login' component={Login} />
           <Route path ='/mydash' component={Dash}/>
           <Route path='/search' component={Search}/>
-          <Route path='/results' component={SearchResults} />
           <Route path ='/postdraftling' component={PostDraftling} />
 
           <Route 
