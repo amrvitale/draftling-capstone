@@ -57,7 +57,7 @@ class App extends React.Component {
     })
   }
 
-  fetchDraftlings(props) {
+  fetchDraftlings = (props) => {
     fetch(`${config.API_ENDPOINT}/mydraftlings`)
     .then((draftlingsRes) => {
       if (!draftlingsRes.ok)

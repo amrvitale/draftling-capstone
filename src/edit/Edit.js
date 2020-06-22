@@ -62,10 +62,7 @@ class Edit extends React.Component {
             },
             body: JSON.stringify(newDraftling),
         })
-        .then(res => {
-          
         
-        })
         .then(draftling => {
             console.log(draftling)
             this.props.fetchDraftlings();
