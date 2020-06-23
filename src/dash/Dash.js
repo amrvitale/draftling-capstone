@@ -9,7 +9,8 @@ class Dash extends React.Component {
         return (
             <div className="draftlingDash">
                 <h1>My Draftling Dashboard</h1>
-
+                <br />
+                <br />
                 <Link to='/postdraftling'>
                     <button type="submit">Post New Draftling</button>
                 </Link>
