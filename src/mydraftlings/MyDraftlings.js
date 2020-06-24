@@ -11,6 +11,8 @@ class MyDraftlings extends React.Component {
         return (
             <div className="mydraftlings">
                 <h1>My Draftlings</h1>
+                <br />
+                <br />
                 <section className="draftling1">
                 <ul>
                         {this.props.draftlings.map(draftling =>

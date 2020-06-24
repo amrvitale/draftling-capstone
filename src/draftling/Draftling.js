@@ -2,6 +2,7 @@ import React from 'react'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import { Link } from 'react-router-dom'
+import './Draftling.css'
 
 export default class Draftling extends React.Component {
     
@@ -14,21 +15,25 @@ export default class Draftling extends React.Component {
         const date = new Date(modified);
 
         return (
-            <div className="draftling">
+                <div className="row">
+                    <div className="card">
                 <h2 className="draftling-title">
                     <Link to={`/draftling/${id}`}>
                         {title}
                        
                     </Link>
                 </h2>
-                <p>
+                <p className="wordCountGenre">
                     {wordcount},
                     <br />
-                    {genre},
+                    {genre}
                     <br />
-                   Modified: {date.toDateString()}
                 </p>
-            </div>
+                <p className="dateCreated">Created: {date.toDateString()}
+
+                </p>
+                    </div>
+                </div>
         )
     }
 }
