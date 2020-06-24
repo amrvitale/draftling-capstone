@@ -1,7 +1,6 @@
 import React from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
-import Published from '../published/Published'
 import config from '../config'
 
 class Search extends React.Component {
@@ -19,23 +18,26 @@ handleOnChange = event => {
 };
 
 handleSearch = () => {
-    this.makeAPICall(this.state.searchValue);
-    this.makeAPICall(this.state.wordcountValue);
-    this.makeAPICall(this.state.genreValue);
+    this.makeAPICall();
+  
 }
 
 makeAPICall = searchInput => {
-    fetch(`${config.API_ENDPOINT}/search`, {
+    let url = `${config.API_ENDPOINT}/search/`;
+    let searchTerms = [];
+    if (this.state.searchValue.length > 0) searchTerms.push(`search=${this.state.searchValue}`);
+    if (this.state.wordcountValue.length > 0) searchTerms.push(`wordcount=${this.state.wordcountValue}`);
+    if (this.state.genreValue.length > 0) searchTerms.push(`genre=${this.state.genreValue}`);
+    url += searchTerms.join('&');
+    fetch(url, {
         method: 'GET',
         headers: {
             'content-type': 'application/json'
         },   
     })
-    .then(res => {
-        return res.json();
-    })
 
     .then(draftling => {
+        console.log(draftling)
         this.setState( { draftlings: draftling.draftlings})
     })
 
@@ -114,6 +116,7 @@ makeAPICall = searchInput => {
                 </section>
 
                     <button type="submit" onClick={this.handleSearch}>Search</button>
+                    <br />
                     {this.state.draftlings ? (
                         <div id="draftlingSearchResultContainer">
                             {this.state.draftlings.map((draftling, index) => (
