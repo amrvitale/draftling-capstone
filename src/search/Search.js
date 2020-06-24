@@ -5,17 +5,23 @@ import config from '../config'
 
 class Search extends React.Component {
     state = {
-        searchValue: '',
+        titleValue: '',
         wordcountValue: '',
         genreValue: '',
         draftlings: []
     };
 
-handleOnChange = event => {
-    this.setState({ searchValue: event.target.value });
-    this.setState( {wordcountValue: event.target.value});
-    this.setState( {genreValue: event.target.value});
+handleTitleChange = event => {
+    this.setState({ titleValue: event.target.value });
 };
+
+handleGenreChange = event => {
+    this.setState( {genreValue: event.target.value});
+}
+
+handleWordCountChange = event => {
+    this.setState( {wordcountValue: event.target.value});
+}
 
 handleSearch = () => {
     this.makeAPICall();
@@ -25,7 +31,7 @@ handleSearch = () => {
 makeAPICall = searchInput => {
     let url = `${config.API_ENDPOINT}/search/`;
     let searchTerms = [];
-    if (this.state.searchValue.length > 0) searchTerms.push(`search=${this.state.searchValue}`);
+    if (this.state.titleValue.length > 0) searchTerms.push(`title=${this.state.titleValue}`);
     if (this.state.wordcountValue.length > 0) searchTerms.push(`wordcount=${this.state.wordcountValue}`);
     if (this.state.genreValue.length > 0) searchTerms.push(`genre=${this.state.genreValue}`);
     url += searchTerms.join('&');
@@ -58,8 +64,8 @@ makeAPICall = searchInput => {
                     <input 
                         type="text" 
                         placeholder="Search by title" 
-                        onChange={event => this.handleOnChange(event)} 
-                        value={this.state.searchValue}
+                        onChange={event => this.handleTitleChange(event)} 
+                        value={this.state.titleValue}
                      />
                 </section>
                 <br />
@@ -68,7 +74,7 @@ makeAPICall = searchInput => {
                     <select 
                         name="wordcount" 
                         id="wordcount" 
-                        onChange={event => this.handleOnChange(event)} 
+                        onChange={event => this.handleWordCountChange(event)} 
                         value={this.state.wordcountValue}
                      >
                         <option></option>
@@ -90,7 +96,7 @@ makeAPICall = searchInput => {
                     <select 
                         name="genreDrop" 
                         id="genreDrop"
-                        onChange={event => this.handleOnChange(event)} 
+                        onChange={event => this.handleGenreChange(event)} 
                         value={this.state.genreValue}
                     >
                         <option></option>
