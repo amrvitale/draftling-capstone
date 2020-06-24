@@ -29,7 +29,7 @@ handleSearch = () => {
 }
 
 makeAPICall = searchInput => {
-    let url = `${config.API_ENDPOINT}/search/`;
+    let url = `${config.API_ENDPOINT}/search?`;
     let searchTerms = [];
     if (this.state.titleValue.length > 0) searchTerms.push(`title=${this.state.titleValue}`);
     if (this.state.wordcountValue.length > 0) searchTerms.push(`wordcount=${this.state.wordcountValue}`);

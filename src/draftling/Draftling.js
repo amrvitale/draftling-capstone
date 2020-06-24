@@ -15,23 +15,24 @@ export default class Draftling extends React.Component {
         const date = new Date(modified);
 
         return (
-                <div className="row">
-                    <div className="card">
-                <h2 className="draftling-title">
-                    <Link to={`/draftling/${id}`}>
-                        {title}
-                       
-                    </Link>
-                </h2>
-                <p className="wordCountGenre">
-                    {wordcount},
-                    <br />
-                    {genre}
-                    <br />
-                </p>
-                <p className="dateCreated">Created: {date.toDateString()}
-
-                </p>
+                <div className="container">
+                    <div className="cards">
+                        <Link to={`/draftling/${id}`}>
+                            <a className="card">  
+                                <span className="card-header">
+                                    <span className="card-title">
+                                        <h2>{title}</h2> 
+                                    </span>
+                                </span>
+                                <span className="card-summary">
+                                    {wordcount},
+                                    <br />
+                                    {genre}
+                                    <br />
+                                </span>
+                                <span className="card-meta">Created: {date.toDateString()}</span>
+                            </a>
+                        </Link>
                     </div>
                 </div>
         )
