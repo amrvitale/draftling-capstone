@@ -2,6 +2,7 @@ import React from 'react';
 import './Search.css';
 import { Link } from 'react-router-dom';
 import config from '../config'
+import Draftling from '../draftling/Draftling'
 
 class Search extends React.Component {
     state = {
@@ -42,9 +43,19 @@ makeAPICall = searchInput => {
         },   
     })
 
-    .then(draftling => {
+    .then((response) => {
+        if(!response.ok) {
+            throw response.message;
+        }
+        console.log("the whole response", response)
+        return response.json();
+    })
+
+    .then((responseJson) => {
+        let draftling = responseJson.draftlings;
         console.log(draftling)
-        this.setState( { draftlings: draftling.draftlings})
+        this.setState( { draftlings: draftling})
+        console.log({draftlings: draftling})
     })
 
     .catch(error => {
@@ -127,16 +138,21 @@ makeAPICall = searchInput => {
                     <br />
                     {this.state.draftlings ? (
                         <div id="draftlingSearchResultContainer">
-                            {this.state.draftlings.map((draftling, index) => (
+                            <h1>Search Results</h1>
+                                {this.state.draftlings.map((draftling, index) => (
                                 <div class="single-draftling" key={index}>
+                                    <Draftling 
+                                    {...draftling}
+                                     />
+                                    
                                 </div>
                             ))}
                         </div>
                     ) : (
                    
-                        <h1>Search Results</h1>
-                      
+                      <p>No results found for your search. Please search again!</p>
                     )}
+                    
             </div>
         );
     }
