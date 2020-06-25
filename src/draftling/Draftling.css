@@ -1,12 +1,26 @@
-* {
-    box-sizing: border-box;
-  }
-
-.container {
-  display: flex;
-  flex-direction: row;
-	
+.individualCard {
+  text-align: center;
+  padding: 15px;
+  margin: 1px;
 }
-.card {
- display: flex;
+a {
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 19px;
+}
+
+.card-summary {
+  font-size: 18px;
+}
+
+.card-meta {
+  font-size: 16px;
+}
+.card-header {
+  height: 30%;
+  color: white;
+  background: red;
+  text-align: center;
 }

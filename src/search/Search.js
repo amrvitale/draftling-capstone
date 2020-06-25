@@ -122,6 +122,9 @@ makeAPICall = searchInput => {
 
                     <button type="submit" onClick={this.handleSearch}>Search</button>
                     <br />
+                    <br />
+                    <br />
+                    <br />
                     {this.state.draftlings ? (
                         <div id="draftlingSearchResultContainer">
                             {this.state.draftlings.map((draftling, index) => (
@@ -130,7 +133,9 @@ makeAPICall = searchInput => {
                             ))}
                         </div>
                     ) : (
-                        <p>Search for a draftling</p>
+                   
+                        <h1>Search Results</h1>
+                      
                     )}
             </div>
         );

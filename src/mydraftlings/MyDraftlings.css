@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+
+     
+  }
+.card {
+    
+    margin: 1px;
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: white;
+    justify-content: space-around;
+
+  }
+
+  .container .card {
+    padding: 3px;
+    flex: 1 1 20%;
+    display: flex;
+    border: 1px red solid;
+    max-height: 150px;
+    max-width: 420px;
+    justify-self: auto;
+
+}
+
+li.card{
+    
+    margin: 30px;
+}
