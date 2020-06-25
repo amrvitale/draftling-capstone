@@ -100,24 +100,23 @@ makeAPICall = searchInput => {
                         value={this.state.genreValue}
                     >
                         <option></option>
-                        <option value="action / adventure">Action / Adventure</option>
-                        <option value="classic">Classic</option>
-                        <option value="contemporary">Contemporary</option>
-                        <option value="crime/detective">Crime / Detective</option>
-                        <option value="fable">Fable</option>
-                        <option value="fairy tale">Fairy Tale</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="folktale">Folktale</option>
-                        <option value="gothic">Gothic</option>
-                        <option value="historical fiction">Historical Fiction</option>
-                        <option value="horror">Horror</option>
-                        <option value="humor">Humor</option>
-                        <option value="magical realism">Magical realism</option>
-                        <option value="mystery">Mystery</option>
-                        <option value="romance">Romance</option>
-                        <option value="science fiction">Science Fiction</option>
-                        <option value="thriller">Thriller</option>
-                        <option value="western">Western</option>
+                        <option value="Action/Adventure">Action/Adventure</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Contempory">Contempory</option>
+                        <option value="Crime/Detective">Crime/Detective</option>
+                        <option value="Fable">Fable</option>
+                        <option value="Fairy Tale">Fairy Tale</option>
+                        <option value="Folktale">Folktale</option>
+                        <option value="Gothic">Gothic</option>
+                        <option value="Historical Fiction">Historical Fiction</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Humor">Humor</option>
+                        <option value="Magical Realism">Magical realism</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Western">Western</option>
                     </select>
                 </section>
 
