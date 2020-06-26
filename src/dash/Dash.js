@@ -8,18 +8,18 @@ class Dash extends React.Component {
     render() {
         return (
             <div className="draftlingDash">
-                <h1>My Draftling Dashboard</h1>
+                <h1 className="myPage">My Draftlings Desk</h1>
                 <br />
                 <br />
                 <Link to='/postdraftling'>
-                    <button type="submit">Post New Draftling</button>
+                    <button type="submit" className="postNew">Post New Draftling</button>
                 </Link>
 
                 <br/>
                 <br/>
 
                 <Link to='/mydraftlings'>
-                    <button type="submit">View My Draftlings</button>
+                    <button type="submit" className="viewMyDraftlings">View My Draftlings</button>
                 </Link>
             </div>
         );

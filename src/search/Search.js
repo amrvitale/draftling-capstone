@@ -67,7 +67,7 @@ makeAPICall = searchInput => {
     
         return (
             <div className="searchPage">
-                <h1>Search Draftlings</h1>
+                <h1 className="searchHeading">Search Draftlings</h1>
                 <br />
                 <br />
                 <section className="titleSearch">
@@ -138,13 +138,13 @@ makeAPICall = searchInput => {
                     <br />
                     {this.state.draftlings ? (
                         <div id="draftlingSearchResultContainer">
-                            <h1>Search Results</h1>
+                          
+                      
                                 {this.state.draftlings.map((draftling, index) => (
                                 <div class="single-draftling" key={index}>
                                     <Draftling 
                                     {...draftling}
                                      />
-                                    
                                 </div>
                             ))}
                         </div>

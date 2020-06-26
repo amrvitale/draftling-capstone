@@ -73,7 +73,7 @@ class PostDraftling extends React.Component {
         }
         return (
             <div className="postDraftling">
-                <h1>Post your Draftling below</h1>
+                <h1 className="postHeader">Post your Draftling below</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="draftlingTitle">Draftling Title:</label>
                     <input type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>

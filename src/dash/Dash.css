@@ -1,0 +1,17 @@
+.draftlingDash {
+    background-image: url(desk.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+
+.myPage {
+    fill: #35322a;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 120px;
+    font-weight: 900;
+}

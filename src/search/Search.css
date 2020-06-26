@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  #draftlingSearchResultContainer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.single-draftling {
+    margin: 1px;
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+#draftlingSearchResultContainer .single-draftling {
+    padding: 3px;
+    display: flex;
+    border: 1px red solid;
+   
+}
+
+div.single-draftling {
+    margin: 30px;
+    justify-self: center;
+    height: 150px;
+    width: 320px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+.searchPage {
+    background-image: url(./whitebookyellowbackground.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+
+.searchHeading {
+    fill: #35322a;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 120px;
+    font-weight: 900;
+}

@@ -4,13 +4,14 @@ import Read from '../read/Read';
 import Draftling from '../draftling/Draftling';
 import DraftlingPage from '../draftlingpage/DraftlingPage';
 import './MyDraftlings.css'
+import background from './bookshelves.jpg'
 
 class MyDraftlings extends React.Component {
     render() {
         console.log(this.props.draftlings);
         return (
           <div className="myDraftlingsPage">
-                <h1>My Draftlings</h1>
+                <h1 className="myDraftlingsHeading">My Draftlings</h1>
                     <br />
                         <ul className="container">
                                 {this.props.draftlings.map(draftling =>
@@ -26,6 +27,7 @@ class MyDraftlings extends React.Component {
                                     </li>
                                 )} 
                         </ul>
+                     
             </div>
     )};
 }
