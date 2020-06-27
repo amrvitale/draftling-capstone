@@ -1,0 +1,24 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.aboutHero {
+    background-image: url('./pen-and-notebook-1119792.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+
+.aboutHeader{
+    color: #35322a;    
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 120px;
+    font-weight: 900;
+}
+
+p, ul, h2 {
+    color: whitesmoke;
+}

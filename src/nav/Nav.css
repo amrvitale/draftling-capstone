@@ -25,6 +25,7 @@
     display: inline;
     text-align: center;
     font-size: 25px;
+    padding-right: 40px;
 }
 
 #navbar  a {
@@ -32,6 +33,6 @@
     padding: 8px 15px;
     text-decoration: none;
     font-weight: bold;
-    color: #D80032;
+    color: whitesmoke;
     text-align: center;
 }

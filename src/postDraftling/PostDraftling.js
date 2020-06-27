@@ -72,13 +72,19 @@ class PostDraftling extends React.Component {
             minWidth: '200px'
         }
         return (
-            <div className="postDraftling">
-                <h1 className="postHeader">Post your Draftling below</h1>
+            <div className="postDraftlingPage">
+                <div className="postDraftlingHero">
+                    <h1 className="postHeader">Write your Draftling</h1>
+                    <p className="instructions">Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
+                </div>
+                <br />
+                <br />
+
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="draftlingTitle">Draftling Title:</label>
+                    <label className="postLabel" htmlFor="draftlingTitle">Draftling Title:</label>
                     <input type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />
-                    <label htmlFor="wordcount">Choose an approximate word count.</label>
+                    <label className="postLabel" htmlFor="wordcount">Choose an approximate word count.</label>
                     <select name="wordcount" id="wordcount" onChange={this.handleChange} required>
                         <option></option>
                         <option value="Six word story">Six word story</option>
@@ -93,7 +99,7 @@ class PostDraftling extends React.Component {
                         <option value="Novel">Novel: 60,0001 + words</option>
                     </select>
                     <br />
-                    <label htmlFor="genre">Choose a genre.</label>
+                    <label className="postLabel" htmlFor="genre">Choose a genre.</label>
                     <select name="genre" id="genre" onChange={this.handleChange} required>
                         <option></option>
                         <option value="Action/Adventure">Action/Adventure</option>
@@ -117,7 +123,7 @@ class PostDraftling extends React.Component {
                     <br/>
                     <textarea style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
                     <br/>
-                    <input type="submit" value="Submit Draft to My Dash"></input>
+                    <input type="submit" value="Submit Draft to My Shelf"></input>
                 </form>
             </div>
         )

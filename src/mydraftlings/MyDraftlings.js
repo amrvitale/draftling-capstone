@@ -11,8 +11,9 @@ class MyDraftlings extends React.Component {
         console.log(this.props.draftlings);
         return (
           <div className="myDraftlingsPage">
-                <h1 className="myDraftlingsHeading">My Draftlings</h1>
-                    <br />
+              <div className="myDraftlingsPageHero">
+                <h1 className="myDraftlingsHeading">My Draftlings Shelf</h1>
+                </div>
                         <ul className="container">
                                 {this.props.draftlings.map(draftling =>
                                     <li className="card" key={draftling.id}>

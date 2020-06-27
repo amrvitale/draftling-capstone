@@ -26,10 +26,10 @@ button {
   padding: 10px;
   color: #d80032;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 button:hover {
-  background-color:#2B2D42;
+  background-color:#e8e9fa;
 }
 ul {
   text-align: center;
