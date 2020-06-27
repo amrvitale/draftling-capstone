@@ -4,6 +4,7 @@ import DraftlingPage from '../draftlingpage/DraftlingPage'
 import ApiContext from '../ApiContext'
 import {findDraftling} from '../draftlings-helpers'
 import config from '../config'
+import './Edit.css'
 
 class Edit extends React.Component {
 
@@ -92,14 +93,20 @@ class Edit extends React.Component {
             minWidth: '200px'
         }
         return (
-            <div className="edit">
-                 <form onSubmit={this.handleSubmit}>
-                     <h1>Edit Your Draftling</h1>
+            <div className="editPage">
+                <div className="editHero">
+                     <h1 className="editHeader">Edit Your Draftling</h1>
+                     <p className="instructions">Edit any fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
+
+                     </div>
                      <br />
-                    <label htmlFor="draftlingTitle">Draftling Title:</label>
+                     <br />
+
+                     <form onSubmit={this.handleSubmit}>
+                    <label className="postLabel" htmlFor="draftlingTitle">Draftling Title:</label>
                     <input value={this.state.title} type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />
-                    <label htmlFor="wordcount">Choose an approximate word count.</label>
+                    <label className="postLabel" htmlFor="wordcount">Choose an approximate word count.</label>
                     <select value={this.state.wordcount} name="wordcount" id="wordcount" onChange={this.handleChange} required>
                         <option></option>
                         <option value="Six word story">Six word story</option>
@@ -114,7 +121,7 @@ class Edit extends React.Component {
                         <option value="Novel">Novel: 60,0001 + words</option>
                     </select>
                     <br />
-                    <label htmlFor="genre">Choose a genre.</label>
+                    <label className="postLabel" htmlFor="genre">Choose a genre.</label>
                     <select value={this.state.genre} name="genre" id="genre" onChange={this.handleChange} required>
                         <option></option>
                         <option value="Action/Adventure">Action/Adventure</option>

@@ -5,6 +5,7 @@ import Draftling from '../draftling/Draftling';
 import {findDraftling} from '../draftlings-helpers'
 import { Link } from 'react-router-dom'
 import Edit from '../edit/Edit'
+import './DraftlingPage.css'
 
 class DraftlingPage extends React.Component {
     static defaultProps = {

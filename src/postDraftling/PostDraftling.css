@@ -7,6 +7,7 @@ select, input, label {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     min-height: 350px;
+    background-size: 100%;
 }
 
 .postHeader {
