@@ -14,9 +14,21 @@ class DraftlingPage extends React.Component {
         }
       }
       static contextType = ApiContext    
-   
+      
+      apiData = {};
     
-        
+    updateDraftling() {
+      //get apiData 
+      //update the apiData
+      //make sure front end is changed, make sure data gets refreshed
+    } 
+
+    deleteDraftling() {
+      //delete apiData in front end
+      //delete apiData in back end
+      //make sure front end is changed, make sure data gets refreshed
+    } 
+    
 
     render() {
         const {draftlings = [] } = this.context
@@ -26,14 +38,26 @@ class DraftlingPage extends React.Component {
         console.log(draftlings, selectedDraftling)
         console.log(selectedDraftling)
 
+        //both publish and delete buttons should be functions that run js, do not take to new page
+        //if published show un
+        //if un show published
 
+        let buttonVar;
+
+        if (this.apiData.status === "published") {
+          //buttonVar = unpublished
+        }
+        else {
+         //buttonVar = published;
+        }
+        ////{buttonVar}
         return (
             <div>
               <section className="myDraftActions">
                <Link to={`/edit/${slug}`}>
                   <button type="button">Edit</button>
                 </Link> 
-
+              
                   <button type="button">Publish</button>
 
                 <button type="button">Delete</button>
