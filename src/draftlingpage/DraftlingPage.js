@@ -33,7 +33,9 @@ class DraftlingPage extends React.Component {
                <Link to={`/edit/${slug}`}>
                   <button type="button">Edit</button>
                 </Link> 
-                <button type="button">Publish</button>
+
+                  <button type="button">Publish</button>
+
                 <button type="button">Delete</button>
               </section>
               <section className="draftViewOfSelected">

@@ -84,7 +84,7 @@ class App extends React.Component {
           <Nav />
           <Route exact path ='/' component={Signup} />
           <Route path='/login' component={Login} />
-          <Route path ='/mydash' component={Dash}/>
+          <Route path ='/mydesk' component={Dash}/>
           <Route path='/search' component={Search}/>
           <Route path ='/postdraftling' component={PostDraftling} />
 
@@ -99,8 +99,12 @@ class App extends React.Component {
           <Route path ='/about' component={About} />
           <Route path= '/read' component={Read} />
           <Route 
-          path="/edit/:id" 
-          render={(props) => <Edit {...props} fetchDraftlings={this.fetchDraftlings}/>} 
+            path="/edit/:id" 
+            render={(props) => <Edit {...props} fetchDraftlings={this.fetchDraftlings}/>} 
+          />
+          <Route 
+            path='/:id/update_status' 
+            render={(props) => <Publish {...props} fetchDraftlings={this.fetchDraftlings} />} 
           />
           <Route path='/choosecritique' component={ChooseCritique}/>
           <Route path='/postfreeformcritique' component={CritiqueFreeform} />
