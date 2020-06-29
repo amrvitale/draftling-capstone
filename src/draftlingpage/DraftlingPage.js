@@ -16,21 +16,6 @@ class DraftlingPage extends React.Component {
         }
       }
       static contextType = ApiContext    
-      
-    constructor(props) {
-      super(props);
-      this.handlePublishClick = this.handlePublishClick.bind(this);
-      this.handleUnpublishClick = this.handleUnpublishClick.bind(this);
-      this.state = {isPublished: false};
-    }
-
-    handlePublishClick() {
-      this.setState( {isPublished: true });
-    }
-
-    handleUnpublishClick() {
-      this.setState({isPublished: false});
-    }
 
     updateDraftlingStatus() {
       let url = `${config.API_ENDPOINT}/:id/update_status`;
