@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.welcomeHero {
+    background-image: url('./welcome.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+
+.welcomeHeader{
+    color: rgb(204, 171, 171);    
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 120px;
+    font-weight: 900;
+    text-shadow:
+    4px 4px 0 black,
+    -3px -3px 0 whitesmoke,  
+     3px -3px 0 whitesmoke,
+     -3px 3px 0 whitesmoke,
+      3px 3px 0 whitesmoke;
+}
+
+.tagline {
+    color: rgb(204, 171, 171);
+    font-size: 60px;
+    text-shadow:
+    3px 3px 0 black,
+    -2px -2px 0 whitesmoke,  
+     2px -2px 0 whitesmoke,
+     -2px 2px 0 whitesmoke,
+      2px 2px 0 whitesmoke;
+}
+p, ul {
+    color: whitesmoke;
+}

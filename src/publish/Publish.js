@@ -4,7 +4,7 @@ class Publish extends React.Component {
     render() {
         return (
             <div>
-                <button>
+                <button onClick={this.props.onClick}>
                     Publish
                 </button>
             </div>

@@ -11,7 +11,12 @@ class Signup extends React.Component {
         return (
             <div>
                <section className="welcome">
-                    <h1>Welcome to Draftling, a Highly Productive Writing Community!</h1>
+                   <div className="welcomeHero">
+                    <h1 className="welcomeHeader">Welcome to Draftling 
+                    </h1>
+                    <h2 className="tagline">A Highly Productive Writing Community</h2>
+                    </div>
+                    
                     <p>Are you a writer who wants feedback? Are you an avid reader who enjoys providing feedback to aspriring authors? Maybe you're an editor at heart, ready to mark up copy? Then you're in the WRITE PLACE </p>
                      
                </section>

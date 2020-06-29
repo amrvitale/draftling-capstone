@@ -4,7 +4,7 @@ class Unpublish extends React.Component {
     render() {
         return (
             <div>
-                <button>
+                <button onClick={this.props.onClick}>
                     Unpublish
                 </button>
             </div>

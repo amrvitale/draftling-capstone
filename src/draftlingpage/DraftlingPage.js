@@ -16,9 +16,11 @@ class DraftlingPage extends React.Component {
         }
       }
       static contextType = ApiContext    
-
     updateDraftlingStatus() {
-      let url = `${config.API_ENDPOINT}/:id/update_status`;
+      const {slug} = this.props.match.params;
+        const id = parseInt(slug);
+      console.log('clicked')
+      let url = `${config.API_ENDPOINT}/${id}/update_status`;
       fetch(url, {
         method: 'PUT',
         headers: {
@@ -45,12 +47,12 @@ class DraftlingPage extends React.Component {
     
     render() {
         const {draftlings = [] } = this.context
-        const {slug} = this.props.match.params
+        const {slug} = this.props.match.params;
         console.log(slug)
+    
         let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
         console.log(draftlings, selectedDraftling)
         console.log(selectedDraftling)
-        let status = {};
 
         let statusButton;
 
