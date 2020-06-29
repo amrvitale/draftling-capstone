@@ -55,6 +55,20 @@ class App extends React.Component {
       ]
     })
   }
+  handlePublishDraftling = (id, status) => {
+    this.setState( {
+      draftlings: this.state.draftlings.map((draftling) => {
+         if (draftling.id === id) {
+            return {
+              ...draftling,
+              status: status
+            } 
+         } else {
+          return draftling;
+         }
+       })
+    })
+  }
 
   fetchDraftlings = (props) => {
     fetch(`${config.API_ENDPOINT}/mydraftlings`)

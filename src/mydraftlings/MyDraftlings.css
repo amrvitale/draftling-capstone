@@ -47,9 +47,16 @@ li.card{
 }
 
 .myDraftlingsHeading {
-    color: #35322a;    
-    font-family: 'Playfair Display', 'Georgia', serif;
+  -webkit-text-stroke: 1px maroon;
+  -webkit-text-fill-color: whitesmoke;    
+  font-family: 'Playfair Display', 'Georgia', serif;
     font-size: 120px;
     font-weight: 900;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
 		
 }

@@ -17,12 +17,15 @@ class DraftlingPage extends React.Component {
       
       apiData = {};
     
-    updateDraftling() {
-      //get apiData 
-      //update the apiData
-      //make sure front end is changed, make sure data gets refreshed
-    } 
-
+    updateDraftlingStatus() {
+      let url = `${config.API_ENDPOINT}/:id/update_status`;
+      fetch(url, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },   
+      }) 
+    }
     deleteDraftling() {
       //delete apiData in front end
       //delete apiData in back end

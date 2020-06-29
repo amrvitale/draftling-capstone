@@ -4,7 +4,7 @@ body, html {
 }
 
 .draftlingDeskHero {
-    background-image: url(desk.jpg);
+    background-image: url(./mydesk.jpg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */

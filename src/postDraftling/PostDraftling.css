@@ -3,7 +3,7 @@ select, input, label {
 }
 
 .postDraftlingHero{
-    background-image: url(postPicture.jpg);
+    background-image: url(post.jpg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     min-height: 350px;
