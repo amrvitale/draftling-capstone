@@ -1,15 +1,15 @@
 import React from 'react'
 
-class Publish extends React.Component {
+class Unpublish extends React.Component {
     render() {
         return (
             <div>
                 <button>
-                    Publish
+                    Unpublish
                 </button>
             </div>
         );
     }
 }
 
-export default Publish;
+export default Unpublish;

@@ -6,6 +6,8 @@ import {findDraftling} from '../draftlings-helpers'
 import { Link } from 'react-router-dom'
 import Edit from '../edit/Edit'
 import './DraftlingPage.css'
+import Unpublish from '../unpublish/Unpublish'
+import Publish from '../publish/Publish'
 
 class DraftlingPage extends React.Component {
     static defaultProps = {
@@ -15,8 +17,21 @@ class DraftlingPage extends React.Component {
       }
       static contextType = ApiContext    
       
-      apiData = {};
-    
+    constructor(props) {
+      super(props);
+      this.handlePublishClick = this.handlePublishClick.bind(this);
+      this.handleUnpublishClick = this.handleUnpublishClick.bind(this);
+      this.state = {isPublished: false};
+    }
+
+    handlePublishClick() {
+      this.setState( {isPublished: true });
+    }
+
+    handleUnpublishClick() {
+      this.setState({isPublished: false});
+    }
+
     updateDraftlingStatus() {
       let url = `${config.API_ENDPOINT}/:id/update_status`;
       fetch(url, {
@@ -29,18 +44,20 @@ class DraftlingPage extends React.Component {
       .then(draftling => {
         console.log(draftling)
         this.state.handlePublishDraftling();
-    })
-    .catch(error => {
+      })
+
+      .catch(error => {
         console.log({ error })
-    })
+      })
     }
     deleteDraftling() {
       //delete apiData in front end
       //delete apiData in back end
       //make sure front end is changed, make sure data gets refreshed
     } 
-    
 
+
+    
     render() {
         const {draftlings = [] } = this.context
         const {slug} = this.props.match.params
@@ -48,20 +65,16 @@ class DraftlingPage extends React.Component {
         let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
         console.log(draftlings, selectedDraftling)
         console.log(selectedDraftling)
+        let status = {};
 
-        //both publish and delete buttons should be functions that run js, do not take to new page
-        //if published show un
-        //if un show published
-
-        let buttonVar;
+        let statusButton;
 
         if (selectedDraftling.status=== "published") { 
-        //buttonVar = unpublished
+          statusButton = <Unpublish onClick = {this.updateDraftlingStatus} />
         }
         else {
-         //buttonVar = published;
+          statusButton = <Publish onClick = {this.updateDraftlingStatus} />
         }
-        ////{buttonVar}
         return (
             <div>
               <section className="myDraftActions">
@@ -69,7 +82,7 @@ class DraftlingPage extends React.Component {
                   <button type="button">Edit</button>
                 </Link> 
               
-                  <button type="button">Publish</button>
+                {statusButton}
 
                 <button type="button">Delete</button>
               </section>
@@ -88,5 +101,5 @@ class DraftlingPage extends React.Component {
         );
     }
 }
-
 export default DraftlingPage;
+
