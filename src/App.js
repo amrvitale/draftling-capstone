@@ -88,8 +88,8 @@ class App extends React.Component {
   render() {
     const providerValue = {
       addDraftling: this.handleAddDraftling,
-      //viewDraftling: this.handleViewDraftling,
       draftlings: this.state.draftlings,
+      handlePublishDraftling: this.handlePublishDraftling,
     }
     
     return (

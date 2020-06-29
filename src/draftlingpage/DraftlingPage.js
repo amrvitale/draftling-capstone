@@ -25,6 +25,14 @@ class DraftlingPage extends React.Component {
             'content-type': 'application/json'
         },   
       }) 
+
+      .then(draftling => {
+        console.log(draftling)
+        this.state.handlePublishDraftling();
+    })
+    .catch(error => {
+        console.log({ error })
+    })
     }
     deleteDraftling() {
       //delete apiData in front end
@@ -47,8 +55,8 @@ class DraftlingPage extends React.Component {
 
         let buttonVar;
 
-        if (this.apiData.status === "published") {
-          //buttonVar = unpublished
+        if (selectedDraftling.status=== "published") { 
+        //buttonVar = unpublished
         }
         else {
          //buttonVar = published;
