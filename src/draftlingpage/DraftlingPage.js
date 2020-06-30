@@ -15,11 +15,12 @@ class DraftlingPage extends React.Component {
           params: {}
         }
       }
-      static contextType = ApiContext    
-    updateDraftlingStatus() {
-      const {slug} = this.props.match.params;
-        const id = parseInt(slug);
+      static contextType = ApiContext   
+      
+      updateDraftlingStatus = () =>  {
+      const id = this.props.match.params;
       console.log('clicked')
+      console.log(this.props)
       let url = `${config.API_ENDPOINT}/${id}/update_status`;
       fetch(url, {
         method: 'PUT',
@@ -49,22 +50,25 @@ class DraftlingPage extends React.Component {
         const {draftlings = [] } = this.context
         const {slug} = this.props.match.params;
         console.log(slug)
-    
+        console.log(draftlings)
         let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
         console.log(draftlings, selectedDraftling)
         console.log(selectedDraftling)
-
         let statusButton;
 
-        if (selectedDraftling.status=== "published") { 
-          statusButton = <Unpublish onClick = {this.updateDraftlingStatus} />
+
+        if (selectedDraftling === undefined ) {
+         let html = <p>Readying your draftling!</p>
+        }
+        else if (selectedDraftling.status=== "published") { 
+          statusButton = <Unpublish className="unpubButton" onClick = {this.updateDraftlingStatus} />
         }
         else {
-          statusButton = <Publish onClick = {this.updateDraftlingStatus} />
+          statusButton = <Publish className="pubButton"onClick = {this.updateDraftlingStatus} />
         }
         return (
-            <div>
-              <section className="myDraftActions">
+            <div className="draftlingPage">
+              <div className="myDraftActions">
                <Link to={`/edit/${slug}`}>
                   <button type="button">Edit</button>
                 </Link> 
@@ -72,7 +76,7 @@ class DraftlingPage extends React.Component {
                 {statusButton}
 
                 <button type="button">Delete</button>
-              </section>
+              </div>
               <section className="draftViewOfSelected">
                 <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
                   <br />

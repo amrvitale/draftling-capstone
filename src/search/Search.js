@@ -143,7 +143,7 @@ makeAPICall = searchInput => {
                             
                         
                                     {this.state.draftlings.map((draftling, index) => (
-                                    <div class="single-draftling" key={index}>
+                                    <div className="single-draftling" key={index}>
                                         <Draftling 
                                         {...draftling}
                                         />
