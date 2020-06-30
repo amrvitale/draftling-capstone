@@ -17,16 +17,15 @@ class DraftlingPage extends React.Component {
       }
       static contextType = ApiContext   
       
-      updateDraftlingStatus = () =>  {
-      const id = this.props.match.params;
+      updateDraftlingStatus = (id) =>  {
       console.log('clicked')
       console.log(this.props)
       let url = `${config.API_ENDPOINT}/${id}/update_status`;
-      fetch(url, {
-        method: 'PUT',
-        headers: {
-            'content-type': 'application/json'
-        },   
+        fetch(url, {
+          method: 'PUT',
+          headers: {
+              'content-type': 'application/json'
+          },   
       }) 
 
       .then(draftling => {
@@ -61,10 +60,10 @@ class DraftlingPage extends React.Component {
          let html = <p>Readying your draftling!</p>
         }
         else if (selectedDraftling.status=== "published") { 
-          statusButton = <Unpublish className="unpubButton" onClick = {this.updateDraftlingStatus} />
+          statusButton = <Unpublish className="unpubButton" onClick = {(slug)=>this.updateDraftlingStatus(slug)} />
         }
         else {
-          statusButton = <Publish className="pubButton"onClick = {this.updateDraftlingStatus} />
+          statusButton = <Publish className="pubButton"onClick = {(slug)=>this.updateDraftlingStatus(slug)} />
         }
         return (
             <div className="draftlingPage">
