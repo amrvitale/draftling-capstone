@@ -8,8 +8,8 @@ class Dash extends React.Component {
     render() {
         return (
             <div className="draftlingDeskPage">
-                <div className="draftlingDeskHero">
-                    <h1 className="myPage">My Draftlings Desk</h1>
+                <div className="deskHero">
+                    <h1 className="myDesk">My Draftlings Desk</h1>
                     <br />
                     <br />
                     </div>
@@ -17,7 +17,7 @@ class Dash extends React.Component {
                     <br />
                     <br />
                     <h2 className="start">Let's get started!</h2>
-                    <p>Welcome to your desk! Here you can create a new draftling or view your existing draftlings.</p>
+                    <p>Welcome to your desk, your own personal workspace at Draftling. <br />Here you can create a brand new draftling, or view your existing draftlings to edit or publish to the Draftling database.</p>
                     <br />
                     <br />
                     <Link to='/postdraftling'>

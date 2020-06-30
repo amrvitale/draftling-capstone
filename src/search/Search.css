@@ -40,17 +40,11 @@ div.single-draftling {
 }
 
 .searchHeading {
-    -webkit-text-stroke: 1px gray;
-    -webkit-text-fill-color: maroon;    
+    -webkit-text-fill-color: rgb(37, 26, 26);    
     font-family: 'Playfair Display', 'Georgia', serif;
       font-size: 120px;
       font-weight: 900;
-      text-shadow:
-      3px 3px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+      
 }
 
 .titleSearch, .wordcountSearch, .genreSearch {

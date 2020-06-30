@@ -20,7 +20,8 @@ class About extends React.Component {
                 
                     <h2>Feedback Options</h2>
                     <p>Beta readers can provide feedback via comments or questionnaires.  To get feedback on your piece, set your feedback availability to one of these options, and readers will post their clear, concise, and useful feedback to help you improve your writing!</p>
-            </div>
+                </div>
+       
         );
     }
 }

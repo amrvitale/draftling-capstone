@@ -73,8 +73,8 @@ class PostDraftling extends React.Component {
         }
         return (
             <div className="postDraftlingPage">
-                <div className="postDraftlingHero">
-                    <h1 className="postHeader">Write your Draftling</h1>
+                <div className="postDraftlingHero">                    
+                <h1 className="postHeader">Write your Draftling</h1>
                     <p className="instructions">Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
                 </div>
                 <br />

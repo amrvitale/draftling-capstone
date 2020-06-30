@@ -11,7 +11,7 @@ class MyDraftlings extends React.Component {
         console.log(this.props.draftlings);
         return (
           <div className="myDraftlingsPage">
-              <div className="myDraftlingsPageHero">
+              <div className="myDraftlingsPageHero"> 
                 <h1 className="myDraftlingsHeading">My Draftlings Shelf</h1>
                 </div>
                         <ul className="container">

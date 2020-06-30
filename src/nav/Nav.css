@@ -7,6 +7,7 @@
   }
 
   #navbar {
+    display: table;
     width: 100%;
     float: left;
     margin: 0;
@@ -15,25 +16,27 @@
     background-color: #2B2D42;
     border-bottom: 1px solid #edf2f4;; 
     border-top: 1px solid #edf2f4;;
-    text-align: center;
-    margin-bottom: 3px;
-    height: 80px;
+    height: 60px;
 
 }
 
 #navbar li {
+    display: table-cell;
     float: left;
     display: inline;
-    text-align: center;
     font-size: 25px;
     padding-right: 40px;
 }
 
 #navbar  a {
-    display: inline-block;
+    display: table-cell;
     padding: 8px 15px;
     text-decoration: none;
-    font-weight: bold;
     color: whitesmoke;
-    text-align: center;
+    vertical-align: middle;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }

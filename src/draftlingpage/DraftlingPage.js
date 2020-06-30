@@ -18,6 +18,7 @@ class DraftlingPage extends React.Component {
       static contextType = ApiContext   
       
       updateDraftlingStatus = (id) =>  {
+        console.log(id)
       console.log('clicked')
       console.log(this.props)
       let url = `${config.API_ENDPOINT}/${id}/update_status`;
@@ -59,11 +60,11 @@ class DraftlingPage extends React.Component {
         if (selectedDraftling === undefined ) {
          let html = <p>Readying your draftling!</p>
         }
-        else if (selectedDraftling.status=== "published") { 
-          statusButton = <Unpublish className="unpubButton" onClick = {(slug)=>this.updateDraftlingStatus(slug)} />
+        else if (selectedDraftling.status=== "published") {
+          statusButton = <Unpublish className="unpubButton" onClick = {()=>this.updateDraftlingStatus(slug)} />
         }
         else {
-          statusButton = <Publish className="pubButton"onClick = {(slug)=>this.updateDraftlingStatus(slug)} />
+          statusButton = <Publish className="pubButton"onClick = {()=>this.updateDraftlingStatus(slug)} />
         }
         return (
             <div className="draftlingPage">

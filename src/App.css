@@ -19,17 +19,18 @@ body {
 
 button {
   cursor: pointer;
-  background: #8D99AE;
+  background: black;
   border: 0;
-  font-size: 1rem;
+  font-size: 2rem;
   margin: 1%;
   padding: 10px;
-  color: #d80032;
-  font-weight: bold;
+  color: whitesmoke;
+ 
   border-radius: 5px;
 }
 button:hover {
-  background-color:#e8e9fa;
+  background-color: whitesmoke;
+  color: black;
 }
 ul {
   text-align: center;
@@ -53,3 +54,60 @@ h1, h2 {
   margin: 0;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero  {
+    min-width: 320px;
+    max-width: 480px;
+    min-height: 300px;
+  }
+  .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader {
+    font-size: 50px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero  {
+    min-width: 481px;
+    max-width: 768px;
+    min-height: 350px;
+  }
+  .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader {
+    font-size: 60px;
+  }
+  .tagline {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1366px)  {  
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero  {
+    min-width: 769px;
+    max-width: 1366px;
+    min-height: 400px;
+  }
+  .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader {
+    font-size: 90px;
+  }
+  .tagline {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-device-width: 1367px) and (max-device-width: 2000px) {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero  {
+    min-width: 1367px;
+    max-width: 2000px;
+    min-height: 500px;
+  }
+  .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader {
+    font-size: 120px;
+  }
+  .tagline {
+    font-size: 35px;
+  }
+
+}
