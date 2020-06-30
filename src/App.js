@@ -108,7 +108,7 @@ class App extends React.Component {
           />
           <Route
           path='/draftling/:slug' 
-          render={(props) => <DraftlingPage {...props} draftlings={this.state.draftlings} />}
+          render={(props) => <DraftlingPage {...props} draftlings={this.state.draftlings} handlePublishDraftling={this.handlePublishDraftling} />}
           />
           <Route path ='/about' component={About} />
           <Route path= '/read' component={Read} />

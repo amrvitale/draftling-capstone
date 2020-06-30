@@ -6,15 +6,13 @@ select, input, label {
     background-image: url(post.jpg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    min-height: 350px;
-    background-size: 100%;
+    
 }
 
 .postHeader {
     color: #35322a;
     font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 120px;
-    font-weight: 900;
+    
 }
 
 .instructions {

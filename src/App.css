@@ -14,8 +14,13 @@ body {
   input, label, select {
     border: 1 px solid #8d99ae;
     margin: 5px;
+    
   }
-
+  input, select {
+    width: 15%;
+    height: 30px;
+    font-size: 20px;
+  }
 
 button {
   cursor: pointer;

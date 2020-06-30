@@ -1,19 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 .editHeader {
     color: #35322a;
     font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 120px;
-    font-weight: 900;
 }
 .editHero {
     background-image: url(proofread.jpg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    min-height: 350px;
     background-blend-mode: lighten;
 }
 .postLabel {
     color: whitesmoke;
-    font-size: 30px;
     
 }
 

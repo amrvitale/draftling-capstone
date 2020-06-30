@@ -31,7 +31,7 @@ class DraftlingPage extends React.Component {
 
       .then(draftling => {
         console.log(draftling)
-        this.state.handlePublishDraftling();
+        this.props.handlePublishDraftling(draftling.id, "status");
       })
 
       .catch(error => {
