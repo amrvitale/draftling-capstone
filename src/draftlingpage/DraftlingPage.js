@@ -15,18 +15,34 @@ class DraftlingPage extends React.Component {
           params: {}
         }
       }
-      static contextType = ApiContext   
-      
-      updateDraftlingStatus = (id) =>  {
-        console.log(id)
+    
+    static contextType = ApiContext   
+
+      updateDraftlingStatus = (selectedDraftling) =>  {
       console.log('clicked')
       console.log(this.props)
-      let url = `${config.API_ENDPOINT}/mydraftlings/${id}`; 
+
+      let status 
+        
+      if (selectedDraftling.status === 'published') {
+        status = 'unpublished'
+      } else {
+        status = 'published'
+      }  
+
+      const updatedDraftling = {
+        ...selectedDraftling,
+        status: status
+      }
+
+      let url = `${config.API_ENDPOINT}/mydraftlings/${selectedDraftling.id}`; 
+
         fetch(url, {
           method: 'PUT',
           headers: {
               'content-type': 'application/json'
           },   
+          body: JSON.stringify(updatedDraftling),
       }) 
 
       .then(draftling => {
@@ -44,8 +60,6 @@ class DraftlingPage extends React.Component {
       //make sure front end is changed, make sure data gets refreshed
     } 
 
-
-    
     render() {
         const {draftlings = [] } = this.context
         const {slug} = this.props.match.params;
@@ -54,6 +68,7 @@ class DraftlingPage extends React.Component {
         let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
         console.log(draftlings, selectedDraftling)
         console.log(selectedDraftling)
+
         let statusButton;
 
 
@@ -61,10 +76,10 @@ class DraftlingPage extends React.Component {
          let html = <p>Readying your draftling!</p>
         }
         else if (selectedDraftling.status=== "published") {
-          statusButton = <Unpublish className="unpubButton" onClick = {()=>this.updateDraftlingStatus(slug)} />
+          statusButton = <Unpublish className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} />
         }
         else {
-          statusButton = <Publish className="pubButton"onClick = {()=>this.updateDraftlingStatus(slug)} />
+          statusButton = <Publish className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} />
         }
         return (
             <div className="draftlingPage">
@@ -86,11 +101,8 @@ class DraftlingPage extends React.Component {
                   <br />
                 <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
               </section>
-
-              
             </div>
         );
     }
 }
 export default DraftlingPage;
-
