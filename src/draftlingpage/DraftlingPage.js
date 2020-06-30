@@ -21,7 +21,7 @@ class DraftlingPage extends React.Component {
         console.log(id)
       console.log('clicked')
       console.log(this.props)
-      let url = `${config.API_ENDPOINT}/${id}/update_status`;
+      let url = `${config.API_ENDPOINT}/mydraftlings/${id}`; 
         fetch(url, {
           method: 'PUT',
           headers: {

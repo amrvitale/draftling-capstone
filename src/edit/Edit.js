@@ -58,7 +58,7 @@ class Edit extends React.Component {
         }
         console.log(newDraftling)
 
-        fetch(`${config.API_ENDPOINT}/edit/${this.props.match.params.id}`, {
+        fetch(`${config.API_ENDPOINT}/mydraftlings/${this.props.match.params.id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
