@@ -1,6 +1,4 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
-import DraftlingPage from '../draftlingpage/DraftlingPage'
 import ApiContext from '../ApiContext'
 import {findDraftling} from '../draftlings-helpers'
 import config from '../config'

@@ -9,7 +9,8 @@ class Search extends React.Component {
         titleValue: '',
         wordcountValue: '',
         genreValue: '',
-        draftlings: []
+        draftlings: [],
+        noResults: false
     };
 
 handleTitleChange = event => {
@@ -105,7 +106,7 @@ makeAPICall = searchInput => {
                     </section>
                     <br />
                     <section className="genreSearch">
-                        <label htmlFor="genreDrop">Search by Fiction Genre</label>
+                        <label htmlFor="genreDrop">Fiction Genre</label>
                         <select 
                             name="genreDrop" 
                             id="genreDrop"
@@ -138,14 +139,12 @@ makeAPICall = searchInput => {
                         <br />
                         <br />
                         <br />
-                        {this.state.draftlings ? (
+                        {this.state.draftlings.length > 0 ? (
                             <div id="draftlingSearchResultContainer">
-                            
-                        
-                                    {this.state.draftlings.map((draftling, index) => (
+                                {this.state.draftlings.map((draftling, index) => (
                                     <div className="single-draftling" key={index}>
                                         <Draftling 
-                                        {...draftling}
+                                            {...draftling}
                                         />
                                     </div>
                                 ))}
@@ -153,6 +152,7 @@ makeAPICall = searchInput => {
                         ) : (
                     
                         <p>No results found for your search. Please search again!</p>
+
                         )}
                     
         </div>

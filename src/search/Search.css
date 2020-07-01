@@ -36,14 +36,12 @@ div.single-draftling {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    min-height: 350px;
 }
 
 .searchHeading {
     -webkit-text-fill-color: rgb(37, 26, 26);    
     font-family: 'Playfair Display', 'Georgia', serif;
-      font-size: 120px;
-      font-weight: 900;
+ 
       
 }
 
