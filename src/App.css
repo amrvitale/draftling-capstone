@@ -26,7 +26,7 @@ button {
   cursor: pointer;
   background: black;
   border: 0;
-  font-size: 2rem;
+  font-size: 25px;
   margin: 1%;
   padding: 10px;
   color: whitesmoke;
@@ -58,7 +58,9 @@ p {
 h1, h2 {
   margin: 0;
 }
-
+.myDraftActions, button, div.unpubButton, div.pubButton, div.myDraftActions.div {
+  display: inline;
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero  {
     min-width: 320px;

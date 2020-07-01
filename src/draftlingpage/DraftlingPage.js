@@ -91,13 +91,13 @@ class DraftlingPage extends React.Component {
                 {statusButton}
 
                 <button type="button">Delete</button>
+                <button type="button">Post a Freeform Critique</button>
+                <button type="button">Post a Templated Critique</button>
               </div>
               <section className="draftViewOfSelected">
                 <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
                   <br />
-                <p>Length Type: {(selectedDraftling) ? selectedDraftling.wordcount: ""}</p> 
-                  <br />
-                  <p>{(selectedDraftling) ? selectedDraftling.genre: ""}</p>
+                <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
                   <br />
                 <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
               </section>

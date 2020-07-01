@@ -5,6 +5,12 @@
 .editHeader {
     color: #35322a;
     font-family: 'Playfair Display', 'Georgia', serif;
+    text-shadow:
+    4px 4px 0 darkorange,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
 }
 .editHero {
     background-image: url(proofread2.jpg);

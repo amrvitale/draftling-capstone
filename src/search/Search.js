@@ -10,8 +10,10 @@ class Search extends React.Component {
         wordcountValue: '',
         genreValue: '',
         draftlings: [],
-        noResults: false
+        noResults: false,
     };
+
+    
 
 handleTitleChange = event => {
     this.setState({ titleValue: event.target.value });
@@ -55,7 +57,7 @@ makeAPICall = searchInput => {
     .then((responseJson) => {
         let draftling = responseJson.draftlings;
         console.log(draftling)
-        this.setState( { draftlings: draftling})
+        this.setState( { draftlings: draftling, noResults: draftling.length === 0,})
         console.log({draftlings: draftling})
     })
 
@@ -139,7 +141,7 @@ makeAPICall = searchInput => {
                         <br />
                         <br />
                         <br />
-                        {this.state.draftlings.length > 0 ? (
+                        {this.state.draftlings.length > 0 && (
                             <div id="draftlingSearchResultContainer">
                                 {this.state.draftlings.map((draftling, index) => (
                                     <div className="single-draftling" key={index}>
@@ -149,11 +151,9 @@ makeAPICall = searchInput => {
                                     </div>
                                 ))}
                             </div>
-                        ) : (
-                    
-                        <p>No results found for your search. Please search again!</p>
-
-                        )}
+                        )
+                    }
+                    {this.state.noResults && <p>No results found for your search. Please search again!</p>}
                     
         </div>
         );

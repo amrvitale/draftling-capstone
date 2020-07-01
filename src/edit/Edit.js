@@ -94,7 +94,7 @@ class Edit extends React.Component {
             <div className="editPage">
                 <div className="editHero">
                      <h1 className="editHeader">Edit Your Draftling</h1>
-                     <p className="instructions">Edit any fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
+                     <p className="instructions">Edit any fields for your Draftling. <br/>Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
 
                      </div>
                      <br />
