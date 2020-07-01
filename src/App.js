@@ -56,9 +56,11 @@ class App extends React.Component {
     })
   }
   handlePublishDraftling = (id, status) => {
+    console.log(id, status)
     this.setState( {
       draftlings: this.state.draftlings.map((draftling) => {
-         if (draftling.id === id) {
+         if (parseInt(draftling.id) === parseInt(id)) {
+          console.log("SETTING NEW STATUS")
             return {
               ...draftling,
               status: status
