@@ -42,6 +42,7 @@ class CritiqueFreeform extends React.Component {
             critFreeform: this.state.critFreeform   
         }
         console.log(freeFormCrit)
+        console.log(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`)
 
         fetch(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`, {
             method: 'POST',
