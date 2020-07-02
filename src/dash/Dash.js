@@ -12,7 +12,7 @@ class Dash extends React.Component {
                     <h1 className="myDesk">My Draftlings Desk</h1>
                     <br />
                     <br />
-                    </div>
+                </div>
                     <br />
                     <br />
                     <br />

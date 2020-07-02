@@ -7,9 +7,6 @@ export default React.createContext( {
     addTemplateCrit: () => {},
     deleteDraftling: () => {},
     editDraftling: () => {},
-    viewDraftling: () => {},
-    readDraftling: () => {},
-    readCrit: () => {},
 })
 
 //wait, would read and edit be from an array? ...so confused

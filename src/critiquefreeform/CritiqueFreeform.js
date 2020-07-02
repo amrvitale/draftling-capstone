@@ -77,7 +77,7 @@ class CritiqueFreeform extends React.Component {
                     <p className="freeformTagline">Please remember to be objective, especially if the piece you're critiquing is not in a style or genre that you prefer. Always start with the strengths of the piece, then make solid suggestions for improvement.</p>
                 </div>
                 <br />
-                <r />
+                <br />
                     <form onSubmit={this.handleSubmit}>
                         
                         <label>Opening Comments</label>

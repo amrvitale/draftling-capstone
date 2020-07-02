@@ -30,9 +30,9 @@ button {
   margin: 1%;
   padding: 10px;
   color: whitesmoke;
- 
   border-radius: 5px;
 }
+
 button:hover {
   background-color: whitesmoke;
   color: black;
