@@ -39,7 +39,7 @@ class CritiqueFreeform extends React.Component {
 
         const freeFormCrit = {
             opening: this.state.opening,
-            critFreeform: this.state.critFreeform   
+            critfreeform: this.state.critfreeform   
         }
         console.log(freeFormCrit)
         console.log(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`)
@@ -88,7 +88,7 @@ class CritiqueFreeform extends React.Component {
                         <br />
                         <label>Freeform Critique</label>
                         <br />
-                        <textarea style={styleTextArea} name="critFreeform" required></textarea>
+                        <textarea style={styleTextArea} name="critfreeform" required></textarea>
 
                         <br/>
                         <input type="submit" value="Post Critique"></input>
