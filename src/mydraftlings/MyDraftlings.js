@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Read from '../read/Read';
 import Draftling from '../draftling/Draftling';
 import DraftlingPage from '../draftlingpage/DraftlingPage';
 import './MyDraftlings.css'

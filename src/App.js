@@ -9,12 +9,10 @@ import Dash from './dash/Dash';
 import About from './about/About';
 import './App.css';
 import MyDraftlings from './mydraftlings/MyDraftlings';
-import Read from './read/Read';
 import Edit from './edit/Edit';
 import CritiqueTemplate from './critiquetemplate/CritiqueTemplate';
 import CritiqueFreeform from './critiquefreeform/CritiqueFreeform';
 import ApiContext from './ApiContext';
-import ChooseCritique from './choosecritique/ChooseCritique'
 import config from './config'
 import Draftling from './draftling/Draftling';
 import DraftlingPage from './draftlingpage/DraftlingPage'
@@ -72,6 +70,10 @@ class App extends React.Component {
     })
   }
 
+  addFreeformCrit = () => {
+
+  }
+
   fetchDraftlings = (props) => {
     fetch(`${config.API_ENDPOINT}/mydraftlings`)
     .then((draftlingsRes) => {
@@ -92,6 +94,7 @@ class App extends React.Component {
       addDraftling: this.handleAddDraftling,
       draftlings: this.state.draftlings,
       handlePublishDraftling: this.handlePublishDraftling,
+      addFreeformCrit: this.addFreeformCrit
     }
     
     return (
@@ -112,8 +115,9 @@ class App extends React.Component {
           path='/draftling/:slug' 
           render={(props) => <DraftlingPage {...props} draftlings={this.state.draftlings} handlePublishDraftling={this.handlePublishDraftling} />}
           />
+         
           <Route path ='/about' component={About} />
-          <Route path= '/read' component={Read} />
+
           <Route 
             path="/edit/:id" 
             render={(props) => <Edit {...props} fetchDraftlings={this.fetchDraftlings}/>} 
@@ -122,10 +126,18 @@ class App extends React.Component {
             path='/:id/update_status' 
             render={(props) => <Publish {...props} fetchDraftlings={this.fetchDraftlings} />} 
           />
-          <Route path='/choosecritique' component={ChooseCritique}/>
-          <Route path='/postfreeformcritique' component={CritiqueFreeform} />
-          <Route path='/posttemplatecritique' component={CritiqueTemplate} />
+          <Route 
+            path='/postfreeformcritique/:id' 
+            render={(props) => <CritiqueFreeform {...props} fetchDraftlings={this.fetchDraftlings} />}
+          />
+
+          <Route 
+            path='/posttemplatecritique/:id' 
+            render={(props) => <CritiqueTemplate {...props} fetchDraftlings={this.fetchDraftlings} />}
+          />
+
         </div>
+      
       </ApiContext.Provider>
       );
 

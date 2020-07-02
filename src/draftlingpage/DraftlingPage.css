@@ -3,4 +3,7 @@
     font-size: 40px;
 }
 .myDraftActions {
+    background-image: url(draftActions.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
 }

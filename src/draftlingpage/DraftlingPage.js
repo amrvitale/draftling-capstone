@@ -8,6 +8,8 @@ import Edit from '../edit/Edit'
 import './DraftlingPage.css'
 import Unpublish from '../unpublish/Unpublish'
 import Publish from '../publish/Publish'
+import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform'
+import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
 
 class DraftlingPage extends React.Component {
     static defaultProps = {
@@ -83,7 +85,7 @@ class DraftlingPage extends React.Component {
         }
         return (
             <div className="draftlingPage">
-              <div className="myDraftActions">
+              <section className="myDraftActions">
                <Link to={`/edit/${slug}`}>
                   <button type="button">Edit</button>
                 </Link> 
@@ -91,16 +93,28 @@ class DraftlingPage extends React.Component {
                 {statusButton}
 
                 <button type="button">Delete</button>
-                <button type="button">Post a Freeform Critique</button>
-                <button type="button">Post a Templated Critique</button>
-              </div>
-              <section className="draftViewOfSelected">
+
+                <Link to={`/postfreeformcritique/${slug}`}>
+                  <button type="button">Post a Freeform Critique</button>
+                </Link>
+
+                <Link to={`/posttemplatecritique/${slug}`}>
+                  <button type="button">Post a Templated Critique</button>
+                </Link>
+
+              </section>
+
+              <div className="draftViewOfSelected">
                 <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
                   <br />
                 <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
                   <br />
                 <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
-              </section>
+              </div>
+
+              <div className="critiques">
+                <h2>Critiques, if any posted, will appear below.</h2>
+              </div>
             </div>
         );
     }

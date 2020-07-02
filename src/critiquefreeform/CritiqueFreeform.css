@@ -4,3 +4,40 @@ textarea {
 	border: 3px solid #cccccc;
 	padding: 5px;
 }
+
+textarea {
+    width: 300px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+}
+
+label {
+	font-size: 25px;
+	font-weight: bold;
+}
+.freeformHero{
+  	background-image: url('./freeformStar.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.freeformHeading{
+	color: #35322a;    
+	font-family: 'Playfair Display', 'Georgia', serif;
+	text-shadow: 
+	4px 4px 0 rgb(175, 33, 33),
+    -1px -1px 0 rgb(175, 33, 33),  
+     1px -1px 0 rgb(175, 33, 33),
+     -1px 1px 0 rgb(175, 33, 33),
+      1px 1px 0 rgb(175, 33, 33);
+	
+}
+
+.freeformTagline{
+	color: black;
+	background-color: whitesmoke;
+}
+
