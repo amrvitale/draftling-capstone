@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 class Signup extends React.Component {
     render() {
         const loginStyle = {
-            fontWeight: 'bold',
             fontSize: '25px',
         }
         return (
@@ -17,14 +16,14 @@ class Signup extends React.Component {
                     <h2 className="tagline">A Highly Productive Writing Community</h2>
                     </div>
                     
-                    <p>Are you a writer who wants feedback? Are you an avid reader who enjoys providing feedback to aspriring authors? Maybe you're an editor at heart, ready to mark up copy? Then you're in the WRITE PLACE </p>
+                    <p>Are you a writer who wants feedback? Are you an avid reader who enjoys providing feedback to aspriring authors? Maybe you're an editor at heart, ready to mark up copy? Then you're in the WRITE PLACE. </p>
                      
                </section>
             
                 <section className="aboutDetails">
                     <h2>About Draftling</h2>
-                    <p>Draftling is a forum for getting and giving feedback on your fiction writing. Post your writing and receive indepth feedback from fellow writers and editors! We accept the following types of fiction pieces: </p>
-                    <ul>
+                    <p>Draftling is a forum for getting and giving feedback on your fiction writing. Post your writing and receive in-depth feedback from fellow writers and editors! We accept the following types of fiction pieces: </p>
+                    <ul className="fictionLengths">
                        <li>Microfiction</li>
                         <li>Flash Fiction</li>
                         <li>Short Story</li>

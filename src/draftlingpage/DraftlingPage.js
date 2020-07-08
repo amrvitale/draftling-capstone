@@ -10,6 +10,7 @@ import Unpublish from '../unpublish/Unpublish'
 import Publish from '../publish/Publish'
 import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform'
 import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
+import Critique from '../critiques/Critique'
 
 class DraftlingPage extends React.Component {
     static defaultProps = {
@@ -78,10 +79,10 @@ class DraftlingPage extends React.Component {
          let html = <p>Readying your draftling!</p>
         }
         else if (selectedDraftling.status=== "published") {
-          statusButton = <Unpublish className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} />
+          statusButton = <button className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)}>Unpublish</button>
         }
         else {
-          statusButton = <Publish className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} />
+          statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
         }
         return (
             <div className="draftlingPage">
@@ -114,6 +115,7 @@ class DraftlingPage extends React.Component {
 
               <div className="critiques">
                 <h2>Critiques, if any posted, will appear below.</h2>
+                <Critique />
               </div>
             </div>
         );
