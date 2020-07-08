@@ -13,112 +13,112 @@ import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
 import Critique from '../critiques/Critique'
 
 class DraftlingPage extends React.Component {
-    static defaultProps = {
-        match: {
-          params: {}
-        }
+  static defaultProps = {
+      match: {
+        params: {}
       }
-    
-    static contextType = ApiContext   
-
-      updateDraftlingStatus = (selectedDraftling) =>  {
-      console.log('clicked')
-      console.log(this.props)
-
-      let status 
-        
-      if (selectedDraftling.status === 'published') {
-        status = 'unpublished'
-      } else {
-        status = 'published'
-      }  
-
-      const updatedDraftling = {
-        ...selectedDraftling,
-        status: status
-      }
-
-      let url = `${config.API_ENDPOINT}/mydraftlings/${selectedDraftling.id}`; 
-
-        fetch(url, {
-          method: 'PUT',
-          headers: {
-              'content-type': 'application/json'
-          },   
-          body: JSON.stringify(updatedDraftling),
-      }) 
-
-      .then(draftling => {
-        console.log(draftling)
-        this.props.handlePublishDraftling(selectedDraftling.id, status);
-      })
-
-      .catch(error => {
-        console.log({ error })
-      })
     }
-    deleteDraftling() {
-      //delete apiData in front end
-      //delete apiData in back end
-      //make sure front end is changed, make sure data gets refreshed
-    } 
+  
+  static contextType = ApiContext   
 
-    render() {
-        const {draftlings = [] } = this.context
-        const {slug} = this.props.match.params;
-        console.log(slug)
-        console.log(draftlings)
-        let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
-        console.log(draftlings, selectedDraftling)
-        console.log(selectedDraftling)
+    updateDraftlingStatus = (selectedDraftling) =>  {
+    console.log('clicked')
+    console.log(this.props)
 
-        let statusButton;
+    let status 
+      
+    if (selectedDraftling.status === 'published') {
+      status = 'unpublished'
+    } else {
+      status = 'published'
+    }  
+
+    const updatedDraftling = {
+      ...selectedDraftling,
+      status: status
+    }
+
+    let url = `${config.API_ENDPOINT}/mydraftlings/${selectedDraftling.id}`; 
+
+      fetch(url, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },   
+        body: JSON.stringify(updatedDraftling),
+    }) 
+
+    .then(draftling => {
+      console.log(draftling)
+      this.props.handlePublishDraftling(selectedDraftling.id, status);
+    })
+
+    .catch(error => {
+      console.log({ error })
+    })
+  }
+  deleteDraftling() {
+    //delete apiData in front end
+    //delete apiData in back end
+    //make sure front end is changed, make sure data gets refreshed
+  } 
+
+  render() {
+      const {draftlings = [] } = this.context
+      const {slug} = this.props.match.params;
+      console.log(slug)
+      console.log(draftlings)
+      let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
+      console.log(draftlings, selectedDraftling)
+      console.log(selectedDraftling)
+
+      let statusButton;
 
 
-        if (selectedDraftling === undefined ) {
-         let html = <p>Readying your draftling!</p>
-        }
-        else if (selectedDraftling.status=== "published") {
-          statusButton = <button className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)}>Unpublish</button>
-        }
-        else {
-          statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
-        }
-        return (
-            <div className="draftlingPage">
-              <section className="myDraftActions">
-               <Link to={`/edit/${slug}`}>
-                  <button type="button">Edit</button>
-                </Link> 
-              
-                {statusButton}
+      if (selectedDraftling === undefined ) {
+       let html = <p>Readying your draftling!</p>
+      }
+      else if (selectedDraftling.status=== "published") {
+        statusButton = <button className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)}>Unpublish</button>
+      }
+      else {
+        statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
+      }
+      return (
+          <div className="draftlingPage">
+            <section className="myDraftActions">
+             <Link to={`/edit/${slug}`}>
+                <button type="button">Edit</button>
+              </Link> 
+            
+              {statusButton}
 
-                <button type="button">Delete</button>
+              <button type="button">Delete</button>
 
-                <Link to={`/postfreeformcritique/${slug}`}>
-                  <button type="button">Post a Freeform Critique</button>
-                </Link>
+              <Link to={`/postfreeformcritique/${slug}`}>
+                <button type="button">Post a Freeform Critique</button>
+              </Link>
 
-                <Link to={`/posttemplatecritique/${slug}`}>
-                  <button type="button">Post a Templated Critique</button>
-                </Link>
+              <Link to={`/posttemplatecritique/${slug}`}>
+                <button type="button">Post a Templated Critique</button>
+              </Link>
 
-              </section>
+            </section>
 
-              <div className="draftViewOfSelected">
-                <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
-                  <br />
-                <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
-                  <br />
-                <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
-              </div>
-
-              <div className="critiques">
-                <h2>Critiques, if any posted, will appear below.</h2>
-                <Critique />
-              </div>
+            <div className="draftViewOfSelected">
+              <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
+                <br />
+              <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
+                <br />
+              <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
             </div>
-        );
-    }
+
+            <div className="critiques">
+              <h2>Critiques, if any posted, will appear below.</h2>
+              <Critique />
+            </div>
+          </div>
+      );
+  }
 }
 export default DraftlingPage;
