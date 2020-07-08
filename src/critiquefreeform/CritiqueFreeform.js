@@ -83,12 +83,12 @@ class CritiqueFreeform extends React.Component {
                         
                         <label>Opening Comments</label>
                         <br />
-                        <textarea style={styleTextArea} name="opening"></textarea>
+                        <textarea style={styleTextArea} name="opening" onChange={this.handleChange} ></textarea>
                         <br />
                         <br />
                         <label>Freeform Critique</label>
                         <br />
-                        <textarea style={styleTextArea} name="critfreeform" required></textarea>
+                        <textarea style={styleTextArea} name="critfreeform" onChange={this.handleChange} required></textarea>
 
                         <br/>
                         <input type="submit" value="Post Critique"></input>
