@@ -57,7 +57,8 @@ class CritiqueFreeform extends React.Component {
         })
 
         .then(freeFormCrit => {
-            
+            this.context.addFreeformCrit(freeFormCrit)
+            this.props.history.push(`/draftling/${this.props.match.params.id}`)
         })
     }
 
