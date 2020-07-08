@@ -21,7 +21,8 @@ import Publish from './publish/Publish'
 class App extends React.Component {
 
   state = {
-    draftlings: []
+    draftlings: [],
+    freeformCrits: []
   };
 
   componentDidMount() {
@@ -70,10 +71,14 @@ class App extends React.Component {
     })
   }
 
-  addFreeformCrit = () => {
-
+  addFreeformCrit = freeformCrit => {
+    this.setState( {
+      freeformCrits: [
+        ...this.state.freeformCrits,
+        freeformCrit
+      ]
+    })
   }
-
   fetchDraftlings = (props) => {
     fetch(`${config.API_ENDPOINT}/mydraftlings`)
     .then((draftlingsRes) => {

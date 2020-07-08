@@ -15,9 +15,9 @@ class MyDraftlings extends React.Component {
                 </div>
                         <ul className="container">
                                 {this.props.draftlings.map(draftling =>
-                                    <li className="card" key={draftling.iddraft}>
+                                    <li className="card" key={draftling.id}>
                                         <Draftling
-                                            iddraft={draftling.iddraft}
+                                            id={draftling.id}
                                             title={draftling.title}
                                             wordcount={draftling.wordcount}
                                             genre={draftling.genre}
