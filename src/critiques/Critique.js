@@ -1,12 +1,25 @@
 import React from 'react'
+import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform';
+import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
 
 class Critique extends React.Component {
     render() {
-        return(
-            <div className="critique">
-                <h3></h3>
+        let critiqueType;
+
+       // if ( s ) {
+       // critiqueType = <CritiqueFreeform />
+      //  }
+
+       // else  {
+       //  critiqueType = <CritiqueTemplate />
+       // }
+       
+        return (
+            <div className="critiqueList">
+              {critiqueType}
             </div>
-        )
+        );
+       
     }
 };
 

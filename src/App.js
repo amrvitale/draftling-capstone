@@ -22,7 +22,8 @@ class App extends React.Component {
 
   state = {
     draftlings: [],
-    freeformCrits: []
+    freeformCrits: [],
+    templateCrits: []
   };
 
   componentDidMount() {
@@ -78,7 +79,19 @@ class App extends React.Component {
         freeformCrit
       ]
     })
+    console.log(this.state.freeformCrits)
   }
+
+  addTemplateCrit = templateCrit => {
+    this.setState( {
+      templateCrits: [
+        ...this.state.templateCrits,
+        templateCrit
+      ]
+      
+    })
+  }
+
   fetchDraftlings = (props) => {
     fetch(`${config.API_ENDPOINT}/mydraftlings`)
     .then((draftlingsRes) => {
@@ -94,12 +107,47 @@ class App extends React.Component {
       console.log({ error });
     });
   }
+
+  fetchFreeformCritiques = (props) => {
+    fetch(`${config.API_ENDPOINT}/freeform`)
+    .then((freeformCritRes) => {
+      if(!freeformCritRes.ok)
+      return freeformCritRes.json().then((e) => Promise.reject(e));
+      return freeformCritRes.json();
+    })
+    .then ((freeformCrits) => {
+      this.setState ({freeformCrits});
+    })
+    .catch((error) => {
+      console.log({ error });
+    });
+    console.log(this.state.freeformCrits)
+  }
+
+  fetchTemplateCritiques = (props) => {
+    fetch(`${config.API_ENDPOINT}/template`)
+    .then((templateCritRes) => {
+      if(!templateCritRes.ok)
+      return templateCritRes.json().then((e) => Promise.reject(e));
+      return templateCritRes.json();
+    })
+    .then ((templateCrits) => {
+      this.setState ({templateCrits});
+    })
+    .catch((error) => {
+      console.log({ error });
+    });
+  }
+
+
   render() {
     const providerValue = {
       addDraftling: this.handleAddDraftling,
       draftlings: this.state.draftlings,
       handlePublishDraftling: this.handlePublishDraftling,
-      addFreeformCrit: this.addFreeformCrit
+      addFreeformCrit: this.addFreeformCrit,
+      fetchTemplateCritiques: this.fetchTemplateCritiques,
+      fetchFreeformCritiques: this.fetchFreeformCritiques
     }
     
     return (

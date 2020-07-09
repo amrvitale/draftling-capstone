@@ -37,28 +37,30 @@ class CritiqueFreeform extends React.Component {
     handleSubmit = e => {
         e.preventDefault()
 
-        const freeFormCrit = {
+        const freeformCrit = {
             opening: this.state.opening,
             critfreeform: this.state.critfreeform   
         }
-        console.log(freeFormCrit)
-        console.log(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`)
+        console.log(freeformCrit)
+        console.log(`${config.API_ENDPOINT}/draftling/freeform/${this.props.match.params.id}`)
 
-        fetch(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`, {
+        fetch(`${config.API_ENDPOINT}/draftling/freeform/${this.props.match.params.id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(freeFormCrit)
+            body: JSON.stringify(freeformCrit)
         })
         
         .then(res => {
             return res.json()
         })
 
-        .then(freeFormCrit => {
-            this.context.addFreeformCrit(freeFormCrit)
+        .then(freeformCrit => {
+            this.context.addFreeformCrit(freeformCrit)
         })
+        console.log(this.state.freeformCrits)
+
     }
 
     render() {

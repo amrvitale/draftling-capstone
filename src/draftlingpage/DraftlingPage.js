@@ -18,6 +18,10 @@ class DraftlingPage extends React.Component {
         params: {}
       }
     }
+    componentDidMount() {
+    this.context.fetchTemplateCritiques();
+    this.context.fetchFreeformCritiques();
+  }
   
   static contextType = ApiContext   
 
@@ -57,11 +61,6 @@ class DraftlingPage extends React.Component {
       console.log({ error })
     })
   }
-  deleteDraftling() {
-    //delete apiData in front end
-    //delete apiData in back end
-    //make sure front end is changed, make sure data gets refreshed
-  } 
 
   render() {
       const {draftlings = [] } = this.context

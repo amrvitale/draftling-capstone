@@ -2,12 +2,14 @@ import React from 'react'
 
 export default React.createContext( {
     draftlings: [],
+    freeformCrits: [],
+    templateCrits: [],
     addDraftling: () => {},
     addFreeformCrit: () => {},
     addTemplateCrit: () => {},
+    fetchFreeformCritiques: () => {},
+    fetchTemplateCritiques:() => {},
     deleteDraftling: () => {},
     editDraftling: () => {},
 })
 
-//wait, would read and edit be from an array? ...so confused
-//array of crits go inside array of draftling somehow without messing up ID
