@@ -122,6 +122,7 @@ class App extends React.Component {
       console.log({ error });
     });
     console.log(this.state.freeformCrits)
+    console.log(this.context.freeformCrits)
   }
 
   fetchTemplateCritiques = (props) => {
@@ -144,6 +145,8 @@ class App extends React.Component {
     const providerValue = {
       addDraftling: this.handleAddDraftling,
       draftlings: this.state.draftlings,
+      freeformCrits: this.state.freeformCrits,
+      templateCrits: this.state.templateCrits,
       handlePublishDraftling: this.handlePublishDraftling,
       addFreeformCrit: this.addFreeformCrit,
       fetchTemplateCritiques: this.fetchTemplateCritiques,

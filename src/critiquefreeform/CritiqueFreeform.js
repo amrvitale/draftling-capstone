@@ -42,6 +42,7 @@ class CritiqueFreeform extends React.Component {
             critfreeform: this.state.critfreeform   
         }
         console.log(freeformCrit)
+        console.log(this.state.freeformCrits)
         console.log(`${config.API_ENDPOINT}/draftling/freeform/${this.props.match.params.id}`)
 
         fetch(`${config.API_ENDPOINT}/draftling/freeform/${this.props.match.params.id}`, {
@@ -60,6 +61,7 @@ class CritiqueFreeform extends React.Component {
             this.context.addFreeformCrit(freeformCrit)
         })
         console.log(this.state.freeformCrits)
+        console.log(this.context.freeformCrits)
 
     }
 
