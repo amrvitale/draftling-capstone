@@ -62,7 +62,7 @@ h1, h2 {
   display: inline;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero  {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 320px;
     max-width: 480px;
     min-height: 300px;
@@ -77,7 +77,7 @@ h1, h2 {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
-  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero  {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 481px;
     max-width: 768px;
     min-height: 350px;
@@ -91,7 +91,7 @@ h1, h2 {
 }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1366px)  {  
-  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero  {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 769px;
     max-width: 1366px;
     min-height: 400px;
@@ -105,7 +105,7 @@ h1, h2 {
 }
 
 @media only screen and (min-device-width: 1367px) and (max-device-width: 2000px) {
-  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero  {
+  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 1367px;
     max-width: 2000px;
     min-height: 500px;

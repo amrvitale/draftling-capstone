@@ -86,7 +86,7 @@ class DraftlingPage extends React.Component {
       }
       return (
           <div className="draftlingPage">
-            <section className="myDraftActions">
+            <div className="myDraftActions">
              <Link to={`/edit/${slug}`}>
                 <button type="button">Edit</button>
               </Link> 
@@ -103,7 +103,7 @@ class DraftlingPage extends React.Component {
                 <button type="button">Post a Templated Critique</button>
               </Link>
 
-            </section>
+            </div>
 
             <div className="draftViewOfSelected">
               <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
