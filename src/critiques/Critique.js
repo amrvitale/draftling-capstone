@@ -16,7 +16,7 @@ class Critique extends React.Component {
        
         return (
             <div className="critiqueList">
-              {critiqueType}
+              {this.props.critiqueType}
             </div>
         );
        
