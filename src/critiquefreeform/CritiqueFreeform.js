@@ -39,7 +39,8 @@ class CritiqueFreeform extends React.Component {
 
         const freeformCrit = {
             opening: this.state.opening,
-            critfreeform: this.state.critfreeform   
+            critfreeform: this.state.critfreeform,
+            draftling_id: this.props.match.params.id  
         }
         console.log(freeformCrit)
         console.log(this.state.freeformCrits)

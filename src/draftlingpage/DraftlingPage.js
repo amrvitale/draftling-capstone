@@ -3,6 +3,7 @@ import ApiContext from '../ApiContext'
 import config from '../config'
 import Draftling from '../draftling/Draftling';
 import {findDraftling} from '../draftlings-helpers'
+import {getFreeformCrits} from '../draftlings-helpers'
 import { Link } from 'react-router-dom'
 import Edit from '../edit/Edit'
 import './DraftlingPage.css'
@@ -83,6 +84,9 @@ class DraftlingPage extends React.Component {
       else {
         statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
       }
+     
+      const ffcrits = getFreeformCrits(this.context.selectedDraftling)
+
       return (
           <div className="draftlingPage">
             <div className="myDraftActions">
@@ -113,8 +117,16 @@ class DraftlingPage extends React.Component {
             </div>
 
             <div className="critiques">
+              
               <h2>Critiques, if any posted, will appear below.</h2>
-              <Critique />
+              
+              {ffcrits.map(freeformCrit =>
+              <Critique 
+                opening={freeformCrit.opening}
+                critfreeform={freeformCrit.critfreeform}
+              />
+              )}
+            
             </div>
           </div>
       );
