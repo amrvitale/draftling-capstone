@@ -7,8 +7,7 @@ export default React.createContext( {
     addDraftling: () => {},
     addFreeformCrit: () => {},
     addTemplateCrit: () => {},
-    fetchFreeformCritiques: () => {},
-    fetchTemplateCritiques:() => {},
+    getCritiquesForDraftlings: () => {},
     deleteDraftling: () => {},
     editDraftling: () => {},
 })
