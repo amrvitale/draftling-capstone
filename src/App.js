@@ -111,7 +111,7 @@ class App extends React.Component {
   }
 
   fetchFreeformCritiques = (props) => {
-    fetch(`${config.API_ENDPOINT}/freeform`)
+    fetch(`${config.API_ENDPOINT}/draftling/freeform`)
     .then((freeformCritRes) => {
       console.log(freeformCritRes);
       if(!freeformCritRes.ok)
@@ -130,7 +130,7 @@ class App extends React.Component {
   }
 
   fetchTemplateCritiques = (props) => {
-    fetch(`${config.API_ENDPOINT}/template`)
+    fetch(`${config.API_ENDPOINT}/draftling/template`)
     .then((templateCritRes) => {
       if(!templateCritRes.ok)
       return templateCritRes.json().then((e) => Promise.reject(e));
