@@ -76,6 +76,8 @@ class App extends React.Component {
     this.setState( {
       freeformCrits: [
         ...this.state.freeformCrits,
+      
+
         freeformCrit
       ]
     })
@@ -111,11 +113,13 @@ class App extends React.Component {
   fetchFreeformCritiques = (props) => {
     fetch(`${config.API_ENDPOINT}/freeform`)
     .then((freeformCritRes) => {
+      console.log(freeformCritRes);
       if(!freeformCritRes.ok)
       return freeformCritRes.json().then((e) => Promise.reject(e));
       return freeformCritRes.json();
     })
     .then ((freeformCrits) => {
+      console.log('FREEFORMCRITS', freeformCrits);
       this.setState ({freeformCrits});
     })
     .catch((error) => {
