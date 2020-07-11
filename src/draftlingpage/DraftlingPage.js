@@ -119,10 +119,15 @@ class DraftlingPage extends React.Component {
             {
               crits.map(critique =>  {
                   let component
+                  let key
+                
+
                   if (critique.hasOwnProperty('critfreeform')) {
                     component = <CFF />
+                    key = 'freeform'+ id;
                   } else {
                     component = <CTF />
+                    key = 'template' + id;
                   }
                   return (
                     <li key={critique.draftling_id}>

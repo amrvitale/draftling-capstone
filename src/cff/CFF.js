@@ -1,21 +1,17 @@
 import React from 'react'
+import ApiContext from '../ApiContext';
+import './CFF.css'
 
 
 class CFF extends React.Component {
+    static contextType = ApiContext;
     render() {
-        let critiqueType;
-
-       // if ( s ) {
-       // critiqueType = <CritiqueFreeform />
-      //  }
-
-       // else  {
-       //  critiqueType = <CritiqueTemplate />
-       // }
+       const {  opening, critfreeform } = this.props
        
         return (
-            <div className="critiqueList">
-              {this.props.critiqueType}
+            <div className="critique">
+                <p>{opening}</p>
+                <p>{critfreeform}</p>            
             </div>
         );
        
