@@ -126,6 +126,17 @@ class DraftlingPage extends React.Component {
                 critfreeform={freeformCrit.critfreeform}
               />
               )}
+
+              {crits.map(templateCrit => 
+                <Critique 
+                  plot={templateCrit.plot}
+                  pov={templateCrit.pov}
+                  characters={templateCrit.characters}
+                  dialogue={templateCrit.dialogue}
+                  gramspell={templateCrit.gramspell}
+                  overall={templateCrit.overall}
+                />
+              )}
             
             </div>
           </div>
