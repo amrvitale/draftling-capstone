@@ -85,41 +85,40 @@ class DraftlingPage extends React.Component {
         statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
       }
      
-      const crits = getCritiquesForDraftlings(draftling_id)
-
+      const { templateCrits = [], freeformCrits = [] } = this.context;
+      const allCritiques = templateCrits.concat(freeformCrits)
+      const crits = getCritiquesForDraftlings(allCritiques, selectedDraftling.id)
+      
       return (
-          <div className="draftlingPage">
-            <div className="myDraftActions">
-             <Link to={`/edit/${slug}`}>
-                <button type="button">Edit</button>
-              </Link> 
+        <div className="draftlingPage">
+          <div className="myDraftActions">
+            <Link to={`/edit/${slug}`}>
+              <button type="button">Edit</button>
+            </Link> 
             
-              {statusButton}
+            {statusButton}
 
-              <button type="button">Delete</button>
 
-              <Link to={`/postfreeformcritique/${slug}`}>
-                <button type="button">Post a Freeform Critique</button>
-              </Link>
+            <Link to={`/postfreeformcritique/${slug}`}>
+              <button type="button">Post a Freeform Critique</button>
+            </Link>
 
-              <Link to={`/posttemplatecritique/${slug}`}>
-                <button type="button">Post a Templated Critique</button>
-              </Link>
+            <Link to={`/posttemplatecritique/${slug}`}>
+              <button type="button">Post a Templated Critique</button>
+            </Link>
 
-            </div>
+          </div>
 
-            <div className="draftViewOfSelected">
-              <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
-                <br />
-              <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
-                <br />
-              <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
-            </div>
+          <div className="draftViewOfSelected">
+            <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
+            <br />
+            <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
+            <br />
+            <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
+          </div>
 
-            <div className="critiques">
-              
-              <h2>Critiques, if any posted, will appear below.</h2>
-              
+          <div className="critiques">
+            <h2>Critiques, if any posted, will appear below.</h2>
               {crits.map(freeformCrit =>
                 <li key={freeformCrit.draftling_id}>
                   <Critique 
@@ -142,8 +141,8 @@ class DraftlingPage extends React.Component {
                 </li>
               )}
             
-            </div>
           </div>
+        </div>
       );
   }
 }

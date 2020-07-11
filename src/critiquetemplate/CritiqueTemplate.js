@@ -43,11 +43,14 @@ class CritiqueTemplate extends React.Component {
             characters: this.state.characters,
             dialogue: this.state.dialogue,
             gramspell: this.state.gramspell,
-            overall: this.state.overall
+            overall: this.state.overall,
+            draftling_id: this.props.match.params.id
         }
         console.log(templateCrit)
-        
-        fetch(`${config.API_ENDPOINT}/draftling/${this.props.match.params.id}`, {
+        console.log(this.state.templateCrits)
+        console.log(`${config.API_ENDPOINT}/draftling/template/${this.props.match.params.id}`)
+
+        fetch(`${config.API_ENDPOINT}/draftling/template/${this.props.match.params.id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -60,8 +63,11 @@ class CritiqueTemplate extends React.Component {
         })
 
         .then(templateCrit => {
-            
+            this.context.addTemplateCrit(templateCrit)
+            this.props.history.push(`/draftling/${this.props.match.params.id}`)
         })
+        console.log(this.state.templateCrits)
+        console.log(this.context.templateCrits)
     }
   
     render() {
@@ -87,37 +93,37 @@ class CritiqueTemplate extends React.Component {
                     <br />
                     <p className="templateInstructions">How would you improve the believabilty of the plot?<br />How would you make the plot easier to follow?<br /> How would you change the arc to leave you more satisfied at its resolution?<br /> If you have no improvements, leave this blank.</p>
                     <br />
-                    <textarea style={styleTextArea} name="plot"></textarea>
+                    <textarea style={styleTextArea} name="plot" onChange={this.handleChange}></textarea>
                     <br /> <br />
                     <label>Point of View</label>
                     <br />
                     <p className="templateInstructions">How would you fix any serious point of view issues in this work?<br />If there was confusion in the point of view, how would you improve that?<br />If the point of view changed, is there any way that you could make the change smoother?<br />If you have no improvements, leave this blank.</p>
                     <br />
-                    <textarea style={styleTextArea} name="pov"></textarea>
+                    <textarea style={styleTextArea} name="pov" onChange={this.handleChange}></textarea>
                     <br /> <br />
                     <label>Characters</label>
                     <br />
                     <p className="templateInstructions">How would you make the characters seem more real?<br />How would you make them form more powerful connections with the reader?<br />If you have no improvements, leave this blank.</p>
                     <br />
-                    <textarea style={styleTextArea} name="characters"></textarea>
+                    <textarea style={styleTextArea} name="characters" onChange={this.handleChange}></textarea>
                     <br /> <br />
                     <label>Dialogue</label>
                     <br />
                     <p className="templateInstructions">How would you improve the naturalness and believability of the dialogue?<br />How would you improve the amount of dialogue in the work?<br />If you have no improvements, leave this blank.</p>
                     <br />
-                    <textarea style={styleTextArea} name="dialogue"></textarea>
+                    <textarea style={styleTextArea} name="dialogue" onChange={this.handleChange}></textarea>
                     <br /> <br />
                     <label>Grammar and Spelling</label>
                     <br />
                     <p className="templateInstructions">What serious grammar and spelling issues did you find?<br />If you have no improvements, leave this blank.</p>
                     <br />
-                    <textarea style={styleTextArea} name="gramspell"></textarea>
+                    <textarea style={styleTextArea} name="gramspell" onChange={this.handleChange}></textarea>
                     <br /> <br />
                     <label>Overall Comments</label>
                     <br />
                     <p className="templateInstructions">Any overall comments about the piece?</p>
                     <br />
-                    <textarea style={styleTextArea} name="overall" required></textarea>
+                    <textarea style={styleTextArea} name="overall" onChange={this.handleChange} required></textarea>
                     <br /> <br />
                     <input type="submit" value="Post Critique"></input>
                 </form>
