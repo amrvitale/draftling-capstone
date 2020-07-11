@@ -1,7 +1,6 @@
 import React from 'react';
 import './Dash.css';
 import { Link } from 'react-router-dom';
-import PostDraftling from '../postDraftling/PostDraftling';
  
 
 class Dash extends React.Component {

@@ -1,6 +1,5 @@
 import React from 'react';
 import ApiContext from '../ApiContext'
-import {findDraftling} from '../draftlings-helpers'
 import config from '../config'
 import './Edit.css'
 

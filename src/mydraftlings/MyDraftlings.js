@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Draftling from '../draftling/Draftling';
-import DraftlingPage from '../draftlingpage/DraftlingPage';
 import './MyDraftlings.css'
-import background from './bookshelves.jpg'
 
 class MyDraftlings extends React.Component {
     render() {

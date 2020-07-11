@@ -2,8 +2,7 @@ import React from 'react';
 import './CritiqueFreeform.css'
 import ApiContext from '../ApiContext'
 import config from '../config'
-import {findDraftling} from '../draftlings-helpers'
-import DraftlingPage from '../draftlingpage/DraftlingPage'
+
 
 class CritiqueFreeform extends React.Component {
 

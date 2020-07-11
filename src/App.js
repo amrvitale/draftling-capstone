@@ -14,7 +14,6 @@ import CritiqueTemplate from './critiquetemplate/CritiqueTemplate';
 import CritiqueFreeform from './critiquefreeform/CritiqueFreeform';
 import ApiContext from './ApiContext';
 import config from './config'
-import Draftling from './draftling/Draftling';
 import DraftlingPage from './draftlingpage/DraftlingPage'
 import Publish from './publish/Publish'
 

@@ -1,16 +1,9 @@
 import React from 'react'
 import ApiContext from '../ApiContext'
 import config from '../config'
-import Draftling from '../draftling/Draftling';
-import {findDraftling} from '../draftlings-helpers'
 import {getCritiquesForDraftlings} from '../draftlings-helpers'
 import { Link } from 'react-router-dom'
-import Edit from '../edit/Edit'
 import './DraftlingPage.css'
-import Unpublish from '../unpublish/Unpublish'
-import Publish from '../publish/Publish'
-import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform'
-import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
 import CFF from '../cff/CFF'
 import CTF from '../ctf/CTF'
 
@@ -123,19 +116,21 @@ class DraftlingPage extends React.Component {
           <div className="critiques">
             <h2>Critiques, if any posted, will appear below.</h2>
 
-            {crits.map(critique =>  {
-                let component
-                if (critique.hasOwnProperty('critfreeform')) {
-                  component = <CFF />
-                } else {
-                  component = <CTF />
-                }
-                return (
-                  <li key={critique.draftling_id}>
-                    {component}
-                  </li>
-                )
-              }
+            {
+              crits.map(critique =>  {
+                  let component
+                  if (critique.hasOwnProperty('critfreeform')) {
+                    component = <CFF />
+                  } else {
+                    component = <CTF />
+                  }
+                  return (
+                    <li key={critique.draftling_id}>
+                      {component}
+                    </li>
+                  )
+              })
+            }
           </div>
         </div>
       );

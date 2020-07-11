@@ -1,6 +1,5 @@
 import React from 'react'
-import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform';
-import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
+
 
 class CFF extends React.Component {
     render() {

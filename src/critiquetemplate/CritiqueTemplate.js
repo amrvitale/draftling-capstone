@@ -2,8 +2,6 @@ import React from 'react';
 import './CritiqueTemplate.css'
 import ApiContext from '../ApiContext'
 import config from '../config'
-import {findDraftling} from '../draftlings-helpers'
-import DraftlingPage from '../draftlingpage/DraftlingPage'
 
 
 class CritiqueTemplate extends React.Component {

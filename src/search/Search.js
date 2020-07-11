@@ -1,6 +1,5 @@
 import React from 'react';
 import './Search.css';
-import { Link } from 'react-router-dom';
 import config from '../config'
 import Draftling from '../draftling/Draftling'
 
