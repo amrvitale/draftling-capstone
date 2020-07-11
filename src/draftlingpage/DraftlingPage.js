@@ -85,7 +85,7 @@ class DraftlingPage extends React.Component {
         statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
       }
      
-      const crits = getCritiquesForDraftlings(this.context.selectedDraftling)
+      const crits = getCritiquesForDraftlings(draftling_id)
 
       return (
           <div className="draftlingPage">
