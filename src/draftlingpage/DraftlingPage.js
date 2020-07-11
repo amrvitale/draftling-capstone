@@ -121,21 +121,25 @@ class DraftlingPage extends React.Component {
               <h2>Critiques, if any posted, will appear below.</h2>
               
               {crits.map(freeformCrit =>
-              <Critique 
-                opening={freeformCrit.opening}
-                critfreeform={freeformCrit.critfreeform}
-              />
+                <li key={freeformCrit.draftling_id}>
+                  <Critique 
+                    opening={freeformCrit.opening}
+                    critfreeform={freeformCrit.critfreeform}
+                  />
+                </li>
               )}
 
               {crits.map(templateCrit => 
-                <Critique 
-                  plot={templateCrit.plot}
-                  pov={templateCrit.pov}
-                  characters={templateCrit.characters}
-                  dialogue={templateCrit.dialogue}
-                  gramspell={templateCrit.gramspell}
-                  overall={templateCrit.overall}
-                />
+                <li key={templateCrit.draftling_id}>
+                  <Critique 
+                    plot={templateCrit.plot}
+                    pov={templateCrit.pov}
+                    characters={templateCrit.characters}
+                    dialogue={templateCrit.dialogue}
+                    gramspell={templateCrit.gramspell}
+                    overall={templateCrit.overall}
+                  />
+                </li>
               )}
             
             </div>
