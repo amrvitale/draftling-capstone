@@ -2,17 +2,9 @@ import React from 'react'
 import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform';
 import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
 
-class Critique extends React.Component {
+class CTF extends React.Component {
     render() {
-        let critiqueType;
-
-       // if ( s ) {
-       // critiqueType = <CritiqueFreeform />
-      //  }
-
-       // else  {
-       //  critiqueType = <CritiqueTemplate />
-       // }
+      
        
         return (
             <div className="critiqueList">
@@ -23,6 +15,6 @@ class Critique extends React.Component {
     }
 };
 
-export default Critique;
+export default CTF;
 
 //if else like with status button, using column as flag

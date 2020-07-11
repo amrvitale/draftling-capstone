@@ -153,6 +153,7 @@ class App extends React.Component {
       templateCrits: this.state.templateCrits,
       handlePublishDraftling: this.handlePublishDraftling,
       addFreeformCrit: this.addFreeformCrit,
+      addTemplateCrit: this.addTemplateCrit,
       fetchTemplateCritiques: this.fetchTemplateCritiques,
       fetchFreeformCritiques: this.fetchFreeformCritiques
     }

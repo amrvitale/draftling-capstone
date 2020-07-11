@@ -11,7 +11,8 @@ import Unpublish from '../unpublish/Unpublish'
 import Publish from '../publish/Publish'
 import CritiqueFreeform from '../critiquefreeform/CritiqueFreeform'
 import CritiqueTemplate from '../critiquetemplate/CritiqueTemplate'
-import Critique from '../critiques/Critique'
+import CFF from '../cff/CFF'
+import CTF from '../ctf/CTF'
 
 class DraftlingPage extends React.Component {
   static defaultProps = {
@@ -77,6 +78,7 @@ class DraftlingPage extends React.Component {
 
       if (selectedDraftling === undefined ) {
        let html = <p>Readying your draftling!</p>
+       return html
       }
       else if (selectedDraftling.status=== "published") {
         statusButton = <button className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)}>Unpublish</button>
@@ -87,8 +89,9 @@ class DraftlingPage extends React.Component {
      
       const { templateCrits = [], freeformCrits = [] } = this.context;
       const allCritiques = templateCrits.concat(freeformCrits)
+      console.log(allCritiques);
+
       const crits = getCritiquesForDraftlings(allCritiques, selectedDraftling.id)
-      
       return (
         <div className="draftlingPage">
           <div className="myDraftActions">
@@ -119,28 +122,20 @@ class DraftlingPage extends React.Component {
 
           <div className="critiques">
             <h2>Critiques, if any posted, will appear below.</h2>
-              {crits.map(freeformCrit =>
-                <li key={freeformCrit.draftling_id}>
-                  <Critique 
-                    opening={freeformCrit.opening}
-                    critfreeform={freeformCrit.critfreeform}
-                  />
-                </li>
-              )}
 
-              {crits.map(templateCrit => 
-                <li key={templateCrit.draftling_id}>
-                  <Critique 
-                    plot={templateCrit.plot}
-                    pov={templateCrit.pov}
-                    characters={templateCrit.characters}
-                    dialogue={templateCrit.dialogue}
-                    gramspell={templateCrit.gramspell}
-                    overall={templateCrit.overall}
-                  />
-                </li>
-              )}
-            
+            {crits.map(critique =>  {
+                let component
+                if (critique.hasOwnProperty('critfreeform')) {
+                  component = <CFF />
+                } else {
+                  component = <CTF />
+                }
+                return (
+                  <li key={critique.draftling_id}>
+                    {component}
+                  </li>
+                )
+              }
           </div>
         </div>
       );
