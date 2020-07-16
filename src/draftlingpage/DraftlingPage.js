@@ -57,6 +57,28 @@ class DraftlingPage extends React.Component {
     })
   }
 
+  showCrits(crits) {
+    console.log(crits)
+    return crits.map(critique =>  {
+      let component
+      let key
+
+      if (critique.hasOwnProperty('critfreeform')) {
+        component = <CFF />
+        key = 'freeform'+ critique.draftling_id;
+      } else {
+        component = <CTF />
+        key = 'template' + critique.draftling_id;
+      }
+      return (
+       <li key={key}>
+       { {component} }
+        test
+      </li>
+   )
+    })
+  }
+
   render() {
       const {draftlings = [] } = this.context
       const {slug} = this.props.match.params;
@@ -83,8 +105,10 @@ class DraftlingPage extends React.Component {
       const { templateCrits = [], freeformCrits = [] } = this.context;
       const allCritiques = templateCrits.concat(freeformCrits)
       console.log(allCritiques);
+      console.log(this.context)
 
       const crits = getCritiquesForDraftlings(allCritiques, selectedDraftling.id)
+      console.log(crits)
       return (
         <div className="draftlingPage">
           <div className="myDraftActions">
@@ -115,27 +139,10 @@ class DraftlingPage extends React.Component {
 
           <div className="critiques">
             <h2>Critiques, if any posted, will appear below.</h2>
-
-            {
-              crits.map(critique =>  {
-                  let component
-                  let key
-                
-
-                  if (critique.hasOwnProperty('critfreeform')) {
-                    component = <CFF />
-                    key = 'freeform'+ critique.draftling_id;
-                  } else {
-                    component = <CTF />
-                    key = 'template' + critique.draftling_id;
-                  }
-                  return (
-                    <li key={key}>
-                      {component}
-                    </li>
-                  )
-              })
-            }
+          <ul>
+          {this.showCrits}
+          </ul>
+           
           </div>
         </div>
       );

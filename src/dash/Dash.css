@@ -26,10 +26,8 @@ p {
     color: whitesmoke;
 }
 
-.postNew {
-height: 80px;
-}
-
-.viewMyDraftlings{
-height: 80px;
+.postNew,.viewMyDraftlings {
+    height: 80px;
+    display: inline;
+    text-align: center;
 }

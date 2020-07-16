@@ -49,3 +49,7 @@ div.single-draftling {
     font-size: 30px;
     color: whitesmoke;
 }
+
+input, select {
+    width: 100px;
+}

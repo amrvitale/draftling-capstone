@@ -77,8 +77,6 @@ class PostDraftling extends React.Component {
                 <h1 className="postHeader">Write your Draftling</h1>
                     <p className="instructions">Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
                 </div>
-                <br />
-                <br />
 
                 <form onSubmit={this.handleSubmit}>
                     <label className="postLabel" htmlFor="draftlingTitle">Draftling Title:</label>

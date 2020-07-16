@@ -23,9 +23,6 @@ class Dash extends React.Component {
                         <button type="submit" className="postNew">Post New Draftling</button>
                     </Link>
 
-                    <br/>
-                    <br/>
-
                     <Link to='/mydraftlings'>
                         <button type="submit" className="viewMyDraftlings">View My Draftlings</button>
                     </Link>
