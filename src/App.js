@@ -136,11 +136,14 @@ class App extends React.Component {
       return templateCritRes.json();
     })
     .then ((templateCrits) => {
+      console.log('TEMPLATECRITS', templateCrits)
       this.setState ({templateCrits});
     })
     .catch((error) => {
       console.log({ error });
     });
+    console.log(this.state.templateCrits)
+    console.log(this.context.templateCrits)
   }
 
 

@@ -130,7 +130,7 @@ class DraftlingPage extends React.Component {
                     key = 'template' + critique.draftling_id;
                   }
                   return (
-                    <li key={critique.draftling_id}>
+                    <li key={key}>
                       {component}
                     </li>
                   )
