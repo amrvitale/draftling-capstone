@@ -39,7 +39,8 @@ class App extends React.Component {
     })
 
     .then(([draftlings]) => {
-      this.setState( {draftlings})
+      console.log(draftlings, "here we are!!!")
+      this.setState( {draftlings: draftlings})
     })
     .catch(error => {
       console.log({ error })
@@ -119,7 +120,7 @@ class App extends React.Component {
     })
     .then ((freeformCrits) => {
       console.log('FREEFORMCRITS', freeformCrits);
-      this.setState ({freeformCrits});
+      this.setState(freeformCrits);
     })
     .catch((error) => {
       console.log({ error });
@@ -137,7 +138,7 @@ class App extends React.Component {
     })
     .then ((templateCrits) => {
       console.log('TEMPLATECRITS', templateCrits)
-      this.setState ({templateCrits});
+      this.setState ({templateCrits: templateCrits});
     })
     .catch((error) => {
       console.log({ error });

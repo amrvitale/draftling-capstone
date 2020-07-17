@@ -17,35 +17,35 @@ class DraftlingPage extends React.Component {
     this.context.fetchTemplateCritiques();
     this.context.fetchFreeformCritiques();
   }
-  
-  static contextType = ApiContext   
+
+  static contextType = ApiContext
 
     updateDraftlingStatus = (selectedDraftling) =>  {
     console.log('clicked')
     console.log(this.props)
 
-    let status 
-      
+    let status
+
     if (selectedDraftling.status === 'published') {
       status = 'unpublished'
     } else {
       status = 'published'
-    }  
+    }
 
     const updatedDraftling = {
       ...selectedDraftling,
       status: status
     }
 
-    let url = `${config.API_ENDPOINT}/mydraftlings/${selectedDraftling.id}`; 
+    let url = `${config.API_ENDPOINT}/mydraftlings/${selectedDraftling.id}`;
 
       fetch(url, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
-        },   
+        },
         body: JSON.stringify(updatedDraftling),
-    }) 
+    })
 
     .then(draftling => {
       console.log(draftling)
@@ -62,9 +62,9 @@ class DraftlingPage extends React.Component {
     return crits.map(critique =>  {
       let component
       let key
-
+      console.log('critique: ', critique);
       if (critique.hasOwnProperty('critfreeform')) {
-        component = <CFF />
+        component = <CFF crit={critique} />
         key = 'freeform'+ critique.draftling_id;
       } else {
         component = <CTF />
@@ -72,8 +72,7 @@ class DraftlingPage extends React.Component {
       }
       return (
        <li key={key}>
-       { {component} }
-        test
+       { component }
       </li>
    )
     })
@@ -101,7 +100,7 @@ class DraftlingPage extends React.Component {
       else {
         statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
       }
-     
+
       const { templateCrits = [], freeformCrits = [] } = this.context;
       const allCritiques = templateCrits.concat(freeformCrits)
       console.log(allCritiques);
@@ -114,8 +113,8 @@ class DraftlingPage extends React.Component {
           <div className="myDraftActions">
             <Link to={`/edit/${slug}`}>
               <button type="button">Edit</button>
-            </Link> 
-            
+            </Link>
+
             {statusButton}
 
 
@@ -130,9 +129,9 @@ class DraftlingPage extends React.Component {
           </div>
 
           <div className="draftViewOfSelected">
-            <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1> 
+            <h1 className="draftlingTitle"> {(selectedDraftling) ? selectedDraftling.title: ""}</h1>
             <br />
-            <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p> 
+            <p className="wordcountAndGenre"> {(selectedDraftling) ? selectedDraftling.wordcount: ""}, {(selectedDraftling) ? selectedDraftling.genre: ""}</p>
             <br />
             <p>{(selectedDraftling) ? selectedDraftling.content: ""}</p>
           </div>
@@ -140,9 +139,9 @@ class DraftlingPage extends React.Component {
           <div className="critiques">
             <h2>Critiques, if any posted, will appear below.</h2>
           <ul>
-          {this.showCrits}
+          {this.showCrits(crits)}
           </ul>
-           
+
           </div>
         </div>
       );

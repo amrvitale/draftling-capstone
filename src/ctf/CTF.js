@@ -5,7 +5,7 @@ import './CTF.css'
 class CTF extends React.Component {
     static contextType = ApiContext;
     render() {
-       const { plot, pov, characters, dialogue, gramspell, overall } = this.props
+       const { plot, pov, characters, dialogue, gramspell, overall } = this.props.crit
        
         return (
             <div className="critique">
