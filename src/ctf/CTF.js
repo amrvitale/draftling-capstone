@@ -9,6 +9,7 @@ class CTF extends React.Component {
        
         return (
             <div className="critique">
+                <h3>Template Critique</h3>
                 <p>{plot}</p>
                 <p>{pov}</p>
                 <p>{characters}</p>       

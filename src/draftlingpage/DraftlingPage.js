@@ -58,7 +58,7 @@ class DraftlingPage extends React.Component {
   }
 
   showCrits(crits) {
-    console.log(crits)
+    console.log(crits,"crits")
     return crits.map(critique =>  {
       let component
       let key
@@ -67,7 +67,7 @@ class DraftlingPage extends React.Component {
         component = <CFF crit={critique} />
         key = 'freeform'+ critique.draftling_id + critique.id;
       } else {
-        component = <CTF />
+        component = <CTF crit={critique}/>
         key = 'template' + critique.draftling_id + critique.id;
       }
       return (
@@ -82,10 +82,9 @@ class DraftlingPage extends React.Component {
       const {draftlings = [] } = this.context
       const {slug} = this.props.match.params;
       console.log(slug)
-      console.log(draftlings)
+      console.log(draftlings, "draftlings")
       let selectedDraftling = draftlings.find(draftling => draftling.id === parseInt(slug))
-      console.log(draftlings, selectedDraftling)
-      console.log(selectedDraftling)
+      console.log(draftlings, selectedDraftling, "draftlings, selectedDraftling")
 
       let statusButton;
 
@@ -103,11 +102,11 @@ class DraftlingPage extends React.Component {
 
       const { templateCrits = [], freeformCrits = [] } = this.context;
       const allCritiques = templateCrits.concat(freeformCrits)
-      console.log(allCritiques);
-      console.log(this.context)
+      console.log(allCritiques, "allCritiques");
+      console.log(this.context, "this.context")
 
       const crits = getCritiquesForDraftlings(allCritiques, selectedDraftling.id)
-      console.log(crits)
+      console.log(crits, "crits")
       return (
         <div className="draftlingPage">
           <div className="myDraftActions">

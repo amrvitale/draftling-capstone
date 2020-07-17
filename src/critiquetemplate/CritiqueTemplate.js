@@ -44,8 +44,8 @@ class CritiqueTemplate extends React.Component {
             overall: this.state.overall,
             draftling_id: this.props.match.params.id
         }
-        console.log(templateCrit)
-        console.log(this.state.templateCrits)
+        console.log(templateCrit, "templateCrit")
+        console.log(this.state.templateCrits, "this.state.templateCrits")
         console.log(`${config.API_ENDPOINT}/draftling/template/${this.props.match.params.id}`)
 
         fetch(`${config.API_ENDPOINT}/draftling/template/${this.props.match.params.id}`, {
@@ -64,8 +64,8 @@ class CritiqueTemplate extends React.Component {
             this.context.addTemplateCrit(templateCrit)
             this.props.history.push(`/draftling/${this.props.match.params.id}`)
         })
-        console.log(this.state.templateCrits)
-        console.log(this.context.templateCrits)
+        console.log(this.state.templateCrits, "this.state.templateCrits")
+        console.log(this.context.templateCrits, "this.context.tempalteCrits")
     }
   
     render() {
