@@ -5,12 +5,7 @@ import './Edit.css'
 
 class Edit extends React.Component {
 
-    state = {
-        title: "",
-        wordcount: "",
-        genre: "",
-        content: ""
-    }
+
 
     componentDidMount() {
         const {draftlings = [] } = this.context
@@ -33,7 +28,12 @@ class Edit extends React.Component {
 
       constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {
+            title: "",
+            wordcount: "",
+            genre: "",
+            content: ""
+        };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);

@@ -5,3 +5,12 @@
   body {
       margin: 0;
   }
+
+  .critique {
+    margin: 1px;
+    padding: 5px;
+    border: 1px solid maroon;
+    border-radius: 5px;
+    background-color: black;
+    justify-content: space-evenly;
+  }

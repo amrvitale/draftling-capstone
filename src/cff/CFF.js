@@ -11,8 +11,8 @@ class CFF extends React.Component {
         return (
             <div className="critique">
                 <h3>Freeform Critique</h3>
-                <p>{opening}</p><br/>
-                <p>{critfreeform}</p>
+                <p>Opening comments: {opening}</p><br/>
+                <p>Overall: {critfreeform}</p>
             </div>
         );
 
