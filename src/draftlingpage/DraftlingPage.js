@@ -65,10 +65,10 @@ class DraftlingPage extends React.Component {
       console.log('critique: ', critique);
       if (critique.hasOwnProperty('critfreeform')) {
         component = <CFF crit={critique} />
-        key = 'freeform'+ critique.draftling_id;
+        key = 'freeform'+ critique.draftling_id + critique.id;
       } else {
         component = <CTF />
-        key = 'template' + critique.draftling_id;
+        key = 'template' + critique.draftling_id + critique.id;
       }
       return (
        <li key={key}>

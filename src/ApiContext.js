@@ -10,5 +10,6 @@ export default React.createContext( {
     getCritiquesForDraftlings: () => {},
     deleteDraftling: () => {},
     editDraftling: () => {},
+    
 })
 

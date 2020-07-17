@@ -10,6 +10,7 @@ class CFF extends React.Component {
        const {  opening, critfreeform } = this.props.crit;
         return (
             <div className="critique">
+                <h3>Freeform Critique</h3>
                 <p>{opening}</p><br/>
                 <p>{critfreeform}</p>
             </div>

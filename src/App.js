@@ -120,7 +120,7 @@ class App extends React.Component {
     })
     .then ((freeformCrits) => {
       console.log('FREEFORMCRITS', freeformCrits);
-      this.setState(freeformCrits);
+      this.setState({freeformCrits: freeformCrits});
     })
     .catch((error) => {
       console.log({ error });
