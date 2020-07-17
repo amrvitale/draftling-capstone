@@ -19,7 +19,7 @@ class About extends React.Component {
                     </ul>
                 
                     <h2 className="feedbackOptions">Feedback Options</h2>
-                    <p className="aboutPara">Beta readers can provide feedback via comments or questionnaires.  To get feedback on your piece, set your feedback availability to one of these options, and readers will post their clear, concise, and useful feedback to help you improve your writing!</p>
+                    <p className="aboutPara">Beta readers can provide feedback via comments or questionnaires.  To give feedback on a piece, click the Draftling and select one of these options. The best readers post clear, concise, and useful feedback to help you improve your writing!</p>
                 </div>
        
         );
