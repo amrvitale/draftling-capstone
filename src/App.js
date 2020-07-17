@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Nav from './nav/Nav';
-import Signup from './signup/Signup';
-import Login from './login/Login';
 import PostDraftling from './postDraftling/PostDraftling';
 import Search from './search/Search';
 import Dash from './dash/Dash';
@@ -165,8 +163,8 @@ class App extends React.Component {
       <ApiContext.Provider value={providerValue}>
         <div className='App'>
           <Nav />
-          <Route exact path ='/' component={Signup} />
-          <Route path='/login' component={Login} />
+    
+          
           <Route path ='/mydesk' component={Dash}/>
           <Route path='/search' component={Search}/>
           <Route path ='/postdraftling' component={PostDraftling} />
