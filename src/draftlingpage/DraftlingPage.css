@@ -1,13 +1,32 @@
 .draftlingTitle {
-    color: whitesmoke;
+    color: maroon;
     font-size: 40px;
+    background-color: black;
+    text-transform: uppercase;
+
 }
-.myDraftActions {
-    background-image: url(draftActions.jpg);
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-}
+
 
 p {
     white-space: pre-wrap; 
 }
+.critList {
+    text-align: center;
+}
+
+.critiqueh2{
+    margin: 10px;
+    padding: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.wordcountAndGenre {
+   
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+

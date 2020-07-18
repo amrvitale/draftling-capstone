@@ -10,12 +10,12 @@ class CTF extends React.Component {
         return (
             <div className="critique">
                 <h3>Template Critique</h3>
-                <p>Plot: {plot}</p> <br/>
-                <p>POV: {pov}</p> <br/>
-                <p>Characters: {characters}</p> <br/>       
-                <p>Dialogue: {dialogue}</p><br/> 
-                <p>Grammar and spelling: {gramspell}</p><br/>
-                <p>Overall: {overall}</p><br/>     
+                <p className="critText">Plot: {plot}</p> <br/>
+                <p className="critText">POV: {pov}</p> <br/>
+                <p className="critText">Characters: {characters}</p> <br/>       
+                <p className="critText">Dialogue: {dialogue}</p><br/> 
+                <p className="critText">Grammar and spelling: {gramspell}</p><br/>
+                <p className="critText">Overall: {overall}</p><br/>     
             </div>
         );
        

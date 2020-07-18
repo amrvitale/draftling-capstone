@@ -15,6 +15,7 @@ textarea {
 label {
 	font-size: 25px;
 	font-weight: bold;
+	color: whitesmoke;
 }
 .freeformHero{
   	background-image: url('./freeformStar.jpg');

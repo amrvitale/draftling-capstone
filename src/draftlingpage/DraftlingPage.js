@@ -136,8 +136,8 @@ class DraftlingPage extends React.Component {
           </div>
 
           <div className="critiques">
-            <h2>Critiques, if any posted, will appear below.</h2>
-          <ul>
+            <h2 className="critiqueh2">Any Critiques Will Appear Below</h2>
+          <ul className="critList">
           {this.showCrits(crits)}
           </ul>
 

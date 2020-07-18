@@ -21,7 +21,8 @@ p, ul, h2 {
 }
 .fictionLengths{
     font-size: 30px;
+    text-align: center;
 }
 .feedbackOptions {
-    font-size: 50px;
+    font-size: 40px;
 }

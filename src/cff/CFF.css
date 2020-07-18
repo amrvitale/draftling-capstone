@@ -1,23 +1,37 @@
+
 * {
-    box-sizing: border-box;
-  }
-
-  body {
-      margin: 0;
-  }
-
-  .critique {
-    margin: 1px;
-    padding: 5px;
-    border: 1px solid maroon;
-    border-radius: 5px;
-    background-color: black;
-    justify-content: space-evenly;
-    font-size: 20px;
-  }
-
-
-
-  p {
-    white-space: pre-wrap; 
+  box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+}
+
+ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+div.critique {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 5px;
+  border: 1px solid maroon;
+  border-radius: 5px;
+  background-color: black;
+  font-size: 20px;
+  min-width: 300px;
+  max-width: 600px;
+
+}
+
+
+.critText {
+font-size: 20px;
+}
+
+p {
+white-space: pre-wrap; 
+}
+
