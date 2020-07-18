@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unpublish component renders a .unpublish button by default 1`] = `
+<div>
+  <button>
+    Unpublish
+  </button>
+</div>
+`;
