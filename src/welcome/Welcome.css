@@ -1,0 +1,8 @@
+
+.welcomeHero {
+    background-image: url('./welcomeDraftling2.jpg');
+    height: 50%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

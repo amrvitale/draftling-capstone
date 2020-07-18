@@ -5,7 +5,7 @@ class Welcome extends React.Component {
     render() {
         return (
             <div className="aboutDetails">
-                <div className="aboutHero">
+                <div className="welcomeHero">
                     <h2 className="aboutHeader">Welcome to Draftling</h2>
                 </div>
                     <p className="aboutPara">Draftling is a forum for getting and giving feedback on your fiction writing. Post your writing and receive indepth feedback from fellow writers and editors! We accept the following types of fiction pieces: </p>
