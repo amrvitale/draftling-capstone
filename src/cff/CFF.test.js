@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
-import CTF from './CTF'
+import CFF from './CFF'
 
-describe (`CTF component`, () => {
-    it('renders a .CTF by default', () => {
-        const wrapper = shallow(<CTF />)
+describe (`CFF component`, () => {
+    it('renders a .CFF by default', () => {
+        const wrapper = shallow(<CFF />)
         expect (toJson(wrapper)).toMatchSnapshot()
     })
 

@@ -121,7 +121,7 @@ class PostDraftling extends React.Component {
                     <br/>
                     <textarea style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
                     <br/>
-                    <input type="submit" value="Submit Draft to My Shelf"></input>
+                    <input type="submit" className="submitBtn" value="Submit"></input>
                 </form>
             </div>
         )

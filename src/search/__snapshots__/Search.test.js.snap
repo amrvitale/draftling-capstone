@@ -4,9 +4,15 @@ exports[`Search component renders a .Search by default 1`] = `
 <div
   className="searchPage"
 >
-  <h1>
-    Search For Other Writers's Draftlings
-  </h1>
+  <div
+    className="searchPageHero"
+  >
+    <h1
+      className="searchHeading"
+    >
+      Search Draftlings
+    </h1>
+  </div>
   <br />
   <br />
   <section
@@ -18,8 +24,10 @@ exports[`Search component renders a .Search by default 1`] = `
       Title:
     </label>
     <input
+      onChange={[Function]}
       placeholder="Search by title"
       type="text"
+      value=""
     />
   </section>
   <br />
@@ -34,6 +42,8 @@ exports[`Search component renders a .Search by default 1`] = `
     <select
       id="wordcount"
       name="wordcount"
+      onChange={[Function]}
+      value=""
     >
       <option />
       <option
@@ -88,122 +98,118 @@ exports[`Search component renders a .Search by default 1`] = `
       </option>
     </select>
   </section>
+  <br />
   <section
     className="genreSearch"
   >
     <label
       htmlFor="genreDrop"
     >
-      Search by Fiction Genre
+      Fiction Genre
     </label>
     <select
       id="genreDrop"
       name="genreDrop"
+      onChange={[Function]}
+      value=""
     >
       <option />
       <option
-        value="action / adventure"
+        value="Action/Adventure"
       >
-        Action / Adventure
+        Action/Adventure
       </option>
       <option
-        value="classic"
+        value="Classic"
       >
         Classic
       </option>
       <option
-        value="contemporary"
+        value="Contempory"
       >
-        Contemporary
+        Contempory
       </option>
       <option
-        value="crime/detective"
+        value="Crime/Detective"
       >
-        Crime / Detective
+        Crime/Detective
       </option>
       <option
-        value="fable"
+        value="Fable"
       >
         Fable
       </option>
       <option
-        value="fairy tale"
+        value="Fairy Tale"
       >
         Fairy Tale
       </option>
       <option
-        value="fantasy"
-      >
-        Fantasy
-      </option>
-      <option
-        value="folktale"
+        value="Folktale"
       >
         Folktale
       </option>
       <option
-        value="gothic"
+        value="Gothic"
       >
         Gothic
       </option>
       <option
-        value="historical fiction"
+        value="Historical Fiction"
       >
         Historical Fiction
       </option>
       <option
-        value="horror"
+        value="Horror"
       >
         Horror
       </option>
       <option
-        value="humor"
+        value="Humor"
       >
         Humor
       </option>
       <option
-        value="magical realism"
+        value="Magical Realism"
       >
         Magical realism
       </option>
       <option
-        value="mystery"
+        value="Mystery"
       >
         Mystery
       </option>
       <option
-        value="romance"
+        value="Romance"
       >
         Romance
       </option>
       <option
-        value="science fiction"
+        value="Science Fiction"
       >
         Science Fiction
       </option>
       <option
-        value="thriller"
+        value="Thriller"
       >
         Thriller
       </option>
       <option
-        value="western"
+        value="Western"
       >
         Western
       </option>
     </select>
-    <Link
-      to="/search"
-    >
-      <button
-        type="submit"
-      >
-        Search
-      </button>
-    </Link>
   </section>
+  <button
+    onClick={[Function]}
+    type="submit"
+  >
+    Search
+  </button>
   <br />
   <br />
-  <Published />
+  <br />
+  <br />
 </div>
 `;

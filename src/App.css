@@ -73,7 +73,9 @@ h1, h2 {
   .tagline {
     font-size: 20px;
   }
-  
+  .submitBtn {
+    width: 40%;
+  }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) {

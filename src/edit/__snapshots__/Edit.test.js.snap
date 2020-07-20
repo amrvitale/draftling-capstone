@@ -2,16 +2,31 @@
 
 exports[`Edit component renders a .Edit by default 1`] = `
 <div
-  className="edit"
+  className="editPage"
 >
+  <div
+    className="editHero"
+  >
+    <h1
+      className="editHeader"
+    >
+      Edit Your Draftling
+    </h1>
+    <p
+      className="instructions"
+    >
+      Edit any fields for your Draftling. 
+      <br />
+      Upon submitting, it will be placed on your shelf until it's ready to be published.
+    </p>
+  </div>
+  <br />
+  <br />
   <form
     onSubmit={[Function]}
   >
-    <h1>
-      Edit Your Draftling
-    </h1>
-    <br />
     <label
+      className="postLabel"
       htmlFor="draftlingTitle"
     >
       Draftling Title:
@@ -26,9 +41,11 @@ exports[`Edit component renders a .Edit by default 1`] = `
         }
       }
       type="text"
+      value=""
     />
     <br />
     <label
+      className="postLabel"
       htmlFor="wordcount"
     >
       Choose an approximate word count.
@@ -38,6 +55,7 @@ exports[`Edit component renders a .Edit by default 1`] = `
       name="wordcount"
       onChange={[Function]}
       required={true}
+      value=""
     >
       <option />
       <option
@@ -93,6 +111,7 @@ exports[`Edit component renders a .Edit by default 1`] = `
     </select>
     <br />
     <label
+      className="postLabel"
       htmlFor="genre"
     >
       Choose a genre.
@@ -102,6 +121,7 @@ exports[`Edit component renders a .Edit by default 1`] = `
       name="genre"
       onChange={[Function]}
       required={true}
+      value=""
     >
       <option />
       <option
@@ -205,6 +225,7 @@ exports[`Edit component renders a .Edit by default 1`] = `
           "textAlign": "left",
         }
       }
+      value=""
     />
     <br />
     <input

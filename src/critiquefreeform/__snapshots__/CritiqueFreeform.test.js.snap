@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CritiqueFreeform component renders a .CritiqueFreeform by default 1`] = `
+<div
+  className="freeform"
+>
+  <div
+    className="freeformHero"
+  >
+    <h1
+      className="freeformHeading"
+    >
+      Post a Freeform Critique
+    </h1>
+    <p
+      className="freeformTagline"
+    >
+      Please remember to be objective, especially if the piece you're critiquing is not in a style or genre that you prefer. Always start with the strengths of the piece, then make solid suggestions for improvement.
+    </p>
+  </div>
+  <br />
+  <br />
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      Opening Comments
+    </label>
+    <br />
+    <textarea
+      name="opening"
+      onChange={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+    <br />
+    <label>
+      Freeform Critique
+    </label>
+    <br />
+    <textarea
+      name="critfreeform"
+      onChange={[Function]}
+      required={true}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+    <input
+      type="submit"
+      value="Post Critique"
+    />
+  </form>
+</div>
+`;

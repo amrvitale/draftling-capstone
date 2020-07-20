@@ -2,15 +2,27 @@
 
 exports[`PostDraftling component renders a .PostDraftling by default 1`] = `
 <div
-  className="postDraftling"
+  className="postDraftlingPage"
 >
-  <h1>
-    Post your Draftling below
-  </h1>
+  <div
+    className="postDraftlingHero"
+  >
+    <h1
+      className="postHeader"
+    >
+      Write your Draftling
+    </h1>
+    <p
+      className="instructions"
+    >
+      Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.
+    </p>
+  </div>
   <form
     onSubmit={[Function]}
   >
     <label
+      className="postLabel"
       htmlFor="draftlingTitle"
     >
       Draftling Title:
@@ -28,6 +40,7 @@ exports[`PostDraftling component renders a .PostDraftling by default 1`] = `
     />
     <br />
     <label
+      className="postLabel"
       htmlFor="wordcount"
     >
       Choose an approximate word count.
@@ -92,6 +105,7 @@ exports[`PostDraftling component renders a .PostDraftling by default 1`] = `
     </select>
     <br />
     <label
+      className="postLabel"
       htmlFor="genre"
     >
       Choose a genre.
@@ -207,8 +221,9 @@ exports[`PostDraftling component renders a .PostDraftling by default 1`] = `
     />
     <br />
     <input
+      className="submitBtn"
       type="submit"
-      value="Submit Draft to My Dash"
+      value="Submit"
     />
   </form>
 </div>

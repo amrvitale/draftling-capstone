@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] = `
+<div
+  className="template"
+>
+  <div
+    className="templateHero"
+  >
+    <h2
+      className="templateHeading"
+    >
+      Templated Critique
+    </h2>
+    <p
+      className="templateTagline"
+    >
+      Please remember to be objective, especially if the piece you're critiquing is not in a style or genre that you prefer. Always start with the strengths of the piece, then make solid suggestions for improvement.
+    </p>
+  </div>
+  <br />
+  <br />
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      Plot
+    </label>
+    <br />
+    <p
+      className="templateInstructions"
+    >
+      How would you improve the believabilty of the plot?
+      <br />
+      How would you make the plot easier to follow?
+      <br />
+       How would you change the arc to leave you more satisfied at its resolution?
+      <br />
+       If you have no improvements, leave this blank.
+    </p>
+    <br />
+    <textarea
+      name="plot"
+      onChange={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+     
+    <br />
+    <label>
+      Point of View
+    </label>
+    <br />
+    <p
+      className="templateInstructions"
+    >
+      How would you fix any serious point of view issues in this work?
+      <br />
+      If there was confusion in the point of view, how would you improve that?
+      <br />
+      If the point of view changed, is there any way that you could make the change smoother?
+      <br />
+      If you have no improvements, leave this blank.
+    </p>
+    <br />
+    <textarea
+      name="pov"
+      onChange={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+     
+    <br />
+    <label>
+      Characters
+    </label>
+    <br />
+    <p
+      className="templateInstructions"
+    >
+      How would you make the characters seem more real?
+      <br />
+      How would you make them form more powerful connections with the reader?
+      <br />
+      If you have no improvements, leave this blank.
+    </p>
+    <br />
+    <textarea
+      name="characters"
+      onChange={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+     
+    <br />
+    <label>
+      Dialogue
+    </label>
+    <br />
+    <p
+      className="templateInstructions"
+    >
+      How would you improve the naturalness and believability of the dialogue?
+      <br />
+      How would you improve the amount of dialogue in the work?
+      <br />
+      If you have no improvements, leave this blank.
+    </p>
+    <br />
+    <textarea
+      name="dialogue"
+      onChange={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+     
+    <br />
+    <label>
+      Grammar and Spelling
+    </label>
+    <br />
+    <p
+      className="templateInstructions"
+    >
+      What serious grammar and spelling issues did you find?
+      <br />
+      If you have no improvements, leave this blank.
+    </p>
+    <br />
+    <textarea
+      name="gramspell"
+      onChange={[Function]}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+     
+    <br />
+    <label>
+      Overall Comments
+    </label>
+    <br />
+    <p
+      className="templateInstructions"
+    >
+      Any overall comments about the piece?
+    </p>
+    <br />
+    <textarea
+      name="overall"
+      onChange={[Function]}
+      required={true}
+      style={
+        Object {
+          "boxSizing": "border-box",
+          "fontSize": "15px",
+          "minHeight": "380px",
+          "minWidth": "380px",
+          "padding": "9px",
+          "textAlign": "left",
+        }
+      }
+    />
+    <br />
+     
+    <br />
+    <input
+      type="submit"
+      value="Post Critique"
+    />
+  </form>
+</div>
+`;
