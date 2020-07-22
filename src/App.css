@@ -14,12 +14,6 @@ input, label, select {
     
 }
 
-input, select {
-  width: 15%;
-  height: 30px;
-  font-size: 20px;
-}
-
 button {
   cursor: pointer;
   background: black;
@@ -64,10 +58,9 @@ h1, h2 {
   display: inline;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 320px;
-    max-width: 480px;
+    max-width: 768px;
     min-height: 300px;
   }
 
@@ -84,25 +77,8 @@ h1, h2 {
   input, select {
     width: 50%;
   }
-}
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
-  .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
-    min-width: 481px;
-    max-width: 768px;
-    min-height: 350px;
-  }
-  .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader, .templateHeading, .freeformHeading {
-    font-size: 60px;
-  }
-  .tagline {
-    font-size: 28px;
-  }
-  input, select {
-    width: 50%;
-  }
-}
-
+/*iPad size */
 @media only screen and (min-device-width: 769px) and (max-device-width: 1366px)  {  
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 769px;
