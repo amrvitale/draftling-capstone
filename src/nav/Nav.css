@@ -17,6 +17,7 @@
     border-bottom: 1px solid #edf2f4;; 
     border-top: 1px solid #edf2f4;;
     height: 60px;
+    white-space: nowrap;
 
 }
 
@@ -34,9 +35,28 @@
     text-decoration: none;
     color: whitesmoke;
     vertical-align: middle;
+    white-space: nowrap;
+
 }
 
 #navbar a:hover {
     background-color: #ddd;
     color: black;
 }
+
+@media screen and (max-width: 44em) {
+    body {
+        margin: 1.5em 0;
+    }
+    
+        ul {
+          padding:0 .5em;    
+        }
+        
+        ul > li {
+          width:100%;
+          padding:.45em .25em;
+          margin:0 0 .55em 0;
+          text-align: center;
+        }
+      }

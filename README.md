@@ -1,3 +1,32 @@
+Welcome to Draftling, my first capstone for the Bloc/Thinkful Web Developer program! 
+====================================================================================
+
+Link to the live Draftling application: https://draftling-capstone.amrvitale.now.sh/ 
+
+
+Summary
+--------
+Draftling is a writing forum, designed for writers to post their work, and editors and readers to give feedback.
+Writers can post their work by filling out the post form, then clicking Publish.
+Once a work is published, it is available to the search component. 
+Readers and editors can then search by genre, title or word count, and select a piece to read.
+If they wish to provide feedback, they can choose between styles of critiques: Freeform and Template.
+For freeform critiques, the fields are open-ended and feedback can be given in a format of the editor's choosing.
+Template critiques, on the other hand, are more specific, with questions pertaining to plot, characters, point of view, and other areas the writer can improve upon.
+
+Technology Used
+---------------
+Client: React.js, vanilla CSS 
+API: Node.js, Express.js
+
+Draftling Application Screenshots
+----------------------------------
+![Welcome page] (/imagesReadMe/welcomescreenshot.PNG)
+![My Desk] (/imagesReadMe/mydeskscreenshot.PNG)
+![Search page] (/imagesReadMe/searchscreenshot.PNG)
+![published draftling example] (/imagesReadMe/publisheddraftlingscreenshot.PNG)
+![freeform critique form] (/imagesReadMe/freeformcritiquescreenshot.PNG)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

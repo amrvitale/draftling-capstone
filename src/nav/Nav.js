@@ -9,7 +9,7 @@ class Nav extends React.Component {
                 <ul id="navbar">
                     <li><Link to='/mydesk'>MY DESK</Link></li>
                     <li><Link to='/about'>ABOUT</Link></li>
-                    <li><Link to='/search'>SEARCH DRAFTLINGS</Link></li>
+                    <li><Link to='/search'>SEARCH</Link></li>
                 </ul>
             </div>
 
