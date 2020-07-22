@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
   }
+  
   .myDraftlingsPageHero {
     background-image: url(./books.jpg);
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -12,11 +13,9 @@
     flex-direction: row;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-around;
-
-
-     
+    justify-content: space-around;   
   }
+
 .card { 
     margin: 1px;
     padding: 5px;
@@ -24,17 +23,12 @@
     border-radius: 5px;
     background-color: white;
     justify-content: space-evenly;
-    
-
   }
 
   .container .card {
     padding: 3px;
     display: flex;
-    border: 1px #2B2D42;
-    
-  
-    
+    border: 1px #2B2D42;     
 }
 
 li.card{
