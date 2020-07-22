@@ -1,7 +1,7 @@
 
-import React from 'react'
+import React from 'react';
 import ApiContext from '../ApiContext';
-import './CFF.css'
+import './CFF.css';
 
 
 class CFF extends React.Component {

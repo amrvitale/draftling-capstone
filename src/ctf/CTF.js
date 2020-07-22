@@ -1,6 +1,6 @@
-import React from 'react'
-import ApiContext from '../ApiContext'
-import './CTF.css'
+import React from 'react';
+import ApiContext from '../ApiContext';
+import './CTF.css';
 
 class CTF extends React.Component {
     static contextType = ApiContext;

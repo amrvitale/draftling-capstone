@@ -1,7 +1,7 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Welcome from './Welcome'
+import React from 'react';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Welcome from './Welcome';
 
 describe (`Welcome component`, () => {
     it('renders a .Welcome by default', () => {

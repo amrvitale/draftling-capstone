@@ -1,7 +1,7 @@
 import React from 'react';
-import './CritiqueFreeform.css'
-import ApiContext from '../ApiContext'
-import config from '../config'
+import './CritiqueFreeform.css';
+import ApiContext from '../ApiContext';
+import config from '../config';
 
 
 class CritiqueFreeform extends React.Component {

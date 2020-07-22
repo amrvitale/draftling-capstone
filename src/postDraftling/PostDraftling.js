@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostDraftling.css';
-import ApiContext from '../ApiContext'
-import config from '../config'
+import ApiContext from '../ApiContext';
+import config from '../config';
 
 class PostDraftling extends React.Component {
 

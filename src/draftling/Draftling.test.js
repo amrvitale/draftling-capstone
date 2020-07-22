@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Draftling from './Draftling'
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Draftling from './Draftling';
 
 describe (`Draftling component`, () => {
     const props = {

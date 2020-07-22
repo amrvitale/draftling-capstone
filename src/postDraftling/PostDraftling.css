@@ -5,8 +5,6 @@ select, input, label {
     margin: 1%;
 }
 
-
-
 .postDraftlingHero{
     background-image: url(post.jpg);
     background-position: center; /* Center the image */
@@ -16,7 +14,6 @@ select, input, label {
 .postHeader {
     color: #35322a;
     font-family: 'Playfair Display', 'Georgia', serif;
-    
 }
 
 .instructions {

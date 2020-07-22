@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.css';
-import config from '../config'
-import Draftling from '../draftling/Draftling'
+import config from '../config';
+import Draftling from '../draftling/Draftling';
 
 class Search extends React.Component {
     state = {

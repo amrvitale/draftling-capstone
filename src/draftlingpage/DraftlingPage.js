@@ -1,11 +1,11 @@
-import React from 'react'
-import ApiContext from '../ApiContext'
-import config from '../config'
-import {getCritiquesForDraftlings} from '../draftlings-helpers'
-import { Link } from 'react-router-dom'
-import './DraftlingPage.css'
-import CFF from '../cff/CFF'
-import CTF from '../ctf/CTF'
+import React from 'react';
+import ApiContext from '../ApiContext';
+import config from '../config';
+import {getCritiquesForDraftlings} from '../draftlings-helpers';
+import { Link } from 'react-router-dom';
+import './DraftlingPage.css';
+import CFF from '../cff/CFF';
+import CTF from '../ctf/CTF';
 
 class DraftlingPage extends React.Component {
   static defaultProps = {

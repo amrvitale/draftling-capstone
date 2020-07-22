@@ -1,7 +1,7 @@
 import React from 'react';
-import './CritiqueTemplate.css'
-import ApiContext from '../ApiContext'
-import config from '../config'
+import './CritiqueTemplate.css';
+import ApiContext from '../ApiContext';
+import config from '../config';
 
 
 class CritiqueTemplate extends React.Component {

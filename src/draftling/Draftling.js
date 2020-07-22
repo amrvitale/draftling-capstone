@@ -1,7 +1,7 @@
-import React from 'react'
-import ApiContext from '../ApiContext'
-import { Link } from 'react-router-dom'
-import './Draftling.css'
+import React from 'react';
+import ApiContext from '../ApiContext';
+import { Link } from 'react-router-dom';
+import './Draftling.css';
 
 export default class Draftling extends React.Component {
     

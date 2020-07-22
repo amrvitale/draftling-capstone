@@ -1,6 +1,6 @@
 import React from 'react';
 import Draftling from '../draftling/Draftling';
-import './MyDraftlings.css'
+import './MyDraftlings.css';
 
 class MyDraftlings extends React.Component {
     render() {
