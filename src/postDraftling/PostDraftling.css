@@ -5,9 +5,7 @@ select, input, label {
     margin: 1%;
 }
 
-input, select {
-    width: 100px;
-}
+
 
 .postDraftlingHero{
     background-image: url(post.jpg);
