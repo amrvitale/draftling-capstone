@@ -77,6 +77,8 @@ makeAPICall = searchInput => {
                     <section className="titleSearch">
                         <label htmlFor="titleSearch">Title:</label>
                         <input 
+                            id="titleSearch"
+                            name="titleSearch"
                             type="text" 
                             placeholder="Search by title" 
                             onChange={event => this.handleTitleChange(event)} 
@@ -87,8 +89,8 @@ makeAPICall = searchInput => {
                     <section className="wordcountSearch">
                         <label htmlFor="wordcountSearch">Word Count:</label>
                         <select 
-                            name="wordcount" 
-                            id="wordcount" 
+                            name="wordcountSearch" 
+                            id="wordcountSearch" 
                             onChange={event => this.handleWordCountChange(event)} 
                             value={this.state.wordcountValue}
                         >

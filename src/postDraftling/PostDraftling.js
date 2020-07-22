@@ -79,8 +79,8 @@ class PostDraftling extends React.Component {
                 </div>
 
                 <form onSubmit={this.handleSubmit}>
-                    <label className="postLabel" htmlFor="draftlingTitle">Draftling Title:</label>
-                    <input type="text" name="title" style={styleTitle} onChange={this.handleChange} required></input>
+                    <label className="postLabel" htmlFor="title">Draftling Title:</label>
+                    <input type="text" name="title" id="title" style={styleTitle} onChange={this.handleChange} required></input>
                     <br />
                     <label className="postLabel" htmlFor="wordcount">Choose an approximate word count.</label>
                     <select name="wordcount" id="wordcount" onChange={this.handleChange} required>
