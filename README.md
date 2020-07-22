@@ -21,11 +21,12 @@ API: Node.js, Express.js
 
 Draftling Application Screenshots
 ----------------------------------
-![Welcome page] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/welcomescreenshot.PNG)
-![My Desk] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/mydeskscreenshot.PNG)
-![Search page] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/searchscreenshot.PNG)
-![published draftling example] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/publisheddraftlingscreenshot.PNG)
-![freeform critique form] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/freeformcritiquescreenshot.PNG)
+
+![Welcome page] (https://raw.githubusercontent.com/amrvitale/draftling-capstone/master/imagesReadMe/welcomescreenshot.PNG)
+![My Desk] (https://raw.githubusercontent.com/amrvitale/draftling-capstone/master/imagesReadMe/mydeskscreenshot.PNG)
+![Search page] (https://raw.githubusercontent.com/amrvitale/draftling-capstone/master/imagesReadMe/searchscreenshot.PNG)
+![published draftling example] (https://raw.githubusercontent.com/amrvitale/draftling-capstone/master/imagesReadMe/publisheddraftlingscreenshot.PNG)
+![freeform critique form] (https://raw.githubusercontent.com/amrvitale/draftling-capstone/master/imagesReadMe/freeformcritiquescreenshot.PNG)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
