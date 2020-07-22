@@ -119,7 +119,8 @@ class PostDraftling extends React.Component {
                         <option value="Western">Western</option>
                     </select>
                     <br/>
-                    <textarea style={styleTextArea} name="content" onChange={this.handleChange} required></textarea>
+                    <label className="postLabel" htmlFor="content">Draftling Content</label>
+                    <textarea style={styleTextArea} name="content" id="content" onChange={this.handleChange} required></textarea>
                     <br/>
                     <input type="submit" className="submitBtn" value="Submit"></input>
                 </form>
