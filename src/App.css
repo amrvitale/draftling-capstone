@@ -70,9 +70,7 @@ h1, h2 {
   .tagline, .instructions {
     font-size: 20px;
   }
-  .submitBtn {
-    width: 40%;
-  }
+  
   input, select {
     width: 50%;
   }
