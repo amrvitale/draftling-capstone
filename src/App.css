@@ -74,12 +74,15 @@ h1, h2 {
   .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader, .templateHeading, .freeformHeading {
     font-size: 50px;
   }
-  
+
   .tagline {
     font-size: 20px;
   }
   .submitBtn {
     width: 40%;
+  }
+  input, select {
+    width: 50%;
   }
 }
 
@@ -95,6 +98,9 @@ h1, h2 {
   .tagline {
     font-size: 28px;
   }
+  input, select {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1366px)  {  
@@ -108,6 +114,9 @@ h1, h2 {
   }
   .tagline {
     font-size: 30px;
+  }
+  input, select {
+    width: 80%;
   }
 }
 
