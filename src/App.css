@@ -82,7 +82,7 @@ h1, h2 {
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 769px;
     max-width: 1366px;
-    min-height: 400px;
+    max-height: 400px;
   }
   .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader, .templateHeading, .freeformHeading {
     font-size: 90px;
@@ -99,7 +99,7 @@ h1, h2 {
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 1367px;
     max-width: 2000px;
-    min-height: 500px;
+    max-height: 500px;
   }
   .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader, .templateHeading, .freeformHeading {
     font-size: 120px;
