@@ -59,9 +59,8 @@ h1, h2 {
 }
 
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
-    min-width: 320px;
-    max-width: 768px;
-    min-height: 300px;
+    width: 100%;
+    height: auto;
   }
 
   .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader, .templateHeading, .freeformHeading {
