@@ -21,6 +21,7 @@ API: Node.js, Express.js
 
 Draftling Application Screenshots
 ----------------------------------
+
 ![Welcome page] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/welcomescreenshot.PNG)
 ![My Desk] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/mydeskscreenshot.PNG)
 ![Search page] (https://github.com/amrvitale/draftling-capstone/blob/master/imagesReadMe/searchscreenshot.PNG)
