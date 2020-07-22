@@ -96,7 +96,7 @@ class CritiqueFreeform extends React.Component {
                         <textarea style={styleTextArea} name="critfreeform" onChange={this.handleChange} required></textarea>
 
                         <br/>
-                        <input type="submit" value="Post Critique"></input>
+                        <input type="submit" className="submitBtn" value="Post Critique"></input>
                    
                     </form>
             </div>

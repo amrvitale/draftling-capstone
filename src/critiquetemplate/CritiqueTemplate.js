@@ -123,7 +123,7 @@ class CritiqueTemplate extends React.Component {
                     <br />
                     <textarea style={styleTextArea} name="overall" onChange={this.handleChange} required></textarea>
                     <br /> <br />
-                    <input type="submit" value="Post Critique"></input>
+                    <input type="submit" className="submitBtn" value="Post Critique"></input>
                 </form>
             </div>
         );
