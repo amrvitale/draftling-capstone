@@ -141,6 +141,7 @@ class Edit extends React.Component {
                     </select>
                     <br/>
                     <label className="postLabel" htmlFor="content">Draftling Content</label>
+                    <br />
                     <textarea value={this.state.content} style={styleTextArea} name="content" id="content" onChange={this.handleChange} required></textarea>
                     <br/>
                     <input type="submit" value="Submit Draft to My Dash"></input>
