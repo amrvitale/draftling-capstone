@@ -69,13 +69,13 @@ h1, h2 {
   .tagline, .instructions {
     font-size: 20px;
   }
-  input {
-    line-height: 3em;
-  }
-  
+
   input, select {
     width: 30%;
+    line-height: 2em;
+    font-size: 18px;
   }
+  
 
 /*iPad size */
 @media only screen and (min-device-width: 769px) and (max-device-width: 1366px)  {  
@@ -90,6 +90,7 @@ h1, h2 {
   .tagline {
     font-size: 30px;
   }
+  
   input, select {
     width: 80%;
   }
