@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CTF component renders a .CTF by default 1`] = `
+<div
+  className="critique"
+>
+  <h3>
+    Template Critique
+  </h3>
+  <p
+    className="critText"
+  >
+    Plot: 
+    test
+  </p>
+   
+  <br />
+  <p
+    className="critText"
+  >
+    POV: 
+    first person
+  </p>
+   
+  <br />
+  <p
+    className="critText"
+  >
+    Characters: 
+    Angela
+  </p>
+   
+  <br />
+  <p
+    className="critText"
+  >
+    Dialogue: 
+    hello
+  </p>
+  <br />
+  <p
+    className="critText"
+  >
+    Grammar and spelling: 
+    none
+  </p>
+  <br />
+  <p
+    className="critText"
+  >
+    Overall: 
+    good work!
+  </p>
+  <br />
+</div>
+`;

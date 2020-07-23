@@ -5,7 +5,7 @@ import DraftlingPage from './DraftlingPage';
 
 describe (`DraftlingPage component`, () => {
     it('renders a .DraftlingPage by default', () => {
-        const wrapper = shallow(<DraftlingPage />)
+        const wrapper = shallow(<DraftlingPage draftling={[]}/>)
         expect (toJson(wrapper)).toMatchSnapshot()
     })
 

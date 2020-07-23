@@ -2,6 +2,7 @@ import React from 'react';
 import './Dash.css';
 import { Link } from 'react-router-dom';
  
+/* This component renders the "my desk" dash component where you can click buttons to post a draftling or view existing draftlings*/
 
 class Dash extends React.Component {
     render() {

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyDraftlings component renders a .MyDraftlings by default 1`] = `
+<div
+  className="myDraftlingsPage"
+>
+  <div
+    className="myDraftlingsPageHero"
+  >
+    <h1
+      className="myDraftlingsHeading"
+    >
+      My Draftlings Shelf
+    </h1>
+  </div>
+  <ul
+    className="container"
+  />
+</div>
+`;

@@ -5,7 +5,7 @@ import CTF from './CTF';
 
 describe (`CTF component`, () => {
     it('renders a .CTF by default', () => {
-        const wrapper = shallow(<CTF />)
+        const wrapper = shallow(<CTF crit={{plot: "test", pov: "first person", characters: "Angela", dialogue: "hello", gramspell:"none", overall:"good work!"}}/>)
         expect (toJson(wrapper)).toMatchSnapshot()
     })  
 })

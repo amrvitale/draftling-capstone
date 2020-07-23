@@ -3,6 +3,8 @@ import ApiContext from '../ApiContext';
 import { Link } from 'react-router-dom';
 import './Draftling.css';
 
+/* This component renders the draftling card, found in search and in my draftlings page */
+
 export default class Draftling extends React.Component {
     
     static contextType = ApiContext;

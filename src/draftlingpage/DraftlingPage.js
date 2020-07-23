@@ -7,6 +7,8 @@ import './DraftlingPage.css';
 import CFF from '../cff/CFF';
 import CTF from '../ctf/CTF';
 
+/* This component renders the individual draftling's page. */
+
 class DraftlingPage extends React.Component {
   static defaultProps = {
       match: {
@@ -14,10 +16,10 @@ class DraftlingPage extends React.Component {
       }
     }
   componentDidMount() {
-    this.context.fetchTemplateCritiques();
-    this.context.fetchFreeformCritiques();
     console.log('DraftlingPage mounted!')
     console.log(this.context)
+    this.context.fetchTemplateCritiques();
+    this.context.fetchFreeformCritiques();
   }
 
   static contextType = ApiContext

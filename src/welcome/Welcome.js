@@ -1,6 +1,8 @@
 import React from 'react';
 import './Welcome.css';
 
+/* Welcome page component - home page */
+
 class Welcome extends React.Component {
     render() {
         return (

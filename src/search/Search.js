@@ -3,6 +3,8 @@ import './Search.css';
 import config from '../config';
 import Draftling from '../draftling/Draftling';
 
+/* Search component. Only published draftlings will appear in the search results. */
+
 class Search extends React.Component {
     state = {
         titleValue: '',

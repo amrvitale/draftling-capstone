@@ -3,6 +3,8 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import './Edit.css';
 
+/* This component renders the edit form when a user clicks Edit for a draftling. Previously entered data is available to edit.*/
+
 class Edit extends React.Component {
 
     componentDidMount() {

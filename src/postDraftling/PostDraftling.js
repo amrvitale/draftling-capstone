@@ -2,7 +2,7 @@ import React from 'react';
 import './PostDraftling.css';
 import ApiContext from '../ApiContext';
 import config from '../config';
-
+/* This component renders the Post Draftling form.*/
 class PostDraftling extends React.Component {
 
     static defaultProps = {

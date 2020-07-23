@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CFF component renders a .CFF by default 1`] = `
+<div
+  className="critique"
+>
+  <h3>
+    Freeform Critique
+  </h3>
+  <p
+    className="critText"
+  >
+    Opening comments: 
+    lots of comments
+  </p>
+  <br />
+  <p
+    className="critText"
+  >
+    Overall: 
+    quite interesting
+  </p>
+</div>
+`;

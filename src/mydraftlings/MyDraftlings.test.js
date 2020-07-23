@@ -5,7 +5,7 @@ import MyDraftlings from './MyDraftlings';
 
 describe (`MyDraftlings component`, () => {
     it('renders a .MyDraftlings by default', () => {
-        const wrapper = shallow(<MyDraftlings />)
+        const wrapper = shallow(<MyDraftlings draftlings={[]} />)
         expect (toJson(wrapper)).toMatchSnapshot()
     })  
 })
