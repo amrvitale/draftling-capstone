@@ -12,14 +12,14 @@ exports[`Edit component renders a .Edit by default 1`] = `
     >
       Edit Your Draftling
     </h1>
-    <p
-      className="instructions"
-    >
-      Edit any fields for your Draftling. 
-      <br />
-      Upon submitting, it will be placed on your shelf until it's ready to be published.
-    </p>
   </div>
+  <p
+    className="instructions"
+  >
+    Edit any fields for your Draftling. 
+    <br />
+    Upon submitting, it will be placed on your shelf until it's ready to be published.
+  </p>
   <br />
   <br />
   <form
@@ -27,11 +27,13 @@ exports[`Edit component renders a .Edit by default 1`] = `
   >
     <label
       className="postLabel"
-      htmlFor="draftlingTitle"
+      htmlFor="title"
     >
       Draftling Title:
     </label>
     <input
+      id="title"
+      maxLength={30}
       name="title"
       onChange={[Function]}
       required={true}
@@ -211,7 +213,15 @@ exports[`Edit component renders a .Edit by default 1`] = `
       </option>
     </select>
     <br />
+    <label
+      className="postLabel"
+      htmlFor="content"
+    >
+      Draftling Content
+    </label>
+    <br />
     <textarea
+      id="content"
       name="content"
       onChange={[Function]}
       required={true}

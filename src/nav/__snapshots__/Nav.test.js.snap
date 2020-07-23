@@ -7,9 +7,9 @@ exports[`Nav component renders a .Nav by default 1`] = `
   >
     <li>
       <Link
-        to="/mydash"
+        to="/mydesk"
       >
-        MY DASHBOARD
+        MY DESK
       </Link>
     </li>
     <li>
@@ -23,7 +23,7 @@ exports[`Nav component renders a .Nav by default 1`] = `
       <Link
         to="/search"
       >
-        SEARCH DRAFTLINGS
+        SEARCH
       </Link>
     </li>
   </ul>

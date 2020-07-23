@@ -99,7 +99,6 @@ h1, h2 {
 @media only screen and (min-device-width: 1367px) {
   .aboutHero, .deskHero, .editHero, .myDraftlingsPageHero, .postDraftlingHero, .searchPageHero, .welcomeHero, .templateHero, .freeformHero, .myDraftActions  {
     min-width: 1367px;
-    max-width: 2000px;
     max-height: 500px;
   }
   .aboutHeader, .myDesk, .editHeader, .myDraftlingsHeading, .postHeader, .searchHeading, .welcomeHeader, .templateHeading, .freeformHeading {

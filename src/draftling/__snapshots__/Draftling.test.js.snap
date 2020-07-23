@@ -2,48 +2,70 @@
 
 exports[`Draftling component renders a .Draftling by default 1`] = `
 <div
-  className="draftling"
+  className="individualCard"
 >
-  <h2
-    className="draftling-title"
+  <Link
+    to="/draftling/undefined"
   >
-    <Link
-      to="/draftling/undefined"
-    />
-  </h2>
-  <p>
-    ,
-    <br />
-    ,
-    <br />
-    Modified: 
-    Invalid Date
-  </p>
+    <div
+      className="card-header"
+    >
+      <div
+        className="card-title"
+      >
+        <h2 />
+      </div>
+    </div>
+    <div
+      className="card-summary"
+    >
+      ,
+      <br />
+      <br />
+    </div>
+    <div
+      className="card-meta"
+    >
+      Created: 
+      Invalid Date
+    </div>
+  </Link>
 </div>
 `;
 
 exports[`Draftling component renders the Draftling given props 1`] = `
 <div
-  className="draftling"
+  className="individualCard"
 >
-  <h2
-    className="draftling-title"
+  <Link
+    to="/draftling/13"
   >
-    <Link
-      to="/draftling/13"
+    <div
+      className="card-header"
     >
-      test-draftling
-    </Link>
-  </h2>
-  <p>
-    sixWordStory
-    ,
-    <br />
-    Horror
-    ,
-    <br />
-    Modified: 
-    Fri Jul 17 2020
-  </p>
+      <div
+        className="card-title"
+      >
+        <h2>
+          test-draftling
+        </h2>
+      </div>
+    </div>
+    <div
+      className="card-summary"
+    >
+      sixWordStory
+      ,
+      <br />
+      Horror
+      <br />
+    </div>
+    <div
+      className="card-meta"
+    >
+      Created: 
+      Fri Jul 17 2020
+    </div>
+  </Link>
 </div>
 `;

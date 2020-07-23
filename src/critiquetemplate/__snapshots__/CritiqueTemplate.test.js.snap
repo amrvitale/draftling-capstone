@@ -23,7 +23,9 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
   <form
     onSubmit={[Function]}
   >
-    <label>
+    <label
+      htmlFor="plot"
+    >
       Plot
     </label>
     <br />
@@ -40,6 +42,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     </p>
     <br />
     <textarea
+      id="plot"
       name="plot"
       onChange={[Function]}
       style={
@@ -56,7 +59,9 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     <br />
      
     <br />
-    <label>
+    <label
+      htmlFor="pov"
+    >
       Point of View
     </label>
     <br />
@@ -73,6 +78,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     </p>
     <br />
     <textarea
+      id="pov"
       name="pov"
       onChange={[Function]}
       style={
@@ -89,7 +95,9 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     <br />
      
     <br />
-    <label>
+    <label
+      htmlFor="characters"
+    >
       Characters
     </label>
     <br />
@@ -104,6 +112,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     </p>
     <br />
     <textarea
+      id="characters"
       name="characters"
       onChange={[Function]}
       style={
@@ -120,7 +129,9 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     <br />
      
     <br />
-    <label>
+    <label
+      htmlFor="dialogue"
+    >
       Dialogue
     </label>
     <br />
@@ -135,6 +146,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     </p>
     <br />
     <textarea
+      id="dialogue"
       name="dialogue"
       onChange={[Function]}
       style={
@@ -151,7 +163,9 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     <br />
      
     <br />
-    <label>
+    <label
+      htmlFor="gramspell"
+    >
       Grammar and Spelling
     </label>
     <br />
@@ -164,6 +178,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     </p>
     <br />
     <textarea
+      id="gramspell"
       name="gramspell"
       onChange={[Function]}
       style={
@@ -180,7 +195,9 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     <br />
      
     <br />
-    <label>
+    <label
+      htmlFor="overall"
+    >
       Overall Comments
     </label>
     <br />
@@ -191,6 +208,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
     </p>
     <br />
     <textarea
+      id="overall"
       name="overall"
       onChange={[Function]}
       required={true}
@@ -209,6 +227,7 @@ exports[`CritiqueTemplate component renders a .CritiqueTemplate by default 1`] =
      
     <br />
     <input
+      className="submitBtn"
       type="submit"
       value="Post Critique"
     />

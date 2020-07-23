@@ -24,8 +24,9 @@ exports[`Search component renders a .Search by default 1`] = `
       Title:
     </label>
     <input
+      id="titleSearch"
+      name="titleSearch"
       onChange={[Function]}
-      placeholder="Search by title"
       type="text"
       value=""
     />
@@ -40,8 +41,8 @@ exports[`Search component renders a .Search by default 1`] = `
       Word Count:
     </label>
     <select
-      id="wordcount"
-      name="wordcount"
+      id="wordcountSearch"
+      name="wordcountSearch"
       onChange={[Function]}
       value=""
     >

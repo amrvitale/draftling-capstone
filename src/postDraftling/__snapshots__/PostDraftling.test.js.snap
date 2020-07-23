@@ -12,22 +12,26 @@ exports[`PostDraftling component renders a .PostDraftling by default 1`] = `
     >
       Write your Draftling
     </h1>
-    <p
-      className="instructions"
-    >
-      Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.
-    </p>
   </div>
+  <p
+    className="instructions"
+  >
+    Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.
+  </p>
+  <br />
+  <br />
   <form
     onSubmit={[Function]}
   >
     <label
       className="postLabel"
-      htmlFor="draftlingTitle"
+      htmlFor="title"
     >
       Draftling Title:
     </label>
     <input
+      id="title"
+      maxLength={30}
       name="title"
       onChange={[Function]}
       required={true}
@@ -204,7 +208,15 @@ exports[`PostDraftling component renders a .PostDraftling by default 1`] = `
       </option>
     </select>
     <br />
+    <label
+      className="postLabel"
+      htmlFor="content"
+    >
+      Draftling Content
+    </label>
+    <br />
     <textarea
+      id="content"
       name="content"
       onChange={[Function]}
       required={true}

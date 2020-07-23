@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Publish component renders a .Publish by default 1`] = `
+exports[`Unpublish component renders a .Unpublish by default 1`] = `
 <div>
   <button>
-    Publish
+    Unpublish
   </button>
 </div>
 `;

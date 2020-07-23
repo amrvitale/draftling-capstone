@@ -23,47 +23,54 @@ exports[`CritiqueFreeform component renders a .CritiqueFreeform by default 1`] =
   <form
     onSubmit={[Function]}
   >
-    <label>
+    <label
+      htmlFor="opening"
+    >
       Opening Comments
+      <br />
+      <textarea
+        id="opening"
+        name="opening"
+        onChange={[Function]}
+        style={
+          Object {
+            "boxSizing": "border-box",
+            "fontSize": "15px",
+            "minHeight": "380px",
+            "minWidth": "380px",
+            "padding": "9px",
+            "textAlign": "left",
+          }
+        }
+      />
     </label>
     <br />
-    <textarea
-      name="opening"
-      onChange={[Function]}
-      style={
-        Object {
-          "boxSizing": "border-box",
-          "fontSize": "15px",
-          "minHeight": "380px",
-          "minWidth": "380px",
-          "padding": "9px",
-          "textAlign": "left",
-        }
-      }
-    />
     <br />
-    <br />
-    <label>
+    <label
+      htmlFor="critfreeform"
+    >
       Freeform Critique
-    </label>
-    <br />
-    <textarea
-      name="critfreeform"
-      onChange={[Function]}
-      required={true}
-      style={
-        Object {
-          "boxSizing": "border-box",
-          "fontSize": "15px",
-          "minHeight": "380px",
-          "minWidth": "380px",
-          "padding": "9px",
-          "textAlign": "left",
+      <br />
+      <textarea
+        id="critfreeform"
+        name="critfreeform"
+        onChange={[Function]}
+        required={true}
+        style={
+          Object {
+            "boxSizing": "border-box",
+            "fontSize": "15px",
+            "minHeight": "380px",
+            "minWidth": "380px",
+            "padding": "9px",
+            "textAlign": "left",
+          }
         }
-      }
-    />
+      />
+    </label>
     <br />
     <input
+      className="submitBtn"
       type="submit"
       value="Post Critique"
     />

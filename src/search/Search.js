@@ -56,7 +56,7 @@ makeAPICall = searchInput => {
     .then((responseJson) => {
         let draftling = responseJson.draftlings;
         console.log(draftling)
-        this.setState( { draftlings: draftling, noResults: draftling.length === 0,})
+        this.setState( { draftlings: draftling, noResults: draftling.length === 0,});
         console.log({draftlings: draftling})
     })
 
@@ -80,7 +80,6 @@ makeAPICall = searchInput => {
                             id="titleSearch"
                             name="titleSearch"
                             type="text" 
-                            placeholder="Search by title" 
                             onChange={event => this.handleTitleChange(event)} 
                             value={this.state.titleValue}
                         />
