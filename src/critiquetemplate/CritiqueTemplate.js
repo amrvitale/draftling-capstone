@@ -29,7 +29,6 @@ class CritiqueTemplate extends React.Component {
 
     handleChange = e => {
         this.setState({[e.target.getAttribute('name')]: e.target.value})
-
     }
 
     handleSubmit = e => {

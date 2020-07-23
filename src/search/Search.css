@@ -21,7 +21,6 @@
 #draftlingSearchResultContainer .single-draftling {
     padding: 3px;
     display: flex;
-   
 }
 
 div.single-draftling {
@@ -41,8 +40,6 @@ div.single-draftling {
 .searchHeading {
     -webkit-text-fill-color: rgb(37, 26, 26);    
     font-family: 'Playfair Display', 'Georgia', serif;
- 
-      
 }
 
 .titleSearch, .wordcountSearch, .genreSearch {

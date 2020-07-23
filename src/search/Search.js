@@ -12,58 +12,55 @@ class Search extends React.Component {
         noResults: false,
     };
 
-    
+    handleTitleChange = event => {
+        this.setState({ titleValue: event.target.value });
+    };
 
-handleTitleChange = event => {
-    this.setState({ titleValue: event.target.value });
-};
+    handleGenreChange = event => {
+        this.setState( {genreValue: event.target.value});
+    }
 
-handleGenreChange = event => {
-    this.setState( {genreValue: event.target.value});
-}
+    handleWordCountChange = event => {
+        this.setState( {wordcountValue: event.target.value});
+    }
 
-handleWordCountChange = event => {
-    this.setState( {wordcountValue: event.target.value});
-}
+    handleSearch = () => {
+        this.makeAPICall();
+    }
 
-handleSearch = () => {
-    this.makeAPICall();
-  
-}
+    makeAPICall = searchInput => {
+        let url = `${config.API_ENDPOINT}/search?`;
+        let searchTerms = [];
+        if (this.state.titleValue.length > 0) searchTerms.push(`title=${this.state.titleValue}`);
+        if (this.state.wordcountValue.length > 0) searchTerms.push(`wordcount=${this.state.wordcountValue}`);
+        if (this.state.genreValue.length > 0) searchTerms.push(`genre=${this.state.genreValue}`);
+        url += searchTerms.join('&');
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            },   
+        })
 
-makeAPICall = searchInput => {
-    let url = `${config.API_ENDPOINT}/search?`;
-    let searchTerms = [];
-    if (this.state.titleValue.length > 0) searchTerms.push(`title=${this.state.titleValue}`);
-    if (this.state.wordcountValue.length > 0) searchTerms.push(`wordcount=${this.state.wordcountValue}`);
-    if (this.state.genreValue.length > 0) searchTerms.push(`genre=${this.state.genreValue}`);
-    url += searchTerms.join('&');
-    fetch(url, {
-        method: 'GET',
-        headers: {
-            'content-type': 'application/json'
-        },   
-    })
+        .then((response) => {
+            if(!response.ok) {
+                throw response.message;
+            }
+            console.log("the whole response", response)
+            return response.json();
+        })
 
-    .then((response) => {
-        if(!response.ok) {
-            throw response.message;
-        }
-        console.log("the whole response", response)
-        return response.json();
-    })
+        .then((responseJson) => {
+            let draftling = responseJson.draftlings;
+            console.log(draftling)
+            this.setState( { draftlings: draftling, noResults: draftling.length === 0,});
+            console.log({draftlings: draftling})
+        })
 
-    .then((responseJson) => {
-        let draftling = responseJson.draftlings;
-        console.log(draftling)
-        this.setState( { draftlings: draftling, noResults: draftling.length === 0,});
-        console.log({draftlings: draftling})
-    })
-
-    .catch(error => {
-        console.log({ error })
-    })
-}
+        .catch(error => {
+            console.log({ error })
+        })
+    }
 
     render() {
     
@@ -74,19 +71,19 @@ makeAPICall = searchInput => {
                 </div>
                     <br />
                     <br />
-                    <section className="titleSearch">
-                        <label htmlFor="titleSearch">Title:</label>
-                        <input 
-                            id="titleSearch"
-                            name="titleSearch"
-                            type="text" 
-                            onChange={event => this.handleTitleChange(event)} 
-                            value={this.state.titleValue}
-                        />
-                    </section>
-                    <br />
-                    <section className="wordcountSearch">
-                        <label htmlFor="wordcountSearch">Word Count:</label>
+                <section className="titleSearch">
+                    <label htmlFor="titleSearch">Title:</label>
+                    <input 
+                        id="titleSearch"
+                        name="titleSearch"
+                        type="text" 
+                        onChange={event => this.handleTitleChange(event)} 
+                        value={this.state.titleValue}
+                    />
+                </section>
+                <br />
+                <section className="wordcountSearch">
+                    <label htmlFor="wordcountSearch">Word Count:</label>
                         <select 
                             name="wordcountSearch" 
                             id="wordcountSearch" 
@@ -105,10 +102,10 @@ makeAPICall = searchInput => {
                             <option value="Novella">Novella: 20,001 - 60,000 words</option>
                             <option value="Novel">Novel: 60,0001 + words</option>
                         </select>
-                    </section>
-                    <br />
-                    <section className="genreSearch">
-                        <label htmlFor="genreDrop">Fiction Genre</label>
+                </section>
+                <br />
+                <section className="genreSearch">
+                    <label htmlFor="genreDrop">Fiction Genre</label>
                         <select 
                             name="genreDrop" 
                             id="genreDrop"
@@ -134,28 +131,28 @@ makeAPICall = searchInput => {
                             <option value="Thriller">Thriller</option>
                             <option value="Western">Western</option>
                         </select>
-                    </section>
+            </section>
 
-                        <button type="submit" onClick={this.handleSearch}>Search</button>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        {this.state.draftlings.length > 0 && (
-                            <div id="draftlingSearchResultContainer">
-                                {this.state.draftlings.map((draftling, index) => (
-                                    <div className="single-draftling" key={index}>
-                                        <Draftling 
-                                            {...draftling}
-                                        />
-                                    </div>
-                                ))}
+            <button type="submit" onClick={this.handleSearch}>Search</button>
+            <br />
+            <br />
+            <br />
+            <br />
+                {this.state.draftlings.length > 0 && (
+                    <div id="draftlingSearchResultContainer">
+                        {this.state.draftlings.map((draftling, index) => (
+                            <div className="single-draftling" key={index}>
+                                <Draftling 
+                                    {...draftling}
+                                />
                             </div>
-                        )
-                    }
-                    {this.state.noResults && <p>No results found for your search. Please search again!</p>}
-                    
-        </div>
+                        ))}
+                    </div>
+                )}
+            
+                {this.state.noResults && <p>No results found for your search. Please search again!</p>}
+          
+            </div>
         );
     }
 }

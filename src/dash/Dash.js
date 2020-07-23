@@ -12,20 +12,20 @@ class Dash extends React.Component {
                     <br />
                     <br />
                 </div>
-                    <br />
-                    <br />
-                    <br />
-                    <h2 className="start">Let's get started!</h2>
-                    <p>Welcome to your desk, your own personal workspace at Draftling. <br />Here you can create a brand new draftling, or view your existing draftlings to edit or publish to the Draftling database.</p>
-                    <br />
-                    <br />
-                    <Link to='/postdraftling'>
-                        <button type="submit" className="postNew">Post New Draftling</button>
-                    </Link>
+                <br />
+                <br />
+                <br />
+                <h2 className="start">Let's get started!</h2>
+                <p>Welcome to your desk, your own personal workspace at Draftling. <br />Here you can create a brand new draftling, or view your existing draftlings to edit or publish to the Draftling database.</p>
+                <br />
+                <br />
+                <Link to='/postdraftling'>
+                    <button type="submit" className="postNew">Post New Draftling</button>
+                </Link>
 
-                    <Link to='/mydraftlings'>
-                        <button type="submit" className="viewMyDraftlings">View My Draftlings</button>
-                    </Link>
+                <Link to='/mydraftlings'>
+                    <button type="submit" className="viewMyDraftlings">View My Draftlings</button>
+                </Link>
             </div>
         );
     }

@@ -44,10 +44,10 @@ li.card{
   -webkit-text-fill-color: whitesmoke;    
   font-family: 'Playfair Display', 'Georgia', serif;
     text-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
+      3px 3px 0 #000,
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
       1px 1px 0 #000;
 		
 }

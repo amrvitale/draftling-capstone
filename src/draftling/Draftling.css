@@ -3,6 +3,7 @@
   padding: 15px;
   margin: 1px;
 }
+
 a {
   text-decoration: none;
 }
@@ -18,6 +19,7 @@ a {
 .card-meta {
   font-size: 16px;
 }
+
 .card-header {
   height: 30%;
   color: white;

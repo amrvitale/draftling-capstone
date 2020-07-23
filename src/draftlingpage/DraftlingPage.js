@@ -13,14 +13,14 @@ class DraftlingPage extends React.Component {
         params: {}
       }
     }
-    componentDidMount() {
+  componentDidMount() {
     this.context.fetchTemplateCritiques();
     this.context.fetchFreeformCritiques();
   }
 
   static contextType = ApiContext
 
-    updateDraftlingStatus = (selectedDraftling) =>  {
+  updateDraftlingStatus = (selectedDraftling) =>  {
     console.log('clicked')
     console.log(this.props)
 
@@ -39,12 +39,12 @@ class DraftlingPage extends React.Component {
 
     let url = `${config.API_ENDPOINT}/mydraftlings/${selectedDraftling.id}`;
 
-      fetch(url, {
-        method: 'PUT',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(updatedDraftling),
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(updatedDraftling),
     })
 
     .then(draftling => {
@@ -58,23 +58,23 @@ class DraftlingPage extends React.Component {
   }
 
   showCrits(crits) {
-    console.log(crits,"crits")
-    return crits.map(critique =>  {
-      let component
-      let key
-      console.log('critique: ', critique);
-      if (critique.hasOwnProperty('critfreeform')) {
-        component = <CFF crit={critique} />
-        key = 'freeform'+ critique.draftling_id + critique.id;
-      } else {
-        component = <CTF crit={critique}/>
-        key = 'template' + critique.draftling_id + critique.id;
-      }
-      return (
-       <li key={key}>
-       { component }
-      </li>
-   )
+      console.log(crits,"crits")
+      return crits.map(critique =>  {
+        let component
+        let key
+        console.log('critique: ', critique);
+        if (critique.hasOwnProperty('critfreeform')) {
+          component = <CFF crit={critique} />
+          key = 'freeform'+ critique.draftling_id + critique.id;
+        } else {
+          component = <CTF crit={critique}/>
+          key = 'template' + critique.draftling_id + critique.id;
+        }
+        return (
+        <li key={key}>
+        { component }
+        </li>
+    )
     })
   }
 
@@ -116,7 +116,6 @@ class DraftlingPage extends React.Component {
 
             {statusButton}
 
-
             <Link to={`/postfreeformcritique/${slug}`}>
               <button type="button">Post a Freeform Critique</button>
             </Link>
@@ -124,7 +123,6 @@ class DraftlingPage extends React.Component {
             <Link to={`/posttemplatecritique/${slug}`}>
               <button type="button">Post a Templated Critique</button>
             </Link>
-
           </div>
 
           <div className="draftViewOfSelected">
@@ -137,11 +135,11 @@ class DraftlingPage extends React.Component {
 
           <div className="critiques">
             <h2 className="critiqueh2">Any Critiques Will Appear Below</h2>
-          <ul className="critList">
-          {this.showCrits(crits)}
-          </ul>
-
+            <ul className="critList">
+              {this.showCrits(crits)}
+            </ul>
           </div>
+          
         </div>
       );
   }
