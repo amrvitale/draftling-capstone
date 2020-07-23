@@ -6,7 +6,7 @@ import CritiqueFreeform from './CritiqueFreeform';
 describe (`CritiqueFreeform component`, () => {
     it('renders a .CritiqueFreeform by default', () => {
         const wrapper = shallow(<CritiqueFreeform />)
-        expect (toJson(wrapper)).toMatchSnapshot()
+        expect(toJson(wrapper)).toMatchSnapshot()
     })
 
     

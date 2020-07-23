@@ -11,16 +11,20 @@ import CTF from '../ctf/CTF';
 
 
   class DraftlingPage extends React.Component {
-    static defaultProps = {
-        match: {
-          params: {}
-        }
-      }
     componentDidMount() {
-      console.log('DraftlingPage mounted!')
-      console.log(this.context)
-      this.context.fetchTemplateCritiques();
-      this.context.fetchFreeformCritiques();
+      if(this.context.fetchTemplateCritiques) {
+        this.context.fetchTemplateCritiques();
+      }
+      
+      if(this.context.fetchFreeformCritiques) {
+        this.context.fetchFreeformCritiques();
+      }
+    }
+    
+    static defaultProps = {
+      match: {
+        params: {}
+      }
     }
 
     static contextType = ApiContext

@@ -1,46 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DraftlingPage component renders a .DraftlingPage by default 1`] = `
-<div>
-  <section
-    className="myDraftActions"
-  >
-    <Link
-      to="/edit/undefined"
-    >
-      <button
-        type="button"
-      >
-        Edit
-      </button>
-    </Link>
-    <button
-      type="button"
-    >
-      Publish
-    </button>
-    <button
-      type="button"
-    >
-      Delete
-    </button>
-  </section>
-  <section
-    className="draftViewOfSelected"
-  >
-    <h1
-      className="draftlingTitle"
-    >
-       
-    </h1>
-    <br />
-    <p>
-      Length Type: 
-    </p>
-    <br />
-    <p />
-    <br />
-    <p />
-  </section>
-</div>
+<p>
+  Readying your draftling!
+</p>
 `;
