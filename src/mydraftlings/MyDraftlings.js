@@ -1,7 +1,9 @@
 import React from 'react';
 import Draftling from '../draftling/Draftling';
 import './MyDraftlings.css';
+
 /* This component renders the My Draftlings page, where a user can view all published and unpublished draftlings*/
+
 class MyDraftlings extends React.Component {
     render() {
         console.log(this.props.draftlings);

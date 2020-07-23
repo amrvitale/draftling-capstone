@@ -14,7 +14,7 @@ describe (`Draftling component`, () => {
 
     it ('renders a .Draftling by default', () => {
         const wrapper = shallow( <Draftling />)
-        expect (toJson(wrapper)).toMatchSnapshot()
+        expect(toJson(wrapper)).toMatchSnapshot()
     })
 
     it ('renders the Draftling given props', () => {

@@ -6,7 +6,7 @@ import CritiqueTemplate from './CritiqueTemplate'
 describe (`CritiqueTemplate component`, () => {
     it('renders a .CritiqueTemplate by default', () => {
         const wrapper = shallow(<CritiqueTemplate />)
-        expect (toJson(wrapper)).toMatchSnapshot()
+        expect(toJson(wrapper)).toMatchSnapshot()
     })
 
     

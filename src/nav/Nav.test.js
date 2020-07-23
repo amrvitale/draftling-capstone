@@ -6,7 +6,7 @@ import Nav from './Nav';
 describe (`Nav component`, () => {
     it('renders a .Nav by default', () => {
         const wrapper = shallow(<Nav />)
-        expect (toJson(wrapper)).toMatchSnapshot()
+        expect(toJson(wrapper)).toMatchSnapshot()
     })
 
     

@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 select, input, label {
     margin: 1%;
 }

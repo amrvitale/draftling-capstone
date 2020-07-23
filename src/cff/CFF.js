@@ -4,6 +4,7 @@ import ApiContext from '../ApiContext';
 import './CFF.css';
 
 /* This component renders a completed Critique Freeform. It is called in Draftling Page, where it appears for the user's draftling*/
+
 class CFF extends React.Component {
     static contextType = ApiContext;
     render() {

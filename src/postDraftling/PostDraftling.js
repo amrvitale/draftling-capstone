@@ -2,7 +2,9 @@ import React from 'react';
 import './PostDraftling.css';
 import ApiContext from '../ApiContext';
 import config from '../config';
+
 /* This component renders the Post Draftling form.*/
+
 class PostDraftling extends React.Component {
 
     static defaultProps = {
@@ -75,7 +77,7 @@ class PostDraftling extends React.Component {
             <div className="postDraftlingPage">
                 <div className="postDraftlingHero">                    
                 <h1 className="postHeader">Write your Draftling</h1>
-                </div>
+            </div>
 
                 <p className="instructions">Enter the following fields for your Draftling. Upon submitting, it will be placed on your shelf until it's ready to be published.</p>
                 <br />

@@ -6,7 +6,7 @@ import Dash from './Dash'
 describe (`Dash component`, () => {
     it('renders a .Dash by default', () => {
         const wrapper = shallow(<Dash />)
-        expect (toJson(wrapper)).toMatchSnapshot()
+        expect(toJson(wrapper)).toMatchSnapshot()
     })
 
     

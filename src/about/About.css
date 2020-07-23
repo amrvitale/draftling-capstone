@@ -19,10 +19,12 @@ body, html {
 p, ul, h2 {
     color: whitesmoke;
 }
+
 .fictionLengths{
     font-size: 30px;
     text-align: center;
 }
+
 .feedbackOptions {
     font-size: 40px;
 }

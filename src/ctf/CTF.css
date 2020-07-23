@@ -2,17 +2,17 @@
     box-sizing: border-box;
   }
 
-  body {
+body {
       margin: 0;
   }
 
-  ul {
+ul {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
 
-  div.critique {
+div.critique {
     margin-left: 0;
     margin-right: 0;
     padding: 5px;

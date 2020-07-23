@@ -66,26 +66,29 @@ import CTF from '../ctf/CTF';
       })
     }
 
-    showCrits(crits) {
+      showCrits(crits) {
         console.log(crits,"crits")
         return crits.map(critique =>  {
           let component
           let key
           console.log('critique: ', critique);
           if (critique.hasOwnProperty('critfreeform')) {
-            component = <CFF crit={critique} />
-            key = 'freeform'+ critique.draftling_id + critique.id;
-          } else {
-            component = <CTF crit={critique}/>
-            key = 'template' + critique.draftling_id + critique.id;
+              component = <CFF crit={critique} />
+              key = 'freeform'+ critique.draftling_id + critique.id;
+          } 
+          
+          else {
+              component = <CTF crit={critique}/>
+              key = 'template' + critique.draftling_id + critique.id;
           }
+
           return (
-          <li key={key}>
-          { component }
-          </li>
-      )
-      })
-    }
+            <li key={key}>
+            { component }
+            </li>
+          )
+        })
+      }
 
     render() {
         const {draftlings = [] } = this.context
@@ -99,12 +102,14 @@ import CTF from '../ctf/CTF';
 
 
         if (selectedDraftling === undefined ) {
-        let html = <p>Readying your draftling!</p>
-        return html
+          let html = <p>Readying your draftling!</p>
+          return html
         }
+        
         else if (selectedDraftling.status=== "published") {
           statusButton = <button className="unpubButton" onClick = {()=>this.updateDraftlingStatus(selectedDraftling)}>Unpublish</button>
         }
+
         else {
           statusButton = <button className="pubButton"onClick = {()=>this.updateDraftlingStatus(selectedDraftling)} >Publish</button>
         }
