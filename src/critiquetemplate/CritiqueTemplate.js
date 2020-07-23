@@ -3,6 +3,7 @@ import './CritiqueTemplate.css';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
+/* This component renders the form for Critique Template, found by navigating to a published draftling, and clicking "Post a Templated Critique"*/
 
 class CritiqueTemplate extends React.Component {
     componentDidMount() {

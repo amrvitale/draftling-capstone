@@ -2,6 +2,8 @@ import React from 'react';
 import ApiContext from '../ApiContext';
 import './CTF.css';
 
+/* This component renders a completed Critique Template Form. It is called in Draftling Page, where it appears for the user's draftling*/
+
 class CTF extends React.Component {
     static contextType = ApiContext;
     render() {

@@ -42,9 +42,7 @@ exports[`About component renders a .About by default 1`] = `
     </li>
   </ul>
   <br />
-   
   <br />
-    
   <br />
   <h2
     className="feedbackOptions"

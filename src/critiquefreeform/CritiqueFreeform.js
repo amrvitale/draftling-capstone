@@ -3,6 +3,8 @@ import './CritiqueFreeform.css';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
+/* This component renders the form for Critique Freeform, found by navigating to a published draftling, and clicking "Post Freeform Critique"*/
+
 
 class CritiqueFreeform extends React.Component {
 

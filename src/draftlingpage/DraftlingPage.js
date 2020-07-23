@@ -16,6 +16,8 @@ class DraftlingPage extends React.Component {
   componentDidMount() {
     this.context.fetchTemplateCritiques();
     this.context.fetchFreeformCritiques();
+    console.log('DraftlingPage mounted!')
+    console.log(this.context)
   }
 
   static contextType = ApiContext
@@ -139,7 +141,7 @@ class DraftlingPage extends React.Component {
               {this.showCrits(crits)}
             </ul>
           </div>
-          
+
         </div>
       );
   }

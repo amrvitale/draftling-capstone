@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 
+/* About Draftling component, no functionality, just text. */
 class About extends React.Component {
     render() {
         return (
